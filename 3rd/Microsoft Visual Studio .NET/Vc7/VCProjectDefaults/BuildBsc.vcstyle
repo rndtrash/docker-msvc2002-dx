@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<VisualStudioStyleSheet 
+	ProjectType="Visual C++" 
+	Version="07.00" 
+	PlatformName="Win32" 
+	Name="Build Browse Info">
+	<Tool 
+		Name="VCCLCompilerTool" 
+		BrowseInformation="1"/>
+	<Tool 
+		Name="VCBscMakeTool" 
+		OutputFile="$(OutDir)/$(TargetName).bsc"
+		RunBSCMakeTool="TRUE"/>
+</VisualStudioStyleSheet>

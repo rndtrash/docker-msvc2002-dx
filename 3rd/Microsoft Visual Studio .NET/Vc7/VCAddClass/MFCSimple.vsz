@@ -1,0 +1,6 @@
+VSWIZARD 7.0
+Wizard=VsWizard.VsWizardEngine
+Param="WIZARD_NAME = Simple"
+Param="RELATIVE_PATH = VCWizards\ClassWiz\MFC"
+Param="PREPROCESS_FUNCTION = CanAddMFCClass"
+Param="IS_PARENT_DIALOG = false"

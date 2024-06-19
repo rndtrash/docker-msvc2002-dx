@@ -1,0 +1,16 @@
+[
+	object,
+	uuid([!output INTERFACE_IID]),
+	dual,
+	nonextensible,
+	helpstring("[!output INTERFACE_NAME] Interface"),
+	pointer_default(unique)
+]
+interface [!output INTERFACE_NAME] : IDispatch
+{
+[!if ON_START_PAGE]
+	//Standard Server Side Component Methods
+	HRESULT OnStartPage([in] IUnknown* piUnk);
+	HRESULT OnEndPage();	
+[!endif]
+};

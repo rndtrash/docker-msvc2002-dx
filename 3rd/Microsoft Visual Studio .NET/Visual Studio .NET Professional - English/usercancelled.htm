@@ -1,0 +1,126 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./usercancelled_files/filelist.xml">
+<title>User Cancelled Setup</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Kalyanaraman Venkatsubramanian (RIS)</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Kalyanaraman Venkatsubramanian (RIS)</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>2</o:TotalTime>
+  <o:Created>2000-05-17T20:36:00Z</o:Created>
+  <o:LastSaved>2000-05-17T20:38:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2</o:Words>
+  <o:Characters>17</o:Characters>
+  <o:Company>MS</o:Company>
+  <o:Lines>1</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>20</o:CharactersWithSpaces>
+  <o:Version>9.3821</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>150</w:Zoom>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+</head>
+
+<body lang=EN-US style='tab-interval:.5in' color:blue bgcolor="#FFFFFF">
+
+<div class=Section1>
+
+<span style='font-size:18.0pt;mso-bidi-font-size:12.0pt;
+font-family:Tahoma;color:blue'>User Cancelled Setup.</span><span style='font-size:
+8.0pt;mso-bidi-font-size:12.0pt;font-family:Tahoma'> <o:p></o:p><br></span>
+
+<o:p></o:p></span></p>
+
+</div>
+
+</body> 
+
+</html>
+<span><span style= 'font-family:Tahoma;color:blue'>
+<script language="JScript">
+	var strInput;
+	var strRemainingInput;
+	var strPath;
+	var strErrors;
+	var strRollback;
+	var strReadmePath;
+	var i;
+	var strErrorAnchor;
+	var strInstallAnchor;
+	
+	
+	strInput=window.location.search.substring(1,window.location.search.length);
+	i=strInput.indexOf(";");
+	
+	strErrors=strInput.substring(0,i);
+	strRemainingInput=strInput.substring(i+1,strInput.length);
+	
+	i=strErrors.indexOf("=");
+	strErrors=strErrors.substring(i+1,i+2);
+	
+	i=strRemainingInput.indexOf(";");
+
+	strPath=strRemainingInput.substring(0,i);
+	strRemainingInput=strRemainingInput.substring(i+1,strInput.length);
+
+	i=strPath.indexOf("=");
+	strPath=strPath.substring(i+1,strPath.length);
+	
+	i=strRemainingInput.indexOf("=");
+	strRollback=strRemainingInput.substring(i+1,i+2);
+
+
+	strRemainingInput=strRemainingInput.substring(i+2,strInput.length);
+	i=strRemainingInput.indexOf("=");
+	strReadmePath=strRemainingInput.substring(i+1,strInput.length);
+
+
+
+	
+	document.write ("<br>Setup has been cancelled. All files copied by setup to the machine will be removed.<br><br>");		
+	 	
+
+	if (strErrors=="1")
+	{
+		document.write ("<a target='_blank' href='file://" + strPath + 	"/errorlog.txt'>View error log</a><br>");
+	}
+	
+	
+	document.write ("<a target='_blank' href='file://" + strPath + "/installlog.txt'>View setup log</a><br>");
+	document.write ("<a target='_blank' href='file://" + strReadmePath + "/readme.htm'>View readme file</a><br>");
+</script>
+</span>

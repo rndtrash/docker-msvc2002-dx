@@ -1,0 +1,90 @@
+<HTML>
+<head>
+<TITLE>Dynamic Help</TITLE>
+</HEAD>
+<BODY VLINK="blue" ALINK="blue" topmargin=5px leftmargin=5px bottommargin=5px rightmargin=5px class="ctxbody">
+
+<SCRIPT language="javascript">
+
+function GoMouseNav(curURL)
+{
+  if (window.event.button == 1) /* left button only */
+  {
+    if (curURL != "")
+      window.external.Help.DisplayTopicFromURL(curURL);
+  }
+}
+function GoNav(curURL)
+{
+  if (curURL != "")
+    window.external.Help.DisplayTopicFromURL(curURL);
+}
+
+function ExpandCollapse(e)
+{
+	if (e.style.display == "")
+		e.style.display = "none";
+	else
+		e.style.display = "";
+}
+
+function ExpandCollapseKeyboard(e)
+{
+	if (event.keyCode == 33) //Page Up collapses
+	{
+		if (e.style.display == "")
+			ExpandCollapse(e);
+	}
+	else if (event.keyCode == 34) //Page Down Expands
+	{
+		if (e.style.display == "none")
+			ExpandCollapse(e);		
+	}
+}
+
+function InitiateDrag(dragURL) 
+{
+    event.dataTransfer.setData("URL", dragURL);
+}
+
+function DHShowHelp(helpFile) 
+{
+    window.showHelp(helpFile);
+}
+
+</SCRIPT>
+
+<STYLE>
+<!--
+.ctxbody    {   overflow-y: auto;
+            }
+
+.context	{	font-family: Tahoma;
+				line-height:11pt;
+				font-size:8pt;
+				white-space: nowrap;
+			}
+
+.caption 	{ 	font-weight: bold;
+			}
+
+.contents 	{ 	font-weight: normal;
+				margin-left: 4pt;
+			}
+
+.section	{	margin-bottom: 6pt;
+			}
+
+.itemd		{	text-decoration: underline;
+				color: blue;
+				cursor: hand;
+			}
+
+-->
+</STYLE>
+
+
+<DIV id=contextitems class=context>
+</DIV>
+</BODY>
+</HTML>

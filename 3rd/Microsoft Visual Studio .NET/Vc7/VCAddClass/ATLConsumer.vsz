@@ -1,0 +1,6 @@
+VSWIZARD 7.0
+Wizard=VsWizard.VsWizardEngine
+Param="WIZARD_NAME = Consumer"
+Param="RELATIVE_PATH = VCWizards\ClassWiz\ATL"
+Param="PREPROCESS_FUNCTION = CanAddClass"
+

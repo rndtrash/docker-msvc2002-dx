@@ -1,0 +1,421 @@
+BODY  {
+	background: white;
+	font-family:verdana;
+	FONT-SIZE: 70%;
+	color: black;
+	margin:0;
+	cursor:default;
+}
+
+A
+{
+	font-size:70%;
+}
+
+.clsTabTblCell A {
+	color: #003399;
+	text-decoration: none;
+}
+
+.clsTabTblCell A:hover
+{
+	color: red;
+	text-decoration: none;
+}
+
+.clsTabTblCellUp A {
+	color: #003399;
+	text-decoration: none;
+	cursor:default;
+}
+
+.clsTabTblCellUp A:hover {
+	text-decoration: none;
+}
+
+.clsLeftNav 
+{
+	background:#003399;
+	border-left-style:solid;
+	border-left-color: #003399;
+	border-left-width: 5;
+}
+
+.clsPopupDisplay {
+	position:absolute;
+	display:none;
+	border:1px solid #003399;
+}
+
+.clsSmallLogo {
+	position:absolute;
+	top:10;left:230;
+	color:#ffffff;
+	width:300px;
+	padding-left:15px;
+	font-size:18pt;
+	cursor:default;
+	font-weight:bold;
+}
+.clsSmallLogoEx {
+	position:absolute;
+	top:10;left:100;
+	color:#ffffff;
+	width:300px;
+	padding-left:15px;
+	font-size:18pt;
+	cursor:default;
+	font-weight:bold;
+}
+
+.clsSmallLogoCell {
+	color:#ffffff;
+	width:100%;height:47px;
+	padding-left:15px;
+	font-size:1.2em;
+	cursor:default;
+	font-weight:bold;
+}
+
+.leftNav {
+	background:#003399;
+	cursor:default;
+}
+
+.clsLogo {
+	background-color:#003399;
+}
+
+.clsTabList {
+	background-color:#003399;
+	margin-top: 20;
+	border-left: 6px solid #003399;
+}
+
+
+.clsTabContent {
+	background-color:#ffffff;
+	padding-left:30;
+}
+
+.clsTabToolbar {
+	background-color:#ffffff;
+	background-repeat: no-repeat;
+	padding-left:15;
+}
+
+.clsTabToolbarItem {
+	background-color:#003399;
+	font-size:70%;
+	font-weight:normal;
+	color:#ffffff;
+}
+
+.clsTabItem {
+	background-color:#003399;
+	color:#ffffff;
+	font-size:70%;
+	font-weight:normal;
+	border-right:1px solid #003399;
+	padding-left:5;
+	padding-bottom:4px;
+	padding-top:4px;
+	text-decoration: none;
+	cursor:hand;
+}
+
+.clsTabItemOver	{
+	color: #ffcc99;
+	text-decoration:underline;
+	padding-left:5;
+	padding-bottom:4px;
+	padding-top:4px;
+	cursor:hand;
+}
+
+.clsTabItemSelected {
+	background:white;
+	color:black;
+	font-size:70%;
+	font-weight:bold;
+	border-right:1px solid white;
+	padding-left:5;
+	padding-bottom:4px;
+	padding-top:4px;
+	cursor:default;
+}
+
+.clsChxBoxen {
+	font-size:8pt;
+	color:red;
+	cursor:hand;
+}
+
+.homepagerule {
+	height: 1px;
+	color: #9999cc;
+	z-index:9;
+}
+
+.homepageimage {
+	margin-right:10px;
+	border:0;
+}
+
+.homePageActive	{
+	font-size:70%;
+	line-height:1.5em;
+	color: #003399;
+	text-decoration: underline;
+	cursor:hand;
+}
+
+.homePageActiveHlt {
+	font-size:70%;
+	line-height:1.5em;
+	color: red;
+	text-decoration: underline;
+	cursor:hand;
+}
+
+.homepageinactive
+{
+	font-size: 70%;
+	line-height: 1.5em;
+}
+
+.homePageStatic {
+	font-size:70%;
+	line-height:1.5em;
+	color: black;
+	text-decoration: none;
+	cursor:default;
+}
+
+.homePageTitle {
+	font-size:70%;
+	line-height:2em;
+	color: black;
+	font-weight: bold;
+	cursor: default;
+	vertical-align: baseline;
+}
+
+LABEL {
+	line-height:2em;
+	color: #003399;
+	font-size:70%;
+	text-decoration: none;
+	cursor:default;
+	vertical-align: baseline;
+}
+
+SELECT {
+	font-size:70%;
+	font-family:verdana;
+	margin-right:4px;
+	margin-left:2px;
+}
+
+INPUT {
+	font-size:70%;
+	font-family:verdana;
+	margin-right:4px;
+	margin-left:2px;
+}
+
+#MruListTable {
+	border:1px solid #9999cc;
+}
+#MruListTable THEAD TD{
+	cursor:default;
+	color:white;
+	background-color:#9999cc;
+	padding:2px;
+	cursor:default;
+}
+#MruListTable TBODY TR{
+	cursor:default;
+	color:#003366;
+	padding:2px;
+}
+#MruListTable .clsGray
+{
+	background: #e0dfed;
+}
+
+#MruListTable A {
+	color: #003399;
+}
+
+#MruListTable A:Hover {
+	color: red;
+}
+
+.clsGray {
+	background:#dddddd;
+	color:#223322;
+}
+
+
+.clsTblHlt{
+	background:#99cccc;
+}
+
+.clsChipSpan{
+	margin:5px;
+	height:10pt;
+	border:1px solid black;
+}
+.clsChipTaglbl {
+	margin:5px;
+	height:12pt;
+	border:1px solid #99cccc;
+	font-size:10pt;
+	padding:2px;
+}
+.clsChipSpan .clsComboLabel{
+	color:#003366;
+	background:white;
+	width:200px;
+	height:12pt;
+	border-right:1px solid #003366;
+	font-size:10pt;
+	padding:2px;
+}
+.clsChipSpan .clsComboThumb{
+	color:#003366;
+	padding:2px;
+	height:12pt;
+	font-size:10pt;
+	font-family:marlett;
+}
+
+.clsCombo {
+	border:1px solid #003366;
+	background:#bbddff;
+}
+.clsComboLabel {
+	color:#003366;
+	background:white;
+	height:100%;
+	width:200px;
+	border-right:1px solid #003366;
+	font-size:70%;
+	padding:4px;
+}
+.clsComboThumb {
+	color:#003366;
+	height:100%;
+	padding:2px;
+	font-size:70%;
+	font-family:marlett;
+}
+
+.clsTabTblHead 
+{
+	width:100%;
+}
+
+.clsTabTblCell 
+{
+	padding-left:10px;
+	padding-right:10px;
+	border-top:1px solid #9999cc;
+	border-right:0px solid white;
+	border-left:1px solid #9999cc;
+	border-bottom:1px solid #9999cc;
+	background: #e0dfed;
+}
+
+.clsTabTblCellRo
+{
+	border-right: #6699cc 0px solid;
+	padding-right: 10px;
+	border-top: #6699cc 1px solid;
+	padding-left: 10px;
+	border-bottom: #6699cc 1px solid;
+}
+
+.clsTabTblCellUp {
+	padding-left:10px;
+	padding-right:10px;
+	margin-top:5px;
+	border-top:1px solid #6699CC;
+	border-right:0px solid #6699CC;
+	border-left:1px solid #6699CC;
+	background:white;
+}
+.clsTabTblCellFillTab {
+	width:100%;
+	font-family:verdana;
+	border-bottom:1px solid #9999cc;
+	background:white;
+}
+.clsTabTblDispCell {
+	background:white;
+	padding-top:15px;
+	padding-left:15px;
+	padding-right:10px;
+	border-bottom:1px solid #9999cc;
+	border-right:1px solid #9999cc;
+	border-left:1px solid #9999cc;
+}
+.clsSubPgTlBar{
+	display:inline;
+}
+.clsSubPgTlBarHidden {
+	display:none;
+}
+
+.bugbugspc {
+	margin-top:5px;
+}
+
+.clsHidden {display:none}
+
+.clsBtnFlat
+{
+	border-right: #6699CC 1px solid;
+	padding-right: 3px;
+	border-top: gainsboro 1px solid;
+	padding-left: 3px;
+	font-weight: bold;
+	font-size: 0.7em;
+	background: #f0f0e0;
+	padding-bottom: 3px;
+	margin-left: 0px;
+	border-left: gainsboro 1px solid;
+	color: #333399;
+	line-height: 0.7em;
+	margin-right: 4px;
+	padding-top: 3px;
+	border-bottom: #6699CC 1px solid;
+	font-family: verdana;
+	text-align: center;
+}
+
+.clsVsToolBtn {
+	background:#f0f0e0;
+	font-weight:bold;
+	font-family:verdana;
+	padding:2px;
+	margin-left:0px;
+	margin-right:4px;
+	border-top:1px solid gainsboro;
+	border-left:1px solid gainsboro;
+	border-bottom:1px solid #6699CC;
+	border-right:1px solid #6699CC;	
+	color: #003399;
+	font-size:0.7em;
+	line-height:0.7em;
+	text-align:center;
+}
+
+.clsVsSectionHeader {
+	font-weight:bold;
+	font-size:70%;
+	line-height:1.5em;
+	text-decoration: none;
+	cursor:normal;
+}

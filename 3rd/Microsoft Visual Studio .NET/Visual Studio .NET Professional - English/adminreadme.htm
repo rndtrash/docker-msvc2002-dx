@@ -1,0 +1,2117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<META http-equiv=Content-Type content="text/html; charset=Windows-1252">
+<STYLE>BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 10pt; BACKGROUND: #ffffff; PADDING-BOTTOM: 12pt; MARGIN: 0px; COLOR: #000000; PADDING-TOP: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.banner {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 10pt; PADDING-BOTTOM: 6pt; WIDTH: 100%; PADDING-TOP: 6pt; BACKGROUND-COLOR: #ff9933; TEXT-ALIGN: left
+}
+.tblpara {
+	MARGIN-LEFT: 5px
+}
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; MARGIN-BOTTOM: 6pt; MARGIN-LEFT: 5px
+}
+H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN-BOTTOM: 6pt; MARGIN-LEFT: 5px
+}
+TABLE {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 100%; MARGIN-BOTTOM: 12pt; MARGIN-LEFT: 30px; BORDER-LEFT: #cccccc 1px solid; MARGIN-RIGHT: 30px; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #ffffff
+}
+TH {
+	PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 10pt; BACKGROUND: #cccccc; PADDING-BOTTOM: 6pt; VERTICAL-ALIGN: top; PADDING-TOP: 6pt; TEXT-ALIGN: left
+}
+TD {
+	BACKGROUND: #ffffff; VERTICAL-ALIGN: top
+}
+P {
+	MARGIN-LEFT: 30px
+}
+BLOCKQUOTE.dtBlock {
+	MARGIN: 0.5em 1.5em 0.5em 2em
+}
+A:link {
+	COLOR: #0000ff
+}
+A:visited {
+	COLOR: #666699
+}
+A:hover {
+	COLOR: #3366ff
+}
+OL {
+	MARGIN: 0.5em 0em 0em 2em
+}
+UL {
+	MARGIN: 0.5em 0em 0em 2em
+}
+LI {
+	MARGIN-BOTTOM: 0.5em
+}
+UL P {
+	MARGIN-LEFT: 0em
+}
+OL P {
+	MARGIN-LEFT: 0em
+}
+DL P {
+	MARGIN-LEFT: 0em
+}
+UL P.label {
+	MARGIN-TOP: 0.5em
+}
+OL P.label {
+	MARGIN-TOP: 0.5em
+}
+DL {
+	MARGIN-TOP: 0em; PADDING-LEFT: 1px
+}
+DD {
+	MARGIN-BOTTOM: 0em; MARGIN-LEFT: 1.5em
+}
+DT {
+	MARGIN-TOP: 0.5em
+}
+PRE {
+	MARGIN-TOP: 0.5em; MARGIN-BOTTOM: 0.5em
+}
+PRE {
+	FONT: 100% Courier New, Courier, mono; COLOR: #000066
+}
+CODE {
+	FONT: 100% Courier New, Courier, mono; COLOR: #000066
+}
+.code {
+	FONT: 100% Courier New, Courier, mono; COLOR: #000066
+}
+PRE B {
+	LETTER-SPACING: 0.1em
+}
+CODE B {
+	LETTER-SPACING: 0.1em
+}
+PRE.syntax {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 8px; BORDER-TOP: #999999 1px solid; MARGIN-TOP: 1em; PADDING-LEFT: 8px; BACKGROUND: #cccccc; MARGIN-BOTTOM: 1em; PADDING-BOTTOM: 4px; BORDER-LEFT: #999999 1px solid; CURSOR: text; COLOR: #000000; PADDING-TOP: 4px; BORDER-BOTTOM: #999999 1px solid
+}
+OL DIV.tablediv {
+	MARGIN-TOP: 0em
+}
+UL DIV.tablediv {
+	MARGIN-TOP: 0em
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<DIV class=banner id=DIV1>Microsoft Visual Studio .NET</DIV>
+<H1>Setup Administrator Mode Readme</H1>
+<H2>1. Introduction</H2>
+<P>Microsoft Visual Studio .NET offers an administrator mode setup, which 
+facilitates deployment to field clients. The administrator initially runs setup 
+to select which features will be deployed. An .INI file is created based on this 
+selection, and is then deployed by running setup in unattend mode, pointing to 
+the generated .INI file. When run in unattend mode, setup runs silently 
+installing the designated options. If there are any errors, setup exits 
+silently with failure. This allows deployment through Microsoft Systems 
+Management Server.</P>
+<p>
+For information on deploying Visual Studio .NET using SMS, see  <a TARGET="_TOP" href="http://support.microsoft.com/support/kb/articles/Q309/6/57.asp">http://support.microsoft.com/support/kb/articles/Q309/6/57.asp</a>.
+<p>
+<H2>2. Running Administrator Mode Setup</H2>
+<P>Before running this phase of administrator setup, you <B>must</B> first run 
+Windows Component Update setup on your machine.&nbsp; Some of the components 
+installed by the update are required for Visual Studio .NET setup to 
+function.</P>
+<P><B>Note:</B> You must run the setup.exe found in the \setup subdirectory in 
+order to create an .ini file. The setup.exe file found at the root of the CD or 
+DVD does not support administrator setup.</P>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TH>To create the deployment .INI file</TH></TR>
+  <TR>
+    <TD>
+      <OL>
+        <LI>Insert the Visual Studio .NET&nbsp;CD 1&nbsp;or DVD and ignore the 
+        autorun message. 
+        <LI>Choose the <B>Start</B> menu and then choose <B>Run</B>. 
+        <LI>Type the following: 
+        <BLOCKQUOTE class=dtBlock>
+          <P class=code><I>n</I>:\setup\Setup.exe /createunattend &lt;<I>path to 
+          .INI file</I>&gt;</P>
+          <P>For example:</P>
+          <P class=code>D:\setup\setup.exe /createunattend 
+          c:\vs7_deployment.ini</P></BLOCKQUOTE></LI></OL></TD></TR></TBODY></TABLE>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TH>To run setup with the generated file on a client</TH></TR>
+  <TR>
+    <TD>
+      <OL>
+        <LI>Verify that Visual Studio .NET is available on the network (see 
+        <I>Creating a Network Image</I>). 
+        <LI>Choose the <B>Start</B> menu and then choose <B>Run</B>. 
+        <LI>Type the following: 
+        <BLOCKQUOTE class=dtBlock>
+          <P 
+          class=code>\\<I>&lt;computer&gt;</I>\<I>&lt;share&gt;</I>\...\setup\Setup.exe 
+          /unattendfile &lt;<I>path to .INI file</I>&gt;</P>
+          <P>For example:</P>
+          <P class=code>\\products\VisualStudio\setup\setup.exe /unattendfile 
+          \\computer\share\vs7_deployment.ini</P></BLOCKQUOTE></LI></OL></TD></TR></TBODY></TABLE>
+
+<H2 class="dtH1">3. Creating a Network Image</H2>
+
+<P>Administrator setup is designed to run  from a network share, rather than from CDs. The following procedures illustrate how to prepare Visual Studio .NET for installation from a network share.</P>
+
+<TABLE>
+	<TR>
+		<TH>To share the installation files from the CDs</TH>
+	</TR>
+	<TR>
+		<TD>
+			<OL>
+			<li>Create a top-level folder (for example, VS7) on the server.
+			<li>Create a folder named <B>WCU</B> within the top-level folder (for example, VS7\WCU).
+			<li>Copy the contents of the CD labeled <B>Visual Studio .NET Windows Component Update</B> to the folder named WCU. 
+			<li>Create a folder named <B>VS</B> within the top-level folder. 
+			<li>Copy the contents of the remaining <B>Visual Studio .NET</B> CDs to the VS7\VS folder (choose to overwrite existing files).
+
+			<BLOCKQUOTE class="dtBlock"><b>Note</b>&nbsp;&nbsp;&nbsp;Optionally, you may also copy the contents of other CDs, such as SourceSafe, Visio, and so on, to separate folders for setup over a network.</BLOCKQUOTE>
+			 
+			<li>Open <B>setup.ini</B> in the VS folder using a text editor, such as Notepad. 
+			<li>In the [Baseline] section, change the line that starts with "DIR=" to "DIR=..\WCU". For example:
+			<BLOCKQUOTE class="dtBlock">
+				<DIV class="code">[Baseline]<BR>
+				DIR=..\WCU<BR>
+				FileName=setup.exe</DIV>
+			</BLOCKQUOTE>
+			<li>Save your changes and close the file.
+			<P>Completing this step prevents disk-swapping requests during setup and informs setup of the correct path to the Windows Component Update disk.</P>
+			<LI>Open the folder containing the copied files, and then open the 
+			<STRONG>Setup</STRONG> folder. 
+			<LI>Open the file "setup.sdb" in a text editor, such as Notepad. 
+			<LI>At the end of the file, add the following: 
+			<P class=code>[Product Key]<BR>
+			&lt;<I>25 digit Product Key</I>&gt;</P>
+			</P><STRONG>Note:</STRONG> The Product Key is found on the CD packaging. 
+
+			<LI>Save the changes and close the file.
+			<li>Create a network share to the VS7 folder and establish the appropriate security settings. The path to Visual Studio .NET setup from the network is now:<SPAN class="code">\\[servername]\VS7\VS\setup.exe</SPAN>
+			<BLOCKQUOTE>
+			<b>Note</b>&nbsp;&nbsp;&nbsp;When installing, setup fails if any path and file name combination exceeds 260 characters. The maximum length of a path in Visual Studio is 221 characters; accordingly, you should copy files to a path with less than 70 characters. If you create a network share for a network image, the UNC path to the root install location should contain fewer than 39 characters. For example:</BLOCKQUOTE>
+			<BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+			<P>Not valid: <SPAN class="code">\\products\corporate\licenses\DeveloperTools\Visual Studio\Visual Studio .NET\NetSetup</SPAN><BR>
+			Valid: <SPAN class="code">\\products\DeveloperTools\Visual Studio .NET\NetSetup\</SPAN></P></BLOCKQUOTE>
+			</li>
+
+			</OL>
+		</TD>
+	</TR>
+</TABLE>
+
+
+<TABLE>
+	<TR>
+		<TH>To share the installation files from the DVD</TH>
+	</TR>
+	<TR>
+		<TD>
+			<OL>
+			<li>Copy the contents of the DVD into a top-level folder named VS7.
+			<BLOCKQUOTE><b>Note</b>&nbsp;&nbsp;&nbsp;Optionally, you may also copy the contents of other CDs, such as SourceSafe, Visio, and so on, for setup over a network.</BLOCKQUOTE>
+			<LI>Open the folder containing the copied files, and then open the 
+			<STRONG>Setup</STRONG> folder. 
+			<LI>Open the file "setup.sdb" in a text editor, such as Notepad. 
+			<LI>At the end of the file, add the following: 
+			<P class=code>[Product Key]<BR>
+			&lt;<I>25 digit Product Key</I>&gt;</P>
+			</P><STRONG>Note:</STRONG> The Product Key is found on the CD packaging. 
+
+			<LI>Save the changes and close the file.
+			<li>Create a network share to the VS7 folder and establish appropriate security settings. The path to Visual Studio .NET setup from the network is now: <SPAN class="code">\\[servername]\VS7\setup.exe</SPAN>
+			<BLOCKQUOTE>
+			<b>Note</b>&nbsp;&nbsp;&nbsp;When installing, setup fails if any path and file name combination exceeds 260 characters. The maximum length of a path in Visual Studio is 221 characters; accordingly, you should copy files to a path with less than 70 characters. If you create a network share for a network image, the UNC path to the root install location should contain fewer than 39 characters. For example:</BLOCKQUOTE>
+			<BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+			<P>Not valid: <SPAN class="code">\\products\corporate\licenses\DeveloperTools\Visual Studio\Visual Studio .NET\NetSetup</SPAN><BR>
+			Valid: <SPAN class="code">\\products\DeveloperTools\Visual Studio .NET\NetSetup\</SPAN></P></BLOCKQUOTE>
+			</OL>
+		</TD>
+	</TR>
+</TABLE>
+
+<H2>4. Installation Maintenance</H2>
+<P>Setup can be run again on a machine with an existing installation.&nbsp;This 
+should be done by the administrator running in createunattend mode on a master 
+machine that had the same install as the client machines. Changes to the feature 
+state can then be deployed to clients.</P>
+<P>Clients should not run setup from <B>Add/Remove Programs</B> in Control Panel 
+(or any other means) on their own. This will cause a discontinuity in the 
+feature state. All changes should come from setup being run with the unattendfile 
+switch.</P>
+<H2>5. Required Baseline Components</H2>
+<P>The following is a list of components required for Visual Studio .NET. Visual 
+Studio .NET&nbsp;unattended setup will fail if any component is not 
+installed.</P>
+<UL type=disc>
+  <LI style="MARGIN-LEFT: 30px">Windows NT 4.0 Service Pack 6a 
+  <LI style="MARGIN-LEFT: 30px">Windows 2000 Service Pack 2 
+  <LI style="MARGIN-LEFT: 30px">Microsoft Windows Installer 2.0 
+  <LI style="MARGIN-LEFT: 30px">Microsoft Windows Management Instrumentation 
+  <LI style="MARGIN-LEFT: 30px">Microsoft FrontPage 2000 Web Extensions Client 
+  <LI style="MARGIN-LEFT: 30px">Microsoft FrontPage 2000 Server Extensions 
+  Service Release 1.2 
+  <LI style="MARGIN-LEFT: 30px">Setup Runtime Files 
+  <LI style="MARGIN-LEFT: 30px">Microsoft Internet Explorer 6 
+  <LI style="MARGIN-LEFT: 30px">Microsoft Data Access Components 2.7 
+  <LI style="MARGIN-LEFT: 30px">Microsoft Jet 4.0 Service Pack 3 
+  <LI style="MARGIN-LEFT: 30px">Microsoft .NET Framework </LI></UL>
+
+<H2>6. Known Installation Issues</H2>
+<H2>6.1. Data file cannot be created</H2>
+<P>When running setup in createunattend mode with a file that already exists, 
+you will see an error "The data file &lt;<I>filename</I>&gt; cannot be created. 
+Setup cannot continue." Either delete the existing file, or provide a unique 
+file name.</P>
+
+<h2>7. Deployment of Visual Studio .Net Service Releases</h2>
+ 
+<P>The deployment of a Visual Studio Update is a two phase process. In the first phase, you download and save the service releases from the Internet or from disks to a local drive. In the second phase, you deploy the service releases to target machines in one of three ways: by disks, a network share, or forced deployment using SMS. Deploying via disks or network shares requires that users initiate the update manually. Deploying via a network share also requires registry changes on the target machines.</P>
+
+<P>Some additional items:</P>
+
+<UL>
+<LI style="MARGIN-LEFT: 30px">For any of these scenarios, you can use UNC paths, absolute paths, or http paths. 
+<LI style="MARGIN-LEFT: 30px">From a given list of Service Releases, you can freely choose to download any combination of a single available Service Pack and/or a single available Windows Component Update per session.
+<LI style="MARGIN-LEFT: 30px">Windows Component Updates are locale specific and restricted to the locale of the operating system of the machine on which the download is performed. For example, if you want download an English Windows Component Update, use a machine with an operating system whose Locale is English.
+<LI style="MARGIN-LEFT: 30px">For successful deployment, 
+  make sure that all the internal and external dependencies are correctly 
+  enforced on the target machines. For example, a particular Service Pack is 
+  dependent on a particular Windows Component Update which in turn is dependent 
+  on a newer version of Internet Explorer. In order to deploy the Service Pack 
+  successfully, you must first install the correct version of Internet Explorer 
+  on the target machines, followed by Windows Component Update, before deploying 
+  the Service Pack.</LI>                                                                             
+</UL>
+
+<h2>Downloading Service Releases</h2>
+<P>You can copy service releases from two different locations: the Internet or from disk.</P>
+
+<TABLE>
+  <TBODY>
+  <TR>
+    <TH>To download and copy Service Releases from the Internet</TH></TR>
+  <TR>
+    <TD>
+		<OL>
+			<LI>From the <b>Start</b> menu, choose <b>Run</b>.
+			<LI>In the <b>Open</b> box, enter the following to launch Administrator Mode of Visual Studio Service Release:
+				<P class=code>"<i>n:\...\</i>vsupdate.exe" /mode=admin /locale=<i>localecode</i></P>
+				For example:
+				<P class=code>c:\vsupdate.exe /mode=admin /locale=1033</P>
+				<b>Note</b>: If the <i>localecode</i> is omitted, Visual Studio Update defaults to the locale used by the version of Visual Studio installed. If Visual Studio Update cannot find the Visual Studio locale,  the locale of the operating system is used. If the operating system locale cannot be determined, English is used by default. See section 9 for a list of locale codes.
+			<LI>Choose <b>Check for Service Releases on the Internet</b>. 
+			<LI>Select a Service Release from the list, and then select <b>Web</b> from the <b>Download from</b> drop down menu.
+			<LI>Choose <b>Download Now!</b>.
+			<LI>When prompted, specify a location to save the files.
+			<P><b>Note</b>: Some components may have dependencies. For example, a Service Pack may require Windows Component Update or a newer version of Internet Explorer. If such a dependency exists, a message will appear, giving you the option to download the dependency from the Internet or copy it from disk. If you do not wish to download or copy the dependencies now, you can ignore the warnings and proceed with downloading the Service Pack by choosing <b>continue</b>.</P>
+			</LI>
+		</OL>
+</TD>
+</TR></TBODY>
+</TABLE>
+
+<P>You can also copy Service Releases that you have received on CD.</P>
+<TABLE>
+	<TBODY>
+		<TR>
+			<TH>To copy Service Releases from disk</TH>
+		</TR>
+		<TR>
+			<TD>
+				<OL>
+					<LI>From the <b>Start</b> menu, choose <b>Run</b>.
+					<LI>In the <b>Open</b> box, enter the following to launch Administrator Mode of Visual Studio Service Release:
+						<P class=code>"<i>n:\...\</i>vsupdate.exe" /mode=admin /locale=<i>localecode</i></P>
+						For example:
+						<P class=code>c:\vsupdate.exe /mode=admin /locale=1033</P>
+						<b>Note</b>: If the <i>localecode</i> is omitted, Visual Studio Update defaults to the locale used by the version of Visual Studio installed. If Visual Studio Update cannot find the Visual Studio locale,  the locale of the operating system is used. If the operating system locale cannot be determined, English is used by default. See section 9 for a list of locale codes. 
+					<LI>Insert the media containing the Service Release into your CDROM or DVD drive.
+					<LI>Choose <b>Copy a Visual Studio .NET Service Release from disk</b>.
+					<LI>Browse to the drive containing the Service Release media and choose <b>Open</b>.
+					<LI>Select the Service Release from the list and choose <b>Download Now!</b>.
+					<LI>When prompted, specify a location to save the files.
+					<P><b>Note</b>: Some components may have dependencies. For example, a Service Pack may require Windows Component Update or a newer version of Internet Explorer. If such a dependency exists, a message will appear, giving you the option to download the dependency from the Internet or copy it from disk. If you do not wish to download or copy the dependencies now, you can ignore the warnings and proceed with downloading the Service Pack by choosing <b>continue</b>.</P>
+					</LI>
+				</OL>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+
+<h2>Deploying Service Releases</h2>
+<P>You can deploy Service Release using three different methods: forced deployment with SMS, disks, or network shares.</P>
+
+<P><b>Forced deployment via SMS</b></P>
+
+<UL>
+	<LI style="MARGIN-LEFT: 30px">Dependencies for the 
+  Service Release must be installed on the target machines. 
+  
+	<LI style="MARGIN-LEFT: 30px">All hot fixes, or QFEs, must be removed from the target machines. To remove a hot fix, use Add/Remove Programs in Control Panel.</LI>
+</UL>
+
+<P>For more information, see the SMS documentation.</P>
+
+<TABLE>
+	<TBODY>
+		<TR>
+			<TH>To force updates on target machines using SMS</TH>
+		</TR>
+		<TR>
+			<TD>
+				<OL>
+					<LI>From the <b>Start</b> menu, choose <b>Run</b>.
+					<LI>In the <b>Open</b> box, enter the following:
+						<P class=code>msiexec /p  "<i>n:\...\myfile</i>.msp" novsui=1</P>   
+						For example:
+						<P class=code>msiexec /p  "\\vsupdate\sr1.msp" novsui=1</P></LI>
+				</OL>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+<P><b>Deploying via disks</b></P>
+
+<UL>
+	<LI style="MARGIN-LEFT: 30px">Target users must have administrator privileges on their respective machines.
+	<LI style="MARGIN-LEFT: 30px">Dependencies for the Service Release must be installed on the target machines.</LI>
+</UL>
+
+<TABLE>
+	<TBODY>
+		<TR>
+			<TH>To force updates on target machines using SMS</TH>
+		</TR>
+		<TR>
+			<TD>
+				<OL>
+					<LI>Browse to the location where the Service Release files were downloaded or copied.
+					<LI>Copy the files to disk or burn the files to CD.
+						<p><b>Tip</b>: To conserve space, you can delete all of the cabs directories and their contents. Cabs are required for Web deployment only.</p></LI>
+				</OL>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+<P><b>Deploying from a shared location</b></P>
+
+<UL>
+	<LI style="MARGIN-LEFT: 30px">Target users must have read permissions to the shared location.
+	<LI style="MARGIN-LEFT: 30px">The update location specified in the registry of the target machines must be edited to point to the shared location path instead of the default Internet path.
+	<LI style="MARGIN-LEFT: 30px">Target users must have administrator privileges on their machines.</LI>        
+</UL>
+
+<P>In addition, administrators must create the following files:</P>
+
+<OL>
+	<LI style="MARGIN-LEFT: 30px">Zero, one, or more than one Localized Windows Component Update file for each Locale that you want to support for a particular Windows Component Update. You do not need this file if you do not have a Localized Windows Component Update; if you do need this file, it is stored within the locale directory of that particular Windows Component Update.
+	<LI style="MARGIN-LEFT: 30px">Zero, one, or more than one Main Windows Component Update file for each Windows Component Update you want to make available. You do not need this file if you do not have a Windows Component Update; if you do need this file, then you have to create this file and saved it within the Windows Component Update directory.
+	<LI style="MARGIN-LEFT: 30px">Zero, one, or more than one Main Service Pack Update file for each Update you want to make available. You do not need this file if you do not have a Service Pack Update; if you do, this file has to be edited by you and saved within the appropriate Service Pack directory.
+	<LI style="MARGIN-LEFT: 30px">One Visual Studio Update Session file. The server path points to this file and this file points to the other Service Pack Update files and/or Main Windows Component Update files. This file is mandatory and has to be created by you.</LI>
+</OL>
+
+<P>See section 8 for the Key value pairs and see section 9 for the Locale codes.</P>
+
+<TABLE>
+	<TBODY>
+		<TR>
+			<TH>To create a Localized Windows Component Update file</TH>
+		</TR>
+		<TR>
+			<TD>
+				<OL>
+					<LI>Copy the Service Release files to a shared location, such as a network share or Intranet site.
+					<LI>Make sure that each locale version of Windows Component Update is located in its respective directory.
+						<p>For example, if you downloaded Windows Component Update in both English and Japanese, you would have two different locale versions of Windows Component Update. These locale versions must remain in separate directories and these directory names must use the locale code, in this case 1033 for English and 1041 for Japanese.</p>
+					<LI>Update each .vsupd file to point to the correct path and locale for .crc and .cab files.
+						<p>For example:</p>
+						<BLOCKQUOTE><P class=code>crcpath=http://myupdate/vs7su1/1033/vs7sr.crc<BR>
+						cabpath=http://myupdate/vs7su1/1033/vs7sr.cab</P></BLOCKQUOTE></LI>
+				</OL>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+
+<TABLE>
+	<TBODY>
+		<TR>
+			<TH>To create the Main Windows Component Update file</TH>
+		</TR>
+		<TR>
+			<TD>
+				<OL>
+					<LI>Create a text file with the extension .vsupd and place the file within the Windows Component Update directory.
+					<LI>Enter the following information in the file:
+						
+							<BLOCKQUOTE><P class=code>[VSUPDATE]<BR>
+							type=3<BR>
+							identifier=&lt;<I>path to Windows Component Update directory</I>&gt;<BR>
+							name=<I>uniquename</I><BR>
+							locale=1</P></BLOCKQUOTE>
+						
+						<P>For example, if you have Windows Component Update 1 files in the directory vs7su1 with the English locale files in a subdirectory called 1033, you would include the following information in the .vsupd file:</P>
+							<BLOCKQUOTE><P class=code>[VSUPDATE]<BR>
+							type=3<BR>
+							identifier=vs7su1<BR>
+							name=Windows Component Update 1<BR>
+							locale=1</P></BLOCKQUOTE>
+
+						<p>For more information on content in .vsupd files, see section 8.</p></LI>
+       			</OL>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+<TABLE>
+	<TBODY>
+		<TR>
+			<TH>To create the Main Service Pack Update file</TH>
+		</TR>
+		<TR>
+			<TD>
+				<OL>
+					<LI>Browse to the directory containing the Service Pack files and open the file with the .vsupd file extension.
+					<LI>Edit the following entries:
+						<p>Under [DOWNLOAD]</P>
+							<BLOCKQUOTE><P class=code>cabpath=&lt;<I>path to Service Pack cab files</I>&gt;</P></BLOCKQUOTE>
+						<p><b>Note</b>: If [Dependency_#] does not exist, skip the next section.</P>
+						<p>Under [Dependency_#]:</P>
+						<p>a. If TYPE=1 AND Locale=1 exist then:</P>
+							<BLOCKQUOTE><P class=code>mapath=&lt;<I>path to the Main Windows Component Update file</I>&gt;</P></BLOCKQUOTE>
+						<p>b. If the TYPE=1 AND Locale=1 do not exist then:
+							<BLOCKQUOTE><P class=code>pdipath=&lt;<I>path to the Windows Component .pdi file</I>&gt;<BR>
+							datpath=&lt;<I>path to the Windows Component .dat file</I>&gt;</P></BLOCKQUOTE>
+						<p>c. If TYPE=2 exists then:
+							<BLOCKQUOTE><P class=code>pdipath=&lt;<I>path to the Service pack .pdi file</I>&gt;<BR>
+							datpath=&lt;<I>path to the Service pack. dat file</I>&gt;</P></BLOCKQUOTE>
+						<p>For example, if you have a shared location on the Intranet at http://myupdate and you decide to copy the Service Release that includes Service Pack 2 (which has a dependency vs7su1) to a directory called vs7sp_2 on that shared location, the Main Service Pack Update file would be as follows: 
+						<p>
+							<BLOCKQUOTE><P class=code>[VSUPDATE]<BR>
+							type=2<BR>
+							identifier=vs7sp2<BR>
+							name=Service Pack 2<BR>
+							size=2072<BR>
+							date=2001/03/22/6<BR>
+							version=0000:11:1234<BR>
+							key=CurrentSPLevel<BR>
+							level=2</P>
+
+							<P class=code>[LAUNCH]<BR>
+							type=3<BR>
+							executable=STSP2.MSP<BR>
+							arguments=REINSTALL=ALL REINSTALLMODE=omus REBOOT=ReallySuppress<BR>
+							installtype=<BR>
+							installstate=<BR>
+							installlevel=<BR>
+							installpackage=<BR></P>
+
+							<P class=code>[DOWNLOAD]<BR>
+							crcpath=<BR>
+							cabpath=http://myupdate/vs7sp2/<BR>
+							cabname=vs7sp2<BR>
+							cabsize=500<BR>
+							numcabs=5<BR></P>
+
+							<P class=code>[DEPENDENCY_1]<BR>
+							type=1<BR>
+							identifier=vs7su1<BR>
+							name=Test Windows Component Update 1<BR>
+							locale=1<BR>
+							mappath=http://myupdate/vs7su1/vs7su1.vsupd</P><BLOCKQUOTE>
+					</LI>
+				</OL>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+<TABLE>
+	<TBODY>
+		<TR>
+			<TH>To create the Visual Studio session file</TH>
+		</TR>
+		<TR>
+			<TD>
+				<OL>
+					<LI>Create a text file with the extension .vsupd (e.g. vsupdate.vsupd) and save it in the shared location at the same level as the directories that have the Service Packs and Windows Component Updates.
+						<p>For example, http://myupdate/</p>
+					<LI>Add the necessary key values to the file. See section 8 for a list.
+						<p>In the following example, you have three Service Packs and two Windows Component Updates that you want to make available to your target users. A dependency exists between Service Pack 2 and Windows Component Update 1  and similarly a dependency exists between Service Pack 3 and Windows Component Update 2.  To map these dependencies, the .vsud file would need to contain the following:</P>
+
+							<BLOCKQUOTE><P class=code>[VSUPDATE]<BR>
+							type=1<BR>
+							vs7sp=3<BR>
+							vs7su=2</P>
+
+							<P class=code>[VS7SP_1]<BR>
+							mappath=http://myupdate/vs7sp1/vs7sp1.vsupd
+
+							<P class=code>[VS7SP_2]<BR>
+							mappath=http://myupdate/vs7sp2/vs7sp2.vsupd
+
+							<P class=code>[VS7SP_3]<BR>
+							mappath=http://myupdate/vs7sp3/vs7sp3.vsupd
+
+							<P class=code>[VS7SU_1]<BR>
+							mappath=http://myupdate/vs7su1/vs7su1.vsupd
+
+							<P class=code>[VS7SU_2]<BR>
+							mappath=http://myupdate/vs7su2/vs7su2.vsupd</P>
+					</li>
+				</OL>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+<TABLE>
+	<TBODY>
+		<TR>
+			<TH>To set the server path and disable Start Page notification on target machines</TH>
+		</TR>
+		<TR>
+			<TD>
+				<OL>
+					<LI>Edit the registry on the client machines so that the server path points to the shared location on the network where the Visual Studio Update Session file is located.
+						<P>For example:</P>
+						<BLOCKQUOTE><P class=code>Server Path=http://myupdate/vsupdate.vsupd&lt; /P&gt;</P></BLOCKQUOTE>
+					<LI>To disable the Start Page notification on target machine, edit the registry on the client machine and change HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\7.0\LastKnownUpdate to equal 9999. 
+					</li>
+				</OL>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+<h2>8. Key Value pairs within the .vsupd files</h2>
+<P>A .vsupd file identifies an update and has several sections:</P>
+
+<UL>
+<LI style="MARGIN-LEFT: 30px">Mandatory section: VSUPDATE
+<LI style="MARGIN-LEFT: 30px">Required sections
+<LI style="MARGIN-LEFT: 30px">Optional sections</LI> 
+</UL>
+
+<p>All Update files have the “.vsupd” extension and consist of the following sections:</p>
+
+
+<TABLE class="MsoTableGrid" id="Table2" style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 0.45in; BORDER-LEFT: medium none; WIDTH: 6.2in; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0in 5.4pt 0in 5.4pt; mso-yfti-tbllook: 191; mso-border-insideh: .5pt solid windowtext; mso-border-insidev: .5pt solid windowtext" cellSpacing="0" cellPadding="0" width="595" border="1">
+				<TR style="mso-yfti-irow: 0">
+					<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt" vAlign="top" width="108">
+						<P class="MsoNormal" style="mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA">[VSUPDATE]
+								<o:p></O:P></SPAN></P>
+					</TD>
+					<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" vAlign="top" width="60">
+						<P class="MsoNormal" style="mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA">
+								<o:p></O:P></SPAN></P>
+					</TD>
+					<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" vAlign="top" width="72">
+						<P class="MsoNormal" style="mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA">required
+								<o:p></O:P></SPAN></P>
+					</TD>
+					<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" vAlign="top" width="355">
+						<P class="MsoNormal" style="mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA">
+								<o:p></O:P></SPAN></P>
+					</TD>
+				</TR>
+				<TR style="mso-yfti-irow: 1">
+					<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign="top" width="108">
+						<P class="MsoNormal" style="mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA">Type
+								<o:p></O:P></SPAN></P>
+					</TD>
+					<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign="top" width="60">
+						<P class="MsoNormal" style="mso-layout-grid-align: none"><SPAN class="SpellE"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA">int</SPAN></SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA">
+								<o:p></O:P></SPAN></P>
+					</TD>
+					<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign="top" width="72">
+						<P class="MsoNormal" style="mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA">required
+								<o:p></O:P></SPAN></P>
+					</TD>
+					<TD style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" vAlign="top" width="355">
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >1=VS <SPAN class=SpellE 
+      >Udpate</SPAN>, 2=Service Pack, 3=Windows Component 
+      Update <o:p></O:P></SPAN></P>
+					</TD>
+				</TR>
+  <TR style="mso-yfti-irow: 2">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Identifier <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=355>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >used to id the update file internally and for download 
+      directory creation <o:p></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 3">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Name <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=355>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >friendly name of package <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 4">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Size <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >int</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=355>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Exploded size in kilobytes (on user system) <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 5">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Version <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=355>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >package version <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 6">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Date <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=355>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >package date in date format (<SPAN class=SpellE 
+      >yyyy/mm/dd</SPAN>) <o:p 
+      ></O:P></SPAN></P>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >yyyy</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      ><SPAN style="mso-spacerun: yes" 
+      >&nbsp; </SPAN>year, 4 digits <o:p 
+      ></O:P></SPAN></P>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >mm<SPAN style="mso-spacerun: yes" 
+      >&nbsp;&nbsp; </SPAN>month, 2 digits <o:p 
+      ></O:P></SPAN></P>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >dd</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      ><SPAN style="mso-spacerun: yes" 
+      >&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>day , 2 digits <o:p 
+      ></O:P></SPAN></P>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >e.g. 2001/05/18 = </SPAN><st1:date 
+       Year="2001" Day="18" Month="5"><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >18th May 2001</SPAN></ST1:DATE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 7">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Locale <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >int</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=355>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Locale &amp; LCID cannot exist together <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 8">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >LCID <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >int</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=355>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Locale &amp; LCID cannot exist together <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 9">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Key <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      ><o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=355>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Key and level are <SPAN class=GramE 
+      >joint</SPAN>. If one exists other must exist. <o:p 
+      ></O:P></SPAN></P>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Key name to look for in the registry <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 10">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Level <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      ><o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=355>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Key and level are <SPAN class=GramE 
+      >joint</SPAN>. If one exists other must exist. <o:p 
+      ></O:P></SPAN></P>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Level of <SPAN class=SpellE 
+      >keyname</SPAN> to compare with the one in registry 
+      <o:p></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 11">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Pdipath</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=355>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >path to <SPAN class=SpellE 
+      >pdi</SPAN> file – if exists and is non-empty then 
+      "<SPAN class=SpellE>datpath</SPAN>=" must also exist 
+      and be non-empty <o:p></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 12">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Datpath</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=355>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >path to <SPAN class=SpellE 
+      >dat</SPAN> file - if exists and is non-empty then 
+      "<SPAN class=SpellE>pdipath</SPAN>=" must also exist 
+      and be non-empty <o:p></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 13; mso-yfti-lastrow: yes">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Section <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.7in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=355>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >denotes required section within the <SPAN 
+      class=SpellE>pdi</SPAN> file <o:p 
+      ></O:P></SPAN></P></TD></TR>
+			</TABLE>
+
+
+<P class=MsoNormal style="MARGIN-LEFT: 0.75in; mso-layout-grid-align: none"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA"><o:p></O:P></SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.75in; mso-layout-grid-align: none"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA"><o:p></O:P></SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.75in; mso-layout-grid-align: none"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA"><o:p></O:P></SPAN></P>
+
+
+<TABLE class=MsoTableGrid id=Table3 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 0.45in; BORDER-LEFT: medium none; WIDTH: 6.25in; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0in 5.4pt 0in 5.4pt; mso-yfti-tbllook: 480; mso-border-insideh: .5pt solid windowtext; mso-border-insidev: .5pt solid windowtext" 
+cellSpacing=0 cellPadding=0 width=600 border=1>
+  
+  <TR style="mso-yfti-irow: 0">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 83.7pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt" 
+    vAlign=top width=112>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      ><SPAN style="mso-spacerun: yes" 
+      >&nbsp;</SPAN>[LAUNCH] <o:p 
+      ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 42.3pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=56>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      ><o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      ><o:p></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 1">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 83.7pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=112>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Type <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 42.3pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=56>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >int</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >1=<SPAN class=SpellE>msi</SPAN> 
+      (<SPAN class=SpellE>MsiInstallProduct</SPAN>), 
+      2=<SPAN class=SpellE>msi</SPAN> (<SPAN class=SpellE 
+      >MsiConfigureProductEx</SPAN>), 3=<SPAN class=SpellE 
+      >msp</SPAN> (<SPAN class=SpellE 
+      >MsiApplyPatch</SPAN>), 4=exe (<SPAN class=SpellE 
+      >ShellExecute</SPAN>) <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 2">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 83.7pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=112>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Executable <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 42.3pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=56>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >name of package executable <o:p 
+      ></O:P></SPAN></P>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >(i.e. vs7sp1.msp or vs7su1.exe) <o:p 
+      ></O:P></SPAN></P>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=GramE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >executable</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > must be in the same directory as this map file. <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 3">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 83.7pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=112>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Arguments <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 42.3pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=56>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >as required for launch type <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 4">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 83.7pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=112>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Installtype</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 42.3pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=56>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >int</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >as required for launch type - see <SPAN class=SpellE 
+      >msi.h</SPAN> <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 5">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 83.7pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=112>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Installstate</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 42.3pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=56>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >int</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >as required for launch type - see <SPAN class=SpellE 
+      >msi.h</SPAN> <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 6">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 83.7pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=112>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Installlevel</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 42.3pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=56>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >int</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >as required for launch type - see <SPAN class=SpellE 
+      >msi.h</SPAN> <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 7; mso-yfti-lastrow: yes">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 83.7pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=112>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >installpackage</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 42.3pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=56>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >int</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >as required for launch type - see <SPAN class=SpellE 
+      >msi.h</SPAN> <o:p 
+      ></O:P></SPAN></P></TD></TR></TABLE></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.5in; mso-layout-grid-align: none"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA"><o:p></O:P></SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.75in; mso-layout-grid-align: none"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA"><o:p></O:P></SPAN></P>
+
+
+
+<TABLE class=MsoTableGrid id=Table4 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 0.45in; BORDER-LEFT: medium none; WIDTH: 6.25in; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0in 5.4pt 0in 5.4pt; mso-yfti-tbllook: 191; mso-border-insideh: .5pt solid windowtext; mso-border-insidev: .5pt solid windowtext" 
+cellSpacing=0 cellPadding=0 width=600 border=1>
+  
+  <TR style="mso-yfti-irow: 0">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 84.25pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt" 
+    vAlign=top width=112>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >[DOWNLOAD] <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 41.75pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=56>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      ><o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required for all packages posted on web for download 
+      <o:p></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 1">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 84.25pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=112>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Crcpath</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 41.75pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=56>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >path to <SPAN class=SpellE 
+      >crc</SPAN> file for download validation <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 2">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 84.25pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=112>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Cabpath</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 41.75pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=56>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >path to directory where <SPAN class=SpellE 
+      >cabfiles</SPAN> can be found <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 3">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 84.25pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=112>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Cabname</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 41.75pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=56>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >name of <SPAN class=SpellE 
+      >cabfiles</SPAN> without the extension <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 4">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 84.25pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=112>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Cabsize</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 41.75pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=56>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >int</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >size of cabs in KB's - it is assumed that all but the 
+      last will have the same size <o:p 
+  ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 5; mso-yfti-lastrow: yes">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 84.25pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=112>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Numcabs</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 41.75pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=56>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >int</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >number of cabs to be downloaded - will also be used 
+      for <SPAN class=SpellE>cabfile</SPAN> extension <o:p 
+      ></O:P></SPAN></P></TD></TR></TABLE></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.75in; mso-layout-grid-align: none"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA"><o:p></O:P></SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.75in; mso-layout-grid-align: none"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA"><o:p></O:P></SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 0.75in; mso-layout-grid-align: none"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA"><o:p></O:P></SPAN></P>
+
+
+<TABLE class=MsoTableGrid id=Table5 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 0.45in; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0in 5.4pt 0in 5.4pt; mso-yfti-tbllook: 191; mso-border-insideh: .5pt solid windowtext; mso-border-insidev: .5pt solid windowtext; mso-table-layout-alt: fixed" 
+cellSpacing=0 cellPadding=0 border=1>
+  
+  <TR style="mso-yfti-irow: 0">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >[DEPENDENCY_#] <o:p 
+      ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      ><o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >the # denotes the <SPAN class=SpellE 
+      >enum</SPAN> from 1 to the value of the "dependency=" 
+      key within the [VSUPDATE] section <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 1">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Type <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >int</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >1=internal (as in a Windows Component Update), 
+      2=external ( as in a newer version of Internet Explorer etc. <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 2">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Identifier <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >used to <SPAN class=SpellE 
+      >mapfile</SPAN> id the case of an internal dependency 
+      <o:p></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 3">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Name <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >friendly name of dependency ( for Windows Component 
+      Update it should match the "name=" key within the<SPAN 
+      style="mso-spacerun: yes">&nbsp; </SPAN>[VSUPDATE] 
+      section ) <o:p></O:P></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 36.4pt; mso-yfti-irow: 4">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 36.4pt; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >url</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 36.4pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 36.4pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required for external dependencies <o:p 
+      ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 36.4pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      ><o:p></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 5">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Locale <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >int</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      ><o:p></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 6">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Mappath</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Used for web install <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 7">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Pdipath</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >see "Dependency Validate Test" above ( if Windows 
+      Component Update and a web download then it can point to <SPAN 
+      class=SpellE>pdi</SPAN> for that Windows Component 
+      Update ) <o:p></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 8">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN class=SpellE><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Datpath</SPAN></SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      > <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >optional <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >see "Dependency Validate Test" above ( if Windows 
+      Component Update and a web download then it can point to <SPAN 
+      class=SpellE>dat</SPAN> for that Windows Component 
+      Update ) <o:p></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 9; mso-yfti-lastrow: yes">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=108>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >Section <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 45pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=60>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >string <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 0.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=72>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required for external dependencies <o:p 
+      ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 3.75in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=360>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >denotes required section within the <SPAN 
+      class=SpellE>pdi</SPAN> file <o:p 
+      ></O:P></SPAN></P>
+      <P class=MsoNormal style="mso-layout-grid-align: none" 
+      ><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA" 
+      >required if <SPAN class=SpellE 
+      >pdi/dat</SPAN> used <o:p 
+      ></O:P></SPAN></P></TD></TR></TABLE></P>
+<H2><SPAN style="COLOR: black; FONT-FAMILY: Verdana"><o:p></O:P></SPAN></H2>
+
+
+
+
+<H2>9. Locale Codes</H2>
+
+<TABLE class=MsoTableGrid id=Table6 
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 0.5in; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0in 5.4pt 0in 5.4pt; mso-yfti-tbllook: 480; mso-border-insideh: .5pt solid windowtext; mso-border-insidev: .5pt solid windowtext" 
+cellSpacing=0 cellPadding=0 border=1>
+  
+  <TR style="mso-yfti-irow: 0">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.2in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt" 
+    vAlign=top width=115>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >Locale Code <o:p 
+      ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 285.55pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt" 
+    vAlign=top width=381>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >Description <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 12.1pt; mso-yfti-irow: 1">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.2in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 12.1pt; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=115>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >1028&nbsp; <o:p 
+    ></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 285.55pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 12.1pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=381>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >Traditional Chinese <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 6pt; mso-yfti-irow: 2">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.2in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 6pt; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=115>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >1031 <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 285.55pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 6pt; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=381>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >German <o:p 
+  ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 3">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.2in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=115>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >1033 <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 285.55pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=381>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >English (US) <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 4">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.2in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=115>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >1036 <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 285.55pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=381>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >French <o:p 
+  ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 5">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.2in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=115>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >1040 <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 285.55pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=381>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >Italian <o:p 
+  ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 6">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.2in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=115>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >1041 <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 285.55pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=381>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >Japanese <o:p 
+    ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 7">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.2in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=115>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >1042 <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 285.55pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=381>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >Korean <o:p 
+  ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 8">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.2in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=115>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >2052 <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 285.55pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=381>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >Simplified Chinese <o:p 
+      ></O:P></SPAN></P></TD></TR>
+  <TR style="mso-yfti-irow: 9; mso-yfti-lastrow: yes">
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: windowtext 1pt solid; WIDTH: 1.2in; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=115>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >3028 <o:p></O:P></SPAN></P></TD>
+    <TD 
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0in; BORDER-LEFT: medium none; WIDTH: 285.55pt; PADDING-TOP: 0in; BORDER-BOTTOM: windowtext 1pt solid; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt" 
+    vAlign=top width=381>
+      <P class=MsoNormal><SPAN 
+      style="FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Verdana" 
+      >Spanish (standardized) <o:p 
+      ></O:P></SPAN></P></TD></TR></TABLE></P>
+
+ 
+</BODY></HTML>

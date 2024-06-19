@@ -1,0 +1,5 @@
+VSWIZARD 7.0
+Wizard=VsWizard.VsWizardEngine
+Param="WIZARD_NAME = Simple"
+Param="RELATIVE_PATH = VCWizards\ClassWiz\ATL"
+Param="PREPROCESS_FUNCTION = CanAddATLClass"

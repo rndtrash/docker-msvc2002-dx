@@ -1,0 +1,395 @@
+<!- (c) 2001 Microsoft Corporation -->
+<HTML DIR="LTR">
+
+<HEAD>
+	<TITLE>Add PerfMon Object Wizard</TITLE>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<STYLE TYPE="text/css">@import url();</STYLE>
+	<SCRIPT>
+		var strURL = "../../../";
+		strURL += window.external.GetHostLocale();
+		strURL += "/NewStyles.css";
+		document.styleSheets(0).imports(0).href = strURL;
+	</SCRIPT>
+
+	<SYMBOL NAME="CLASS_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="NAME_STRING" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="HELP_STRING" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="DETAIL_LEVEL" TYPE=select-one VALUE="PERF_DETAIL_NOVICE"></SYMBOL>
+	<SYMBOL NAME="NO_INSTANCES" TYPE=checkbox VALUE=false></SYMBOL>
+</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="if (!bValidating) OnKey();" ONKEYPRESS="if (!bValidating) OnPress();">
+
+<TABLE CLASS="ONE" HEIGHT="100%" WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL WIDTH="100%">
+
+  <!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79" WIDTH="100%" COLSPAN="2">
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV CLASS="SMALLA" ID="Layer0">
+		 <IMG CLASS="SMALLEST" SRC="../../Images/PerfObject.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0"></IMG>
+		</DIV>
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">Welcome to the Add Perfmon Object Wizard</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">This wizard generates a perfmon object for your perfmon class.</P>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"><IMG SRC="../../Images/spacer.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"><IMG SRC="../../Images/spacer.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+	</TD>
+  </TR>
+  <!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+
+  <!--OPEN OF CONTENT AND BUTTON TABLES//-->
+  <TR VALIGN="TOP">
+	   <TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+	   
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+		  
+		  	<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL WIDTH="398"><COL WIDTH="12">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="3">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			  <TD VALIGN="TOP">
+			  	<SPAN CLASS="itemTextTop" TITLE="Name of new class that will be created." ID="AUT_ID" >
+					 <LABEL FOR="CLASS_NAME" ID="CLASS_NAME_LABEL">C<U>l</U>ass name:</LABEL>
+				 	 <BR>
+				 	 <INPUT CLASS="sideBtn" ID="CLASS_NAME" TYPE="TEXT" ACCESSKEY="L">
+				</SPAN>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		 	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="15" COLSPAN="3">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			  <TD VALIGN="TOP">
+			  	<SPAN CLASS="itemText" TITLE="The name of the object as presented to the user in the 'Performance object' combobox in perfmon" ID="AUT_ID1" >
+					 <LABEL FOR="NAME_STRING" ID="NAME_STRING_LABEL"><U>N</U>ame string:</LABEL>
+				 	 <BR>
+				 	 <INPUT CLASS="sideBtn" ID="NAME_STRING" TYPE="TEXT" ACCESSKEY="N">
+				</SPAN>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		 	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="3">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			  <TD VALIGN="TOP">
+			  	<SPAN CLASS="itemText" TITLE="The explanation text displayed to the user when they request an explanation of the object from perfmon" ID="AUT_ID2" >
+					 <LABEL FOR="HELP_STRING" ID="HELP_STRING_LABEL">Hel<U>p</U> string:</LABEL>
+				 	 <BR>
+				 	 <INPUT CLASS="sideBtn" ID="HELP_STRING" TYPE="TEXT" ACCESSKEY="P">
+				</SPAN>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		 	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="3">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			  <TD VALIGN="TOP">
+			  	<SPAN CLASS="itemText" TITLE="A hint to the perfmon client indication the complexity of the object for different levels of user" ID="AUT_ID3" >
+					 <LABEL FOR="DETAIL_LEVEL" ID="DETAIL_LEVEL_LABEL"><U>D</U>etail level:</LABEL>
+				 	 <BR>
+				 	 <SELECT CLASS="sideBtn" ID="DETAIL_LEVEL" SIZE="1" ACCESSKEY="D" TITLE="A hint to the perfmon client indication the complexity of the object for different levels of user" VALUE="PERF_DETAIL_NOVICE">
+					 	<OPTION VALUE="PERF_DETAIL_NOVICE" ID="PERF_DETAIL_NOVICE_OPTION" SELECTED>novice</OPTION>
+						<OPTION VALUE="PERF_DETAIL_ADVANCED" ID="PERF_DETAIL_ADVANCED_OPTION">advanced</OPTION>
+						<OPTION VALUE="PERF_DETAIL_EXPERT" ID="PERF_DETAIL_EXPERT_OPTION">expert</OPTION>
+						<OPTION VALUE="PERF_DETAIL_WIZARD" ID="PERF_DETAIL_WIZARD_OPTION">wizard</OPTION>
+				 	 </SELECT>
+				</SPAN>
+  			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		 	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="16" COLSPAN="3">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			  <TD VALIGN="TOP">
+  				<SPAN CLASS="itemText" TITLE="If checked, this object will be a singleton object with no named instances" ID="AUT_ID4" >
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBox" ID="NO_INSTANCES" ACCESSKEY="I" TITLE="If checked, this object will be a singleton object with no named instances">
+	  	 			 <DIV CLASS="itemTextCheckboxA">
+		  			  <LABEL FOR="NO_INSTANCES" ID="NO_INSTANCES_LABEL">No <U>i</U>nstances</LABEL>
+	  	 			 </DIV>
+				</SPAN>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		 	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="100%" COLSPAN="3">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+		 	</TABLE>
+			
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD HEIGHT="48">
+	   	  <!--OPEN OF BUTTON HTML//-->
+		  
+		  	<TABLE HEIGHT="48" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"><IMG SRC="../../Images/spacer.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"><IMG SRC="../../Images/spacer.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			  </TR>
+ 
+ 			  <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">Finish</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">Cancel</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.codewiz.class.atl.perfobj.overview');">Help</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+			
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+	
+  	<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+ 	</TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var strParameters = "";
+
+function InitDocument(document)
+{
+	setDirection();
+	
+	if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+	{
+		var L_WizardDialogTitle_Text = "Add PerfMon Object Wizard";
+		window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+		window.external.SetDefaults(document);
+	}
+
+	window.external.Load(document);
+}
+
+function Next(document, linkto)
+{
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	bValidating = true;
+	if (!ValidateInput())
+	{
+		bValidating = false;
+		return;
+	}
+	bValidating = false;
+
+	OnWizFinish(document);
+}
+
+function ValidateInput()
+{
+	var oInvalid = null;
+
+	if (!Validate(CLASS_NAME))
+		oInvalid = CLASS_NAME;
+
+	if (!Validate(NAME_STRING))
+		oInvalid = NAME_STRING;
+
+	if (!Validate(HELP_STRING))
+		oInvalid = HELP_STRING;
+
+	if (oInvalid != null)
+	{
+		window.external.ReportError();
+		oInvalid.focus();
+		return false;
+	}
+	return true;
+}
+
+function Validate(obj)
+{
+	var bValid = true;
+	switch(obj.id)
+	{
+		case "CLASS_NAME":
+		{
+			bValid = window.external.ProjectObject.CodeModel.ValidateMember(CLASS_NAME.value, vsCMElementClass);
+			if (!bValid)
+			{
+				var L_ErrClassExists_Text = "Class already exists";
+				oErrObj = new Error(L_ErrClassExists_Text);
+				SetErrorInfo(oErrObj);
+			}
+			break;
+		}
+		case "NAME_STRING":
+		case "HELP_STRING":
+			if (obj.value.length = 0)
+			{
+				var L_InvalidValue_Text = "Invalid value";
+				oErrObj = new Error(L_InvalidValue_Text);
+				SetErrorInfo(oErrObj);
+				bValid = false;
+			}
+			break;
+		default:
+			break;
+	}
+
+	if (typeof(bValid) == "undefined")
+		bValid = false;
+
+	return bValid;
+}
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	var strPath = "../../../";
+	strPath += window.external.GetHostLocale();
+	var strScriptPath = strPath + "/Script.js";
+	var strCommonPath = strPath + "/Common.js";
+	document.scripts("INCLUDE_SCRIPT").src = strScriptPath;
+	document.scripts("INCLUDE_COMMON").src = strCommonPath;
+</SCRIPT>

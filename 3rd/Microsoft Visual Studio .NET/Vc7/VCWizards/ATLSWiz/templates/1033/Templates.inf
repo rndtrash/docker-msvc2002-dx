@@ -1,0 +1,22 @@
+[!if GENERATING_ISAPI]
+rootisapi.def
+[!if FILE_CACHE || BLOB_CACHE || SESSION_MEM || SESSION_DB || DATASOURCE_CACHE || BROWSCAPS]
+rootisapiextension.h
+[!endif]
+resource.h
+root.rc
+[!endif]
+[!if GENERATING_APP]
+root.h
+[!if SOAP]
+root.disco
+root.htm
+[!endif]
+[!if STENCIL]
+rootapp.srf
+[!endif]
+[!endif]
+root.cpp
+StdAfx.cpp
+StdAfx.h
+readme.txt

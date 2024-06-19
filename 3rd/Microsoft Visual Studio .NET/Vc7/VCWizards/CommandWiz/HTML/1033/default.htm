@@ -1,0 +1,461 @@
+<!- (c) 2001 Microsoft Corporation -->
+<HTML DIR="LTR">
+
+<HEAD>
+	<TITLE>Add/Goto Command Wizard</TITLE>
+	<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<STYLE TYPE="text/css">@import url();</STYLE>
+	<SCRIPT>
+		var strURL = "../../../";
+		strURL += window.external.GetHostLocale();
+		strURL += "/NewStyles.css";
+		document.styleSheets(0).imports(0).href = strURL;
+	</SCRIPT>
+
+	<SYMBOL NAME="EXTERNAL_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="INTERNAL_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="STOCK_DISPID" TYPE=text value=""></SYMBOL>
+	<SYMBOL NAME="STOCK_MACRO" TYPE=text value=""></SYMBOL>
+</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="if (!bValidating) OnKey();" ONKEYPRESS="if (!bValidating) OnPress();">
+
+<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL WIDTH="100%">
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV CLASS="SMALLA" ID="Layer0">
+		 <IMG CLASS="SMALLEST" SRC="..\..\Images\Command.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+		</DIV>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">Welcome to the Event Handler Wizard</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">This wizard adds a menu or accelerator command handler or dialog control event handler to the class of your choice.</P>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+ 			  	 
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+	 
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	</TD>
+	</TR>
+	<TR VALIGN="TOP">
+	<TD HEIGHT="100%">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW TWO//-->
+	
+	 <TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL>
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+	   
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+		  
+		  	<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+			  	<SPAN CLASS="itemTextTop" TITLE="Shows the name of the command ID from which this wizard is invoked" ID="AUT_ID"  DISABLED>
+			  	 <LABEL FOR="COMMAND_NAME" ID="COMMAND_NAME_LABEL">Command name:</LABEL>
+				 <BR>
+				 <INPUT CLASS="sideBtnThreeColumn" ID="COMMAND_NAME" TYPE="TEXT" TABINDEX="1">
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12" COLSPAN="5">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="18" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+			  	<SPAN CLASS="itemText" ID="DATA_TYPE_SPAN" TITLE="Messages fired by this command">
+			  	 <LABEL FOR="MESSAGE_TYPE" ID="MESSAGE_TYPE_LABEL">Message t<U>y</U>pe:</LABEL>
+				 <BR>
+				 <SELECT CLASS="SideBtnThreeColumn" SIZE="3" ID="MESSAGE_TYPE" ACCESSKEY="Y" TITLE="Messages fired by this command" onChange="OnSelectMessageType();" TABINDEX="2">
+					<OPTION></OPTION>
+				 </SELECT>
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+			  <TD VALIGN="TOP" COLSPAN="3" ROWSPAN="2">
+ 				<SPAN CLASS="itemText" TITLE="List of available classes that can implement this command handler. Selection switches the context of the wizard" ID="AUT_ID1" >
+					<LABEL FOR="CLASSES" ID="CLASSES_LABEL">C<U>l</U>ass list:</LABEL>
+					<BR>
+					<SELECT CLASS="SideBtnThreeColumn" SIZE="7" ID="CLASSES" ACCESSKEY="L" TITLE="List of classes." onChange="OnSelectClass();" TABINDEX="4">
+					</SELECT>
+				</SPAN>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+			 
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="BOTTOM">
+				<SPAN CLASS="itemText" TITLE="Name of the function that will handle the message type to add." ID="AUT_ID2" >
+	  		 		 <LABEL FOR="HANDLER_NAME" ID="HANDLER_NAME_LABEL">Function handler <U>n</U>ame:</LABEL>
+	  	 			 <BR>
+	  	 			 <INPUT CLASS="sideBtnThreeColumn" ID="HANDLER_NAME" ACCESSKEY="N" TITLE="" TYPE="TEXT" TITLE="Name of the function that will handle the message type to add." TABINDEX="3">
+				</SPAN>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+			  </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="15" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR VALIGN="TOP">
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" COLSPAN="5">
+				<SPAN CLASS="itemText" TITLE="The handler description." ID="AUT_ID3"  DISABLED>
+				    <NOBR>
+					 <LABEL FOR="HANDLER_DESCRIPTION" ID="HANDLER_DESCRIPTION_LABEL">Handler description:</LABEL>
+					</NOBR>
+					<BR>
+					<INPUT CLASS="COMMENT" TYPE="text" ID="HANDLER_DESCRIPTION" TITLE="The handler description." READONLY DISABLED>
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 			 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="100%" COLSPAN="7">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+		 	</TABLE>
+			
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD HEIGHT="48">
+	   	  <!--OPEN OF BUTTON HTML//-->
+		  
+		  	<TABLE HEIGHT="48" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="10" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			  </TR>
+ 
+ 			  <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="10">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" ACCESSKEY="A" onClick="OnFinishAdd(document);"><U>A</U>dd and Edit</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="NavigateBtn" ACCESSKEY="E" onClick="OnFinish(document);"><U>E</U>dit Code</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">Cancel</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.codewiz.eventhandler.overview');">Help</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="10">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+			
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+	
+	   <!--CLOSE OF CONTENT AND BUTTON TABLE//-->
+	   </TD>
+	  </TR>
+	 </TABLE>
+	
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW TWO//-->
+	</TD>
+	</TR>
+	</TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var oSelctedClassDescription;
+
+function InitDocument(document)
+{		
+	setDirection();
+	
+	if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+	{
+		var L_WizardDialogTitle_Text = "Event Handler Wizard";
+		window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+		window.external.SetDefaults(document);
+	}
+
+	window.external.Load(document);
+	COMMAND_NAME.value = window.external.FindSymbol("ITEM_NAME");
+	COMMAND_NAME.disabled = true;
+
+	//find the classes that belong to the project and fill the class list
+	var oCM = window.external.ProjectObject.CodeModel;
+	
+	var strDialog = window.external.FindSymbol("DIALOG_ID")
+	var oClasses = oCM.Classes;
+	var oDlgClasses = null;
+	var strDialogClassName = "";
+	var iSelectedIndex = 0;
+	
+	if((strDialog != null) && (typeof(strDialog) != "undefined") && (strDialog!=""))
+	{
+		oDlgClasses = oCM.DialogClasses(strDialog);
+		if(oDlgClasses != null)
+		{
+			strDialogClassName = oDlgClasses.Item(1).Name;
+		}
+	}	
+	
+	if(oClasses != null)
+	{
+		for (var iClass=1; iClass <= oClasses.Count; iClass++)
+		{
+			var oOption = document.createElement("OPTION");
+			var opName = oClasses.Item(iClass).Name;
+			oOption.value = opName;
+			oOption.text = opName;
+			if(opName == strDialogClassName) 
+				iSelectedIndex = iClass - 1;	//class collection is 1 based, option index 0 based
+			CLASSES.add(oOption);
+		}
+	}
+	
+	if(CLASSES.length)
+		CLASSES.selectedIndex = iSelectedIndex;
+
+	OnSelectClass();
+}
+
+function OnSelectClass()
+{
+	if(CLASSES.selectedIndex>=0)
+	{
+		try
+		{
+			var oCM = window.external.ProjectObject.CodeModel;
+			var oSelectedClass = oCM.Classes.Find(CLASSES.options[CLASSES.selectedIndex].value);
+			var strControlType = window.external.FindSymbol("CONTROL_TYPE");
+			oSelctedClassDescription = window.external.GetClassCommandHandlerDesc(oSelectedClass, COMMAND_NAME.value, strControlType);
+
+			// cleanup the previous options
+			//
+			while(MESSAGE_TYPE.options.length)
+				MESSAGE_TYPE.remove(0);
+
+			for(var nMsg = 0; nMsg < window.external.GetCommandCount(oSelctedClassDescription); nMsg++)
+			{
+				var oOption = document.createElement("OPTION");
+				oOption.text = window.external.GetCommandName(oSelctedClassDescription, nMsg);
+				MESSAGE_TYPE.add(oOption);		
+			}
+		}
+		catch(e)
+		{
+			L_SelClassErr_Text = "Error in OnSelectMessageType";
+			if (e.description.length != 0)
+			{
+				L_SelClassErr_Text += " : ";
+				L_SelClassErr_Text += e.description;
+			}
+			window.external.ReportError(L_SelClassErr_Text);
+			return;
+		}
+		MESSAGE_TYPE.selectedIndex = 0; //0 goes to the default handler for the given type of control/menu command
+	}
+	OnSelectMessageType()
+}
+
+function OnSelectMessageType()
+{
+	if(MESSAGE_TYPE.selectedIndex<0 || MESSAGE_TYPE.selectedIndex>=window.external.GetCommandCount(oSelctedClassDescription))
+	{
+		HANDLER_NAME.value = "";
+		HANDLER_DESCRIPTION.value = "";
+		FinishBtn.disabled = true;
+		NavigateBtn.disabled = true;
+		return;
+	}
+	try
+	{
+		HANDLER_NAME.value = window.external.GetCommandHandlerString(oSelctedClassDescription, MESSAGE_TYPE.selectedIndex);
+		HANDLER_DESCRIPTION.value = window.external.GetCommandDocumentation(oSelctedClassDescription, MESSAGE_TYPE.selectedIndex);
+		if(window.external.CommandHandlerExists(oSelctedClassDescription, MESSAGE_TYPE.selectedIndex))
+		{
+			FinishBtn.disabled = true;
+			NavigateBtn.disabled = false;
+		}
+		else
+		{
+			FinishBtn.disabled = false;
+			NavigateBtn.disabled = true;
+		}
+	}
+	catch(e)
+	{
+		L_MsgTypeErr_Text = "Error in OnSelectMessageType";
+		if (e.description.length != 0)
+		{
+			L_MsgTypeErr_Text += " : ";
+			L_MsgTypeErr_Text += e.description;
+		}
+		window.external.ReportError(L_MsgTypeErr_Text);
+		return;
+	}
+}
+
+function OnFinishAdd(document)
+{
+	window.external.AddSymbol("CLASSDESC_DISPATCH", oSelctedClassDescription);
+	window.external.AddSymbol("CLASSDESC_MEMID", MESSAGE_TYPE.selectedIndex);
+	window.external.AddSymbol("CLASSDESC_HANDLER_NAME", HANDLER_NAME.value);
+	OnWizFinish(document);
+}
+
+function OnFinish(document)
+{
+	window.external.AddSymbol("CLASSDESC_DISPATCH", oSelctedClassDescription);
+	window.external.AddSymbol("CLASSDESC_MEMID", MESSAGE_TYPE.selectedIndex);
+	window.external.AddSymbol("CLASSDESC_HANDLER_NAME", "");
+	OnWizFinish(document);
+}
+
+</SCRIPT>
+
+<SCRIPT FOR="CLASSES" EVENT="Change">
+	if (CLASSES.ListIndex > 0)
+	{
+	}
+</SCRIPT>
+
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	var strPath = "../../../";
+	strPath += window.external.GetHostLocale();
+	var strScriptPath = strPath + "/Script.js";
+	var strCommonPath = strPath + "/Common.js";
+	document.scripts("INCLUDE_SCRIPT").src = strScriptPath;
+	document.scripts("INCLUDE_COMMON").src = strCommonPath;
+</SCRIPT>

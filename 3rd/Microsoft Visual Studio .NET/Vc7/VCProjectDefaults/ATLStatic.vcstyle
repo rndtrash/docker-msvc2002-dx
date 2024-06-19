@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<VisualStudioStyleSheet 
+	ProjectType="Visual C++" 
+	Version="07.00" 
+	PlatformName="Win32" 
+	Name="Static Link to ATL">
+	<Tool 
+		Name="VCCLCompilerTool" 
+		PreprocessorDefinitions="_ATL_STATIC_REGISTRY"/>
+</VisualStudioStyleSheet>

@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Web Project Requirements</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=Windows-1252">
+<STYLE>BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 10pt; BACKGROUND: #ffffff; PADDING-BOTTOM: 12pt; MARGIN: 0px; COLOR: #000000; PADDING-TOP: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.banner {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 10pt; PADDING-BOTTOM: 6pt; WIDTH: 100%; PADDING-TOP: 6pt; BACKGROUND-COLOR: #ffcc99; TEXT-ALIGN: left
+}
+.tblpara {
+	MARGIN-TOP: 5px; MARGIN-LEFT: 5px
+}
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; MARGIN-BOTTOM: 6pt; MARGIN-LEFT: 5px
+}
+H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; MARGIN-BOTTOM: 6pt; MARGIN-LEFT: 5px
+}
+TABLE {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 100%; MARGIN-BOTTOM: 12pt; MARGIN-LEFT: 30px; BORDER-LEFT: #cccccc 1px solid; MARGIN-RIGHT: 30px; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #ffffff
+}
+TH {
+	PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 10pt; BACKGROUND: #cccccc; PADDING-BOTTOM: 6pt; VERTICAL-ALIGN: top; PADDING-TOP: 6pt; TEXT-ALIGN: left
+}
+TD {
+	BACKGROUND: #ffffff; VERTICAL-ALIGN: top
+}
+P {
+	MARGIN-LEFT: 30px
+}
+BLOCKQUOTE.dtBlock {
+	MARGIN: 0.5em 1.5em 0.5em 2em
+}
+A:link {
+	COLOR: #0000ff
+}
+A:visited {
+	COLOR: #666699
+}
+A:hover {
+	COLOR: #3366ff
+}
+OL {
+	MARGIN: 0.5em 0em 0em 2em
+}
+UL {
+	MARGIN: 0.5em 0em 0em 2em
+}
+LI {
+	MARGIN-BOTTOM: 0.5em
+}
+UL P {
+	MARGIN-LEFT: 0em
+}
+OL P {
+	MARGIN-LEFT: 0em
+}
+DL P {
+	MARGIN-LEFT: 0em
+}
+UL P.label {
+	MARGIN-TOP: 0.5em
+}
+OL P.label {
+	MARGIN-TOP: 0.5em
+}
+DL {
+	MARGIN-TOP: 0em; PADDING-LEFT: 1px
+}
+DD {
+	MARGIN-BOTTOM: 0em; MARGIN-LEFT: 1.5em
+}
+DT {
+	MARGIN-TOP: 0.5em
+}
+PRE {
+	MARGIN-TOP: 0.5em; MARGIN-BOTTOM: 0.5em
+}
+PRE {
+	FONT: 100% Courier New, Courier, mono; COLOR: #000066
+}
+CODE {
+	FONT: 100% Courier New, Courier, mono; COLOR: #000066
+}
+.code {
+	FONT: 100% Courier New, Courier, mono; COLOR: #000066
+}
+PRE B {
+	LETTER-SPACING: 0.1em
+}
+CODE B {
+	LETTER-SPACING: 0.1em
+}
+PRE.syntax {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 8px; BORDER-TOP: #999999 1px solid; MARGIN-TOP: 1em; PADDING-LEFT: 8px; BACKGROUND: #cccccc; MARGIN-BOTTOM: 1em; PADDING-BOTTOM: 4px; BORDER-LEFT: #999999 1px solid; CURSOR: text; COLOR: #000000; PADDING-TOP: 4px; BORDER-BOTTOM: #999999 1px solid
+}
+OL DIV.tablediv {
+	MARGIN-TOP: 0em
+}
+UL DIV.tablediv {
+	MARGIN-TOP: 0em
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2462.0" name=GENERATOR></HEAD>
+<BODY>
+<DIV class=banner>Microsoft Visual Studio .NET Windows Component Update</DIV>
+<H1>Web Project Requirements</H1>
+
+<P>If you want to create Web projects on this machine, you must first install additional components. To create Web projects, both Internet Information Services (IIS) and FrontPage Server Extensions (FPSE) must be installed and configured. You can, however, create Web projects on remote machines that have these components installed and configured.</P>
+
+<P>Preparing a machine to be a Web server includes the 
+steps below, to be completed in the following order. Some of these steps may be optional depending on your machine configuration:
+
+<UL>
+	<LI style="MARGIN-LEFT: 30px"><A href="#download">Download Security Updates</A>
+	<LI style="MARGIN-LEFT: 30px"><A href="#install">Install IIS and FPSE</A>
+	<LI style="MARGIN-LEFT: 30px"><A href="#configfpse">Configure FPSE</A>
+	<LI style="MARGIN-LEFT: 30px"><A href="#secure">Install Security Updates</A>	
+	<LI style="MARGIN-LEFT: 30px"><A href="#return">Return to setup</A>
+	<LI style="MARGIN-LEFT: 30px"><A href="#configiis">Configure IIS on Windows .NET Servers</A></LI>
+</UL>
+
+<P>If you are running Windows .NET Server or later, see <A TARGET="_TOP" HREF="http://support.microsoft.com/support/kb/articles/Q312/0/73.asp">http://support.microsoft.com/support/kb/articles/Q312/0/73.asp</A> for late-breaking information about installing and configuring these components.</P>
+
+<P></P>
+
+<H2><A name="download">1. Download Security Updates</A></H2>
+<P>Before enabling these components, you must download the latest security  updates.
+Go to <A TARGET="_TOP" HREF="http://msdn.microsoft.com/vstudio/security/">http://msdn.microsoft.com/vstudio/security/</A>
+ to download the latest security updates for these
+components. Unless you installed your operating system via a network, you should disconnect your machine 
+from the network until you have completed step 4, <A href="#secure">Install Security Updates</A> listed below. If you do not disconnect, your machine could be susceptible to viruses between installing the components and applying the latest security updates.</P> 
+
+
+<H2><A name="install">2. Install IIS and FPSE</A></H2>
+
+
+<BR>
+
+<TABLE>
+	<TBODY>
+		<TR>
+			<TH>To install Internet Information Services and FrontPage Server Extensions</TH>
+		</TR>
+		<TR>
+			<TD>
+				<OL>
+					<LI>For Windows 2000, on the <B>Start</B> menu, choose <B>Settings</B>, and then choose <B>Control Panel</B>. For Windows XP and later, on the <B>Start</B> menu, choose <B>Control Panel</B>.
+					<LI>Choose <STRONG>Add/Remove Programs</STRONG>.
+					<LI>In the <B>Add/Remove Programs</B> dialog box, choose <B>Add/Remove Windows Components</B>.
+					<LI>In the Windows Component Wizard, select <B>Internet Information Services (IIS)</B>.
+					<LI>With <B>Internet Information Services (IIS)</B> selected, choose <STRONG>Details</STRONG>. 
+					<LI>If <B>FrontPage <i>&lt;version number&gt;</i> Server Extensions</B> are not already selected, select the check box. 
+					<LI>Click <STRONG>OK</STRONG>. 
+					<LI>Choose <B>Next</B> to begin installing.</LI>   
+				</OL>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+<P><b>Note:</b>&nbsp; After completing 
+Visual Studio setup, users who installed Visual Studio on a Windows .NET server machine must run the Security Lockdown Wizard. For more information, see the section <A href="#configiis">Configuring IIS for Windows .NET Server machines</A> below.</P>
+
+
+<H2><A name="configfpse">3. Configure FPSE</A></H2>
+<P>The following steps are required if you are installing 
+on a Windows 2000 or XP operating system with Windows FAT16 or FAT32 file 
+systems. By default, FrontPage Server Extensions are configured when installed 
+on Windows 2000 or XP with a NTFS file system. On Windows .NET Server and later, 
+FPSE needs to be enabled in the IIS Security Lockdown Wizard, regardless of your 
+file system type. <STRONG></STRONG>                                                                  </P>
+<P><STRONG>Caution:</STRONG> &nbsp; If you are using FAT16 or FAT32 file 
+system, it is strongly recommended that you convert to NTFS before following the 
+steps below. Running FrontPage Server Extensions on a&nbsp;FAT file system allows any 
+anonymous user to author on your web server.</P>
+  
+<TABLE>
+	<TBODY>
+		<TR>
+			<TH>To configure FrontPage Server Extensions on Windows 2000</TH>
+		</TR>
+		<TR>
+			<TD>
+				<OL>
+					<LI>On the <B>Start</B> menu, choose <B>Settings</B>, and then choose <B>Control Panel</B>.
+					<LI>Select <B>Administrative Tools</B>, and then select <B>Computer Management</B>. 
+					<LI>In the <B>Computer Management</B> dialog box, expand the <B>Services and Applications</B> node, and then expand the <B>Internet Information Services</B> node.
+					<LI>Right-click <B>Default Web Site</B>, choose <B>All Tasks</B>, and then choose <B>Configure Server Extensions</B>. 
+						<BLOCKQUOTE><B>Note:</B> If the Configure Server Extensions menu command is missing, FrontPage Server Extensions are already installed and configured.</BLOCKQUOTE>
+					<LI>Choose <B>Next</B> on the first page of the Server Extensions Configuration Wizard.
+					<LI>Choose <B>Yes</B> in the <B>Warning</B> dialog box. 
+					<LI>Choose <B>No</B> for configuring the mail server settings, and then choose <B>Next</B>. 
+					<LI>Choose <B>Finish</B>.</LI>
+				</OL>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+<TABLE>
+	<TBODY>
+		<TR>
+			<TH>To configure FrontPage Server Extensions on Windows XP</TH>
+		</TR>
+		<TR>
+			<TD>
+				<OL>
+					<LI>On the <B>Start</B> menu, choose <B>Control Panel</B>, and then select <b>Performance and Maintenance</b>.
+					<LI>Select <B>Administrative Tools</B>, and then select <B>Computer Management</B>.
+					<LI>In the <B>Computer Management</B> dialog box, expand the <B>Services and Applications</B> node, and then expand the <B>Internet Information Services</B> node.
+					<LI>Expand the <b>Web sites</b> node.
+					<LI>Right-click <B>Default Web Site</B>, choose <B>All Tasks</B>, and then choose <B>Configure Server Extensions</B>.
+						<BLOCKQUOTE><B>Note:</B>  If the Configure Server Extensions menu command is missing, FrontPage Server Extensions are already installed and configured.</BLOCKQUOTE>
+					<LI>Choose <B>Next</B> on the first page of the Server Extensions Configuration Wizard. 
+					<LI>Choose <B>Yes</B> in the <B>Warning</B> dialog box. 
+					<LI>Choose <B>No</B> for configuring the mail server settings, and then choose <B>Next</B>. 
+					<LI>Choose <B>Finish</B>.</LI>
+				</OL>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+<TABLE>
+	<TBODY>
+		<TR>
+			<TH>To enable and configure FrontPage Server Extensions on Windows .NET Server and later</TH>
+		</TR>
+		<TR>
+			<TD>
+				<OL>
+					<LI>On the <B>Start</B> menu, choose <B>Control Panel</B>, and then select the <b>Performance and Maintenance</b> category.
+					<LI>Select <B>Administrative Tools</B>, and then select <B>Computer Management</B>.
+					<LI>In the <B>Computer Management</B> dialog box, expand the <B>Services and Applications</B> node, and then expand the <B>Internet Information Services</B> node.
+					<LI>Right-click your machine name in the left pane and choose <B>Security</B>.
+					<LI>Click <B>Next</B> on the first screen of the IIS Security Lockdown Wizard.
+					<LI>Verify that <B>HTTP:</B> is set to <B>Automatic</B> and click <B>Next</B>.
+					<LI>In the <B>Request Handlers</B> list, check each instance of <B>Enable FrontPage Server Extensions / SharePoint</B>.
+					<LI>Click <B>Next</B>.
+					<LI>Click <B>Finish</B> to complete the wizard.
+					<LI>In the <B>Computer Management</B> dialog box, expand the <b>Web sites</b> node.
+					<LI>Right-click <B>Default Web Site</B>, choose <B>All Tasks</B>, and then choose <B>Configure Server Extensions</B>.
+						<BLOCKQUOTE><B>Note:</B>  If the Configure Server Extensions menu command is missing, FrontPage Server Extensions are already installed and configured.</BLOCKQUOTE>
+					<LI>Click <B>Submit</B> on the <B>Extend virtual server with FrontPage Server Extensions 2002</B> page.</LI> 
+				</OL>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+
+<H2><A name="secure">4. Install Security Updates</A></H2>
+
+<P>Run the security updates you downloaded in step 1, <A href="#download">Download Security Updates</A>.  After applying the updates, you can safely reconnect to the network.</P>
+
+
+
+<H2><A name="return">5. Return to setup</A></H2>
+
+<P> You can return to setup by running Setup on CD1 or DVD of the Visual Studio product you are installing.</P>
+
+<H2><A name="configiis">6. Configure IIS on Windows .NET Servers</A></H2>
+
+<P>After installing Visual Studio .NET on Windows .NET Server, Advanced Server, or Datacenter Server, ASP.NET is not enabled by default. To develop Web projects successfully, you must run the Security Lockdown Wizard after completing Visual Studio .NET Setup.  For your convenience, you can print these instructions or save this file to your local machine for reference after completing setup.</P>
+<P><B>Caution:</B> If you run this wizard before Visual Studio .NET setup is complete, the correct version of ASP.NET might not be enabled.  During Visual Studio .NET Setup, a different version of ASP.NET is installed.  This wizard should be run after setup to ensure the latest version is enabled.</P>
+
+<TABLE>
+	<TBODY>
+		<TR>
+			<TH>To configure IIS after running setup on Windows .NET Servers</TH>
+		</TR>
+		<TR>
+			<TD>
+				<OL>
+					<LI>On the <B>Start</B> menu, choose <B>All Programs</B>.
+					<LI>Choose <B>Administrative Tools</B> and then choose <B>Internet Information Services</B>.
+					<LI>Right-click your machine name in left pane and choose <B>Security</B>.
+					<LI>Click <B>Next</B> on the first screen of the IIS Security Lockdown Wizard.
+					<LI>Verify that <B>HTTP:</B> is set to <B>Automatic</B> and click <B>Next</B>.
+					<LI>In the <B>Request Handlers</B> list, check <B>ASP.NET</B> and each instance of <SPAN class="code"><I>n:</I>\WINDOWS\Microsoft.NET\Framework\&lt;<I>version number</I>&gt;\aspnet_isapi.dll</SPAN>.
+					<LI>Click <B>Next</B>.
+					<LI>Click <B>Finish</B> to complete the wizard.</LI>    
+				</OL>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+</BODY></HTML>
+

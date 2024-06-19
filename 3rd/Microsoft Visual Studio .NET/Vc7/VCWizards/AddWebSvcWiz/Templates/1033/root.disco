@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<discovery xmlns="http://schemas.xmlsoap.org/disco/">
+	<contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://[!output REMOTE_MACHINE]/[!output PROJECT_NAME]/[!output SAFE_PROJECT_NAME].dll?Handler=Gen[!output SAFE_PROJECT_NAME]WSDL"/>
+</discovery>

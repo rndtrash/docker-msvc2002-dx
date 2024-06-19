@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabDefinition>
+	<Tab Name="Get Started" ID="vs_get_started" Filterable="false">
+		<TabData>
+			<Value Name="VisualStudioF1Keyword">vs.homepage.get.started</Value>
+		</TabData>
+		<Application Title="Get Started" ID="vs_get_started_app">
+			<Action ID="OpenProj" Title="Open Project">
+				<InvokeMethod ToolID="vs_File_OpenProject" Name="VsOpenProject"/>
+			</Action>
+			<Action ID="NewProj" Title="New Project">
+				<InvokeMethod ToolID="vs_File_NewProject" Name="VsNewProject"/>
+			</Action>
+			<Action ID="GetSamplesProfile" Title="Get Samples Profile">
+				<InvokeMethod ToolID="vs_GetSamplesProfile" Name="VSGetSamplesProfile"/>
+			</Action>
+			<PaneSet ID="GetStartedPaneSet">
+				<Pane ID="MainPane" Title="Projects">
+					<ProjectMRUList ID="mruList"/>
+					<Button ID="OpenProjBtn" Text="Open Project" OnClick="OpenProj"/>
+					<Button ID="NewProjBtn" Text="New Project" OnClick="NewProj"/>
+				</Pane>
+				<Pane ID="SamplesPane" Title="Find Samples" OnClick="GetSamplesProfile">
+					<ShowSamples>
+						<SampleType>Controls</SampleType>
+						<SampleType>Forms</SampleType>
+						<SampleType>Web</SampleType>
+					</ShowSamples>
+				</Pane>
+			</PaneSet>
+		</Application>
+		<Feeds>
+			<Feed>
+				<Source LCID="1033" URL="http://msdn.microsoft.com/vsdata/vssamples.asp" Normative="false">
+					<Arg Name="tab">vs_get_started_samples</Arg>
+				</Source>
+			</Feed>
+		</Feeds>
+		</Tab>
+</TabDefinition>

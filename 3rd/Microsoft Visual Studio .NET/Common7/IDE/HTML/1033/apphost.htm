@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>Application Host</title>
+    <LINK REL="StyleSheet" HREF="vsHome.css" type="text/css"/>
+</head>
+
+<script>
+var L_AppLoadErr_HTMLText = "Failed to load application.";
+var L_NOAppSelected_HTMLText = "No Application Selected.";
+var L_FindingProvider_HTMLText ="Finding Host Provider";
+var L_ErrorGettingHostLocation_HTMLText = "Error finding hoster's application";
+var L_GettingApplication_HTMLText = "Loading Application";
+var L_Done_HTMLText = "Done";
+var sAppID = String(document.location.href).split("?");
+
+if(sAppID.length>1)sAppID = sAppID[1].split("&");
+
+var oArrArgs = new Array();
+
+for(var i = 0; i<sAppID.length;i++){
+	oID = sAppID[i].split("=");
+	oArrArgs[oID[0].toLowerCase()] = oID[1];
+}
+
+sAppID = oArrArgs["guid"];
+
+if(sAppID){
+	var xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	var xml = new ActiveXObject("MSXML2.DOMDocument.3.0");
+		
+	xml.async = false;
+
+	window.status = L_FindingProvider_HTMLText; 
+
+	// search yellow pages for web hosting app provider
+	xmlhttp.open("GET", "http://msdn.microsoft.com/vsdata/webhosting/hostingYP.xml", false);
+	xmlhttp.send();
+	
+	try{
+		xml.loadXML(xmlhttp.responseXML.xml);
+		if(!xml.parseError.number || xml.parseError.number==0){
+			var sURL = xml.selectSingleNode("apps/app[guid/text() ='"+sAppID+"']/url").text;
+		}
+	}catch(e){
+		alert(L_ErrorGettingHostLocation_HTMLText);
+	}
+	
+	// extracted URL from response to install web hosting app
+	
+	var oXML = new ActiveXObject("MSXML2.DOMDocument.3.0");
+	var oXSL = new ActiveXObject("MSXML2.DOMDocument.3.0");
+	oXML.async = false;
+	oXSL.async = false;
+
+	var sXML = "";
+	var bSuccess = false;
+	
+	oXSL.load("vsapp.xsl");
+
+	window.status = L_GettingApplication_HTMLText; 
+	
+	try{
+		sXML = window.external.Globals.VariableValue(sAppID);
+	}catch(m){
+		//noop;
+	}
+	
+	try{	
+		if(sXML==""){
+			// get web hosting install app from URL
+			xmlhttp.open("GET", sURL+"/install.xml", false);	
+			xmlhttp.send(); 
+			sXML = xmlhttp.responseXML.xml;
+		}
+	}catch(e){}
+	
+	oXML.loadXML(sXML);
+	
+	if(oXML.parseError.reason=="" && oXSL.parseError.reason==""){
+		document.write( oXML.transformNode(oXSL) );
+		bSuccess = true;
+	}else{
+		document.write(L_AppLoadErr_HTMLText);
+	}
+
+	try{
+		window.external.Globals.VariableValue(sAppID) = sXML;
+		window.external.Globals.VariablePersists(sAppID) = false; // bSuccess;
+	}catch(e){}
+
+// received web hosting install app
+
+}else{
+	alert(L_NOAppSelected_HTMLText);
+}
+
+window.status = L_Done_HTMLText;
+</script>
+
+</html>

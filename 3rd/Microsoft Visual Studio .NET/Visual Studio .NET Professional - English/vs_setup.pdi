@@ -1,0 +1,161 @@
+[Version]
+Signature = "$Windows NT$"
+Provider=Visual Studio .NET Windows Component Update - English
+Version=700.100.01
+NullString=Null String
+
+[Complete Component List]
+GFN_MID WinNT4 SP6
+GFN_MID Win2k SP2
+GFN_MID Front Page Server
+GFN_MID Windows Installer 2.0 NT
+GFN_MID WMI
+GFN_MID Front Page Client
+GFN_MID Setup Files
+GFN_MID Internet Explorer 6.0
+GFN_MID MDAC 2.7
+GFN_MID Jet4
+GFN_MID Framework SDK
+
+[CompleteDependencyList]
+gencomp01
+gencomp02
+gencomp07
+gencomp08
+gencomp09
+gencomp10
+gencomp11
+gencomp13
+gencomp16
+gencomp17
+gencomp18
+
+[Visual Studio .NET Academic - English]
+gencomp01
+gencomp02
+gencomp07
+gencomp08
+gencomp09
+gencomp10
+gencomp11
+gencomp13
+gencomp16
+gencomp17
+gencomp18
+
+[Visual Studio .NET Enterprise Developer - English]
+gencomp01
+gencomp02
+gencomp07
+gencomp08
+gencomp09
+gencomp10
+gencomp11
+gencomp13
+gencomp16
+gencomp17
+gencomp18
+
+[Visual Studio .NET PDC 2001]
+gencomp01
+gencomp02
+gencomp07
+gencomp08
+gencomp09
+gencomp10
+gencomp11
+gencomp13
+gencomp16
+gencomp17
+gencomp18
+
+[Visual Studio .NET Trial - English]
+gencomp01
+gencomp02
+gencomp07
+gencomp08
+gencomp09
+gencomp10
+gencomp11
+gencomp13
+gencomp16
+gencomp17
+gencomp18
+
+[Visual Studio .NET Enterprise Architect - English]
+gencomp01
+gencomp02
+gencomp07
+gencomp08
+gencomp09
+gencomp10
+gencomp11
+gencomp13
+gencomp16
+gencomp17
+gencomp18
+
+[Visual Studio .NET Professional - English]
+gencomp01
+gencomp02
+gencomp07
+gencomp08
+gencomp09
+gencomp10
+gencomp11
+gencomp13
+gencomp16
+gencomp17
+gencomp18
+
+[Visual C++ .NET Standard - English]
+gencomp01
+gencomp02
+gencomp07
+gencomp08
+gencomp09
+gencomp10
+gencomp11
+gencomp13
+gencomp16
+gencomp17
+gencomp18
+
+[Visual C# .NET Standard - English]
+gencomp01
+gencomp02
+gencomp07
+gencomp08
+gencomp09
+gencomp10
+gencomp11
+gencomp13
+gencomp16
+gencomp17
+gencomp18
+
+[Visual Basic .NET Standard - English]
+gencomp01
+gencomp02
+gencomp07
+gencomp08
+gencomp09
+gencomp10
+gencomp11
+gencomp13
+gencomp16
+gencomp17
+gencomp18
+
+[Visual Studio .NET Windows Component Update - English]
+gencomp01
+gencomp02
+gencomp07
+gencomp08
+gencomp09
+gencomp10
+gencomp11
+gencomp13
+gencomp16
+gencomp17
+gencomp18

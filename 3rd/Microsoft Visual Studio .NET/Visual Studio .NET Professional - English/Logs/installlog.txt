@@ -1,0 +1,599 @@
+[07/07/23,05:20:40] Setup.exe: 
+[07/07/23,05:20:40] Setup.exe: ========== Logging started ==========
+[07/07/23,05:20:40] Setup.exe: =====================================
+[07/07/23,05:20:40] Setup.exe: GetGlobalCustomProperty({481CEF9F-033A-11D3-ACE2-00C04F8EEBA1})
+[07/07/23,05:20:40] Setup.exe: GetGlobalCustomProperty(B51015E7-26A5-4c8f-B871-26ABA9BEFB65)
+[07/07/23,05:20:40] Setup.exe: entering ISetupManager::RunIntro()
+[07/07/23,05:20:40] Setup.exe: LoadSetupDatabase()
+[07/07/23,05:20:40] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:40] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: ISetupManager::RunIntro() : LoadSuiteRequirements
+[07/07/23,05:20:40] Setup.exe: ISetupManager::RunIntro() : CheckSuiteBlocks
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: ISetupManager::RunIntro() : LoadHelpManager
+[07/07/23,05:20:40] Setup.exe: inside ISetupManager::LoadHelpManager()
+[07/07/23,05:20:40] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:40] Setup.exe: ISetupManager::RunIntro() : LoadCommandLineMgr
+[07/07/23,05:20:40] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:40] Setup.exe: ISetupManager::LoadCommandLineMgr() completed
+[07/07/23,05:20:40] Setup.exe: ISetupManager::RunIntro() : LoadSetupLog
+[07/07/23,05:20:40] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:40] Setup.exe: ISetupManager::LoadSetupLog() completed
+[07/07/23,05:20:40] Setup.exe: ISetupManager::RunIntro() : LoadManagers
+[07/07/23,05:20:40] Setup.exe: inside ISetupManager::LoadUIManager()
+[07/07/23,05:20:40] vs70uimgr: Entering InitializeModule() method.
+[07/07/23,05:20:40] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:20:40] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:40] Setup.exe: CSetupManager::InstallSetupFiles() starting
+[07/07/23,05:20:40] Setup.exe: GetGlobalCustomProperty({39E467CB-8962-4AD8-99F9-864AFF183FD4})
+[07/07/23,05:20:40] vs70uimgr: Entering ShowSmallProgress() method.
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:40] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:41] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:42] Setup.exe: UnloadSuiteComponents()
+[07/07/23,05:20:42] Setup.exe: 
+[07/07/23,05:20:42] Setup.exe: ========== Logging started ==========
+[07/07/23,05:20:42] Setup.exe: =====================================
+[07/07/23,05:20:42] Setup.exe: GetGlobalCustomProperty({481CEF9F-033A-11D3-ACE2-00C04F8EEBA1})
+[07/07/23,05:20:42] Setup.exe: GetGlobalCustomProperty(B51015E7-26A5-4c8f-B871-26ABA9BEFB65)
+[07/07/23,05:20:42] Setup.exe: entering ISetupManager::RunIntro()
+[07/07/23,05:20:42] Setup.exe: LoadSetupDatabase()
+[07/07/23,05:20:42] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:42] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:42] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:42] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:20:42] Setup.exe: ISetupManager::RunIntro() : LoadSuiteRequirements
+[07/07/23,05:20:42] Setup.exe: ISetupManager::RunIntro() : CheckSuiteBlocks
+[07/07/23,05:20:42] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:42] Setup.exe: ISetupManager::RunIntro() : LoadHelpManager
+[07/07/23,05:20:42] Setup.exe: inside ISetupManager::LoadHelpManager()
+[07/07/23,05:20:42] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:42] Setup.exe: ISetupManager::RunIntro() : LoadCommandLineMgr
+[07/07/23,05:20:42] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:42] Setup.exe: ISetupManager::LoadCommandLineMgr() completed
+[07/07/23,05:20:42] Setup.exe: ISetupManager::RunIntro() : LoadSetupLog
+[07/07/23,05:20:42] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:42] Setup.exe: ISetupManager::LoadSetupLog() completed
+[07/07/23,05:20:42] Setup.exe: ISetupManager::RunIntro() : LoadManagers
+[07/07/23,05:20:42] Setup.exe: inside ISetupManager::LoadDependencyMgr()
+[07/07/23,05:20:42] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:42] Setup.exe: inside ISetupManager::LoadCDInfoMgr()
+[07/07/23,05:20:42] Setup.exe: GetCustomProperties()
+[07/07/23,05:20:42] Setup.exe: get_CustomProperties()
+[07/07/23,05:20:42] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:42] Setup.exe: inside ISetupManager::LoadTemplMgr()
+[07/07/23,05:20:42] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:42] Setup.exe: inside ISetupManager::LoadDiskInfoMgr()
+[07/07/23,05:20:42] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:42] Setup.exe: inside ISetupManager::LoadUIManager()
+[07/07/23,05:20:42] vs70uimgr: Entering InitializeModule() method.
+[07/07/23,05:20:42] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:20:42] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:42] Setup.exe: inside ISetupManager::LoadAccountManager()
+[07/07/23,05:20:42] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:42] Setup.exe: inside ISetupManager::LoadValidationManager()
+[07/07/23,05:20:42] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:42] Setup.exe: inside ISetupManager::LoadDependencyManagerUI()
+[07/07/23,05:20:42] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:42] Setup.exe: inside ISetupManager::LoadServerGroupManager()
+[07/07/23,05:20:42] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:42] Setup.exe: ISetupManager::RunIntro() : LoadChangeFolder
+[07/07/23,05:20:42] Setup.exe: inside ISetupManager::LoadChangeFolder()
+[07/07/23,05:20:42] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:42] Setup.exe: ISetupManager::RunIntro() : LoadDatabaseValues
+[07/07/23,05:20:42] Setup.exe: GetGlobalCustomProperty({AA62DF98-3F2C-11D3-887B-00C04F8ECDD6})
+[07/07/23,05:20:42] Setup.exe: GetCustomProperties()
+[07/07/23,05:20:42] Setup.exe: get_CustomProperties()
+[07/07/23,05:20:44] Setup.exe: GetGlobalCustomProperty({CF5ED780-9627-4D59-8530-1BCDE23E7E32})
+[07/07/23,05:20:46] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:20:46] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:20:46] Setup.exe: ISetupManager::RunIntro() : CheckForRemove
+[07/07/23,05:20:46] Setup.exe: inside ISetupManager::LoadActionOverrides()
+[07/07/23,05:20:46] Setup.exe: ISetupManager::RunIntro() : LoadScenarioFactory
+[07/07/23,05:20:46] Setup.exe: inside ISetupManager::LoadScenarioFactory()
+[07/07/23,05:20:46] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:46] Default Scenario Factory: Default scenario not specified or not found in [Scenario Factory Information] section of DefFactory.dat, defaulting to the first specified
+[07/07/23,05:20:46] Setup.exe: ISetupManager::RunIntro() : LoadSetupLocationInformation
+[07/07/23,05:20:46] Setup.exe: ISetupManager::RunIntro() : SelectAllComponents
+[07/07/23,05:20:46] Setup.exe: ISetupManager::RunIntro() : InitializeUIManager
+[07/07/23,05:20:46] Setup.exe: inside ISetupManager::InitializeUIManager()
+[07/07/23,05:20:46] vs70uimgr: Entering Start() method.
+[07/07/23,05:20:46] Setup.exe: GetGlobalCustomProperty({340F7930-0E41-11D3-ACE2-00C04F8EEBA1})
+[07/07/23,05:20:46] Setup.exe: GetGlobalCustomProperty({AA62DF98-3F2C-11D3-887B-00C04F8ECDD6})
+[07/07/23,05:20:46] Setup.exe: GetGlobalCustomProperty({BCC78D7A-89AE-11D2-AF03-00C04F797FB8})
+[07/07/23,05:20:46] vs70uimgr: Entering GetAdminMode.
+[07/07/23,05:20:46] Setup.exe: GetGlobalCustomProperty({27B34574-6B5B-409F-9F93-D1E927B39E9C})
+[07/07/23,05:20:46] vs70uimgr: ISetupManager::GetGlobalCustomProperty() failed to find global prop in CUIMgr::GetGlobalProperty()
+[07/07/23,05:20:46] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:20:46] vs70uimgr: CUIMgr::GetAdminMode m_AdminMode = AM_NOMODE
+[07/07/23,05:20:46] vs70uimgr: Entering LoagPages() method.
+[07/07/23,05:20:46] vs70uimgr: Entering AddPageToList() method. Loading: vs70pgui.dll : {bb81d810-3f9b-11d3-a50c-00c04f5e0ba5}
+[07/07/23,05:20:46] VS70pgui: Entered InitializeModule Method of Start Page
+[07/07/23,05:20:46] vs70uimgr: Returning from CUIMgr::AddPageToList()
+[07/07/23,05:20:46] vs70uimgr: Entering AddPageToList() method. Loading: vs70pgui.dll : {9fe307c0-3646-11d3-a508-00c04f5e0ba5}
+[07/07/23,05:20:46] vs70uimgr: Returning from CUIMgr::AddPageToList()
+[07/07/23,05:20:46] vs70uimgr: Entering AddPageToList() method. Loading: vs70pgui.dll : {bb81d811-3f9b-11d3-a50c-00c04f5e0ba5}
+[07/07/23,05:20:46] vs70uimgr: Returning from CUIMgr::AddPageToList()
+[07/07/23,05:20:46] vs70uimgr: Entering AddPageToList() method. Loading: vs70pgui.dll : {1920cc5d-5be5-45d4-9c1c-3513d334c71c}
+[07/07/23,05:20:46] vs70uimgr: Returning from CUIMgr::AddPageToList()
+[07/07/23,05:20:46] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:20:46] Setup.exe: IsRunningUnattended
+[07/07/23,05:20:46] vs70uimgr: Entering DisplayStartup() method. - not custom implemented
+[07/07/23,05:20:46] Setup.exe: ISetupManager::ResetBaselineActions() : SMP_SUITEBASELINE
+[07/07/23,05:20:46] Setup.exe: ISetupManager::GetBaslineComponents()
+[07/07/23,05:20:46] Setup.exe: ISetupManager::ResetBaselineActions() : SMP_SUITEBASELINE
+[07/07/23,05:20:46] Setup.exe: ISetupManager::GetBaslineComponents()
+[07/07/23,05:20:46] Setup.exe: ISetupManager::ResetBaselineActions() : SMP_SCENARIOBASELINE
+[07/07/23,05:20:46] Setup.exe: GetCustomProperties()
+[07/07/23,05:20:46] Setup.exe: get_CustomProperties()
+[07/07/23,05:20:46] Client Scenario: ISetupScenarioImpl::GetBaslineComponents()
+[07/07/23,05:20:46] vs70uimgr: Entering SelectScenario() method. - not custom implemented
+[07/07/23,05:20:46] vs70uimgr: Entering ThreadUI() method.
+[07/07/23,05:20:46] Setup.exe: GetCustomProperties()
+[07/07/23,05:20:46] Setup.exe: get_CustomProperties()
+[07/07/23,05:20:46] Setup.exe: ISetupManager::RunIntro() : CheckBaselines
+[07/07/23,05:20:46] Setup.exe: ISetupManager::RunIntro() : StartUIManager
+[07/07/23,05:20:46] Setup.exe: StartUIManager()
+[07/07/23,05:20:46] vs70uimgr: Entering RunScenario() method.
+[07/07/23,05:20:46] Setup.exe: GetGlobalCustomProperty({AA62DF98-3F2C-11D3-887B-00C04F8ECDD6})
+[07/07/23,05:20:46] VS70pgui: Creating Start Page
+[07/07/23,05:20:46] VS70pgui: Initializing the Start Page dialog
+[07/07/23,05:20:46] VS70pgui: Entered InitGDIResources method
+[07/07/23,05:20:46] VS70pgui: Entered InitStaticControls method
+[07/07/23,05:20:46] VS70pgui: Entered InitStateBar method
+[07/07/23,05:20:46] VS70pgui: Entered InitNavLinks method
+[07/07/23,05:20:46] VS70pgui: Entered InitStaticToolTips method
+[07/07/23,05:20:46] VS70pgui: Created the Start Page
+[07/07/23,05:20:46] VS70pgui: Entered OnShowWindow method
+[07/07/23,05:20:46] VS70pgui: Entered COptionsPage::OnInitDialog method
+[07/07/23,05:20:46] VS70pgui: Entered COptionsPage::InitStaticControls method
+[07/07/23,05:20:46] VS70pgui: Entered COptionsPage::InitGDIResources method
+[07/07/23,05:20:46] VS70pgui: Entered COptionsPage::InitPropertyList method
+[07/07/23,05:20:46] VS70pgui: Entered COptionsPage::InitStateBar method
+[07/07/23,05:20:46] VS70pgui: Entered COptionsPage::InitNavLinks method
+[07/07/23,05:20:46] VS70pgui: Entered COptionsPage::InitStaticToolTips method
+[07/07/23,05:20:46] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:20:46] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:20:46] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:20:46] VS70pgui: Entered COptionsPage::InitFeatureTips method
+[07/07/23,05:20:46] VS70pgui: Entered COptionsPage::OnShowWindow method
+[07/07/23,05:20:46] Setup.exe: in RegisterSetupService()
+[07/07/23,05:20:46] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:46] Setup.exe: in RegisterSetupService()
+[07/07/23,05:20:46] Setup.exe: in InternalRegisterSetupService()
+[07/07/23,05:20:46] VS70pgui: Entered CPageHeaderDynamic::SetCallingPageBrowser method
+[07/07/23,05:20:46] VS70pgui: Entered CPageHeaderDynamic::OnInitDialog method
+[07/07/23,05:20:46] VS70pgui: Entered OnShowWindow method
+[07/07/23,05:20:46] Setup.exe: GetGlobalCustomProperty(DF8FF64A-1967-4871-9E32-CA2F819BAB81)
+[07/07/23,05:20:51] VS70pgui: Entered OnClickedAccept method
+[07/07/23,05:21:30] VS70pgui: Clicked Next on the Start Page
+[07/07/23,05:21:30] VS70pgui: Entered PidIsValid method
+[07/07/23,05:21:30] Setup.exe: GetGlobalCustomProperty({799FF008-23F3-4279-BBAE-34A39906F7A3})
+[07/07/23,05:21:30] Setup.exe: GetGlobalCustomProperty({E2A5F437-5576-4AD0-AEC0-EC8DD3BC5A4D})
+[07/07/23,05:21:30] Setup.exe: GetGlobalCustomProperty({A5F918AF-5E66-11D2-ACCA-00C04F8EEBA1})
+[07/07/23,05:21:30] Setup.exe: GetGlobalCustomProperty({A5F918AC-5E66-11D2-ACCA-00C04F8EEBA1})
+[07/07/23,05:21:30] vs70uimgr: Entering Next() method.
+[07/07/23,05:21:30] VS70pgui: Entered COptionsPage::OnShowWindow method
+[07/07/23,05:21:30] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:30] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:30] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:30] VS70pgui: Entered OnShowWindow method
+[07/07/23,05:21:31] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:31] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:31] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:31] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:31] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:31] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:32] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:32] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:32] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:32] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:32] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:32] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:32] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:32] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:32] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:32] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:32] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:32] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:33] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:33] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:33] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:33] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:33] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:33] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:33] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:33] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:33] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:33] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:33] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:33] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:34] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:34] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:34] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:34] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:34] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:34] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:36] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:36] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:36] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:36] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:36] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:36] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:37] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:37] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:37] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:37] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:37] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:37] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:40] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:40] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:40] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:40] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:40] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:40] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:40] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:40] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:40] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:40] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:40] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:40] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:41] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:41] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:41] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:41] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:41] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:41] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:41] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:41] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:41] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:41] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:41] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:41] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:42] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:42] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:42] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:42] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:42] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:42] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:43] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:43] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:43] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:43] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:43] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:43] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:43] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:21:43] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:21:43] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:43] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:21:43] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:21:43] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:06] VS70pgui: Entered COptionsPage::EnableContinue method
+[07/07/23,05:22:06] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:22:06] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:22:06] Setup.exe: GetGlobalCustomProperty({739790FE-7740-4BD5-872B-2195FED088FE})
+[07/07/23,05:22:06] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:06] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: ISetupManager::GetFullComponents()
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({0969412C-7281-11D2-AF01-00C04F797FB8})
+[07/07/23,05:22:11] VS70pgui: Entered COptionsPage::Next method
+[07/07/23,05:22:11] vs70uimgr: Entering Next() method.
+[07/07/23,05:22:11] VS70pgui: Entered CPageHeaderDynamic::OnShowWindow method
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] VS70pgui: Entered COptionsPage::OnShowWindow method
+[07/07/23,05:22:11] Setup.exe: ISetupManager::RunIntro() complete
+[07/07/23,05:22:11] Setup.exe: ValidateAndCorrectTheInstallOrder()
+[07/07/23,05:22:11] Setup.exe: Attempted Order
+[07/07/23,05:22:11] Setup.exe: Visual Studio .NET Professional - English [{D0610409-7D65-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Visual Studio .NET Professional [{B8813A92-F099-11D4-A547-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Language Tools [{67926D82-6F2B-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ .NET [{D825DF04-87AB-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Run-Time Libraries [{00E2118C-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Static Multi-Threaded CRT Libraries [{00E21192-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Dynamic CRT Libraries [{00E21193-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ CRT Source Code [{00E21194-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Static Single-Threaded CRT Libraries [{00E21195-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Class & Template Libraries [{00E2118D-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Static Libraries ANSI [{00E21197-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Shared Libraries ANSI [{00E21198-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Static Libraries Unicode [{00E21199-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Shared Libraries Unicode [{00E2119A-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Source Code [{00E2119C-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Tools [{00E2118E-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Error Lookup [{00E211A4-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Win32 Platform SDK Tools [{EC50DD48-3064-11D5-A54A-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: ValidateAndCorrectTheInstallOrder()
+[07/07/23,05:22:11] Setup.exe: Attempted Order
+[07/07/23,05:22:11] Setup.exe: Visual Studio .NET Professional - English [{D0610409-7D65-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Visual Studio .NET Professional [{B8813A92-F099-11D4-A547-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Language Tools [{67926D82-6F2B-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ .NET [{D825DF04-87AB-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Run-Time Libraries [{00E2118C-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Static Multi-Threaded CRT Libraries [{00E21192-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Dynamic CRT Libraries [{00E21193-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ CRT Source Code [{00E21194-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Static Single-Threaded CRT Libraries [{00E21195-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Class & Template Libraries [{00E2118D-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Static Libraries ANSI [{00E21197-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Shared Libraries ANSI [{00E21198-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Static Libraries Unicode [{00E21199-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Shared Libraries Unicode [{00E2119A-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Source Code [{00E2119C-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Tools [{00E2118E-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Error Lookup [{00E211A4-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Win32 Platform SDK Tools [{EC50DD48-3064-11D5-A54A-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: ValidateAndCorrectTheInstallOrder()
+[07/07/23,05:22:11] Setup.exe: Attempted Order
+[07/07/23,05:22:11] Setup.exe: Visual Studio .NET Professional - English [{D0610409-7D65-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Visual Studio .NET Professional [{B8813A92-F099-11D4-A547-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Language Tools [{67926D82-6F2B-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ .NET [{D825DF04-87AB-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Run-Time Libraries [{00E2118C-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Static Multi-Threaded CRT Libraries [{00E21192-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Dynamic CRT Libraries [{00E21193-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ CRT Source Code [{00E21194-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Static Single-Threaded CRT Libraries [{00E21195-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Class & Template Libraries [{00E2118D-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Static Libraries ANSI [{00E21197-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Shared Libraries ANSI [{00E21198-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Static Libraries Unicode [{00E21199-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Shared Libraries Unicode [{00E2119A-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Source Code [{00E2119C-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Tools [{00E2118E-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Error Lookup [{00E211A4-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Win32 Platform SDK Tools [{EC50DD48-3064-11D5-A54A-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: ISetupManager::RunLoadSetup() complete
+[07/07/23,05:22:11] Setup.exe: RunInstall()
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({39E467CB-8962-4AD8-99F9-864AFF183FD4})
+[07/07/23,05:22:11] Setup.exe: ISetupManager::RunInstallLists() starting
+[07/07/23,05:22:11] Setup.exe: CSetupManager::InstallSetupFiles() starting
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({39E467CB-8962-4AD8-99F9-864AFF183FD4})
+[07/07/23,05:22:11] Setup.exe: CreateDirectoryLayout()
+[07/07/23,05:22:11] vs70uimgr: Entering ShowSmallProgress() method.
+[07/07/23,05:22:11] VS70pgui: Failed to increment max steps for small progress. Logging as event not error ... noncritical.
+[07/07/23,05:22:11] Setup.exe: IsRunningUnattended
+[07/07/23,05:22:11] vs70uimgr: Entering DisplayProgressScreen() method.
+[07/07/23,05:22:11] Setup.exe: ISetupManager::RunInstallFromList(IP_PREINSTALL) starting
+[07/07/23,05:22:11] VS70pgui: Failed to increment max steps for small progress. Logging as event not error ... noncritical.
+[07/07/23,05:22:11] Setup.exe: ValidateAndCorrectTheInstallOrder()
+[07/07/23,05:22:11] Setup.exe: Attempted Order
+[07/07/23,05:22:11] Setup.exe: Visual Studio .NET Professional - English [{D0610409-7D65-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Visual Studio .NET Professional [{B8813A92-F099-11D4-A547-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Language Tools [{67926D82-6F2B-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ .NET [{D825DF04-87AB-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Run-Time Libraries [{00E2118C-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Static Multi-Threaded CRT Libraries [{00E21192-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Dynamic CRT Libraries [{00E21193-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ CRT Source Code [{00E21194-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Static Single-Threaded CRT Libraries [{00E21195-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Class & Template Libraries [{00E2118D-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Static Libraries ANSI [{00E21197-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Shared Libraries ANSI [{00E21198-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Static Libraries Unicode [{00E21199-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Shared Libraries Unicode [{00E2119A-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Source Code [{00E2119C-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Tools [{00E2118E-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Error Lookup [{00E211A4-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Win32 Platform SDK Tools [{EC50DD48-3064-11D5-A54A-0090278A1BB8}]
+[07/07/23,05:22:11] VS70pgui: Failed to increment max steps for small progress. Logging as event not error ... noncritical.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({CDD00162-2E69-11D3-A829-00C04FB1799F})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({6B9948CF-0275-4B0A-BD4C-BD51A98D9D1C})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({A5F918AC-5E66-11D2-ACCA-00C04F8EEBA1})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({A5F918AD-5E66-11D2-ACCA-00C04F8EEBA1})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({A5F918AF-5E66-11D2-ACCA-00C04F8EEBA1})
+[07/07/23,05:22:11] Setup.exe: IsRunningUnattended
+[07/07/23,05:22:11] vs70uimgr: Entering GetActiveHWND() method.
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] Setup.exe: ISetupManager::RunInstallFromList(IP_PREINSTALL) completed
+[07/07/23,05:22:11] Setup.exe: ISetupManager::RunInstallFromList(IP_INSTALL) starting
+[07/07/23,05:22:11] VS70pgui: Failed to increment max steps for small progress. Logging as event not error ... noncritical.
+[07/07/23,05:22:11] Setup.exe: ValidateAndCorrectTheInstallOrder()
+[07/07/23,05:22:11] Setup.exe: Attempted Order
+[07/07/23,05:22:11] Setup.exe: Visual Studio .NET Professional - English [{D0610409-7D65-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Visual Studio .NET Professional [{B8813A92-F099-11D4-A547-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Language Tools [{67926D82-6F2B-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ .NET [{D825DF04-87AB-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Run-Time Libraries [{00E2118C-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Static Multi-Threaded CRT Libraries [{00E21192-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Dynamic CRT Libraries [{00E21193-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ CRT Source Code [{00E21194-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Static Single-Threaded CRT Libraries [{00E21195-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Class & Template Libraries [{00E2118D-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Static Libraries ANSI [{00E21197-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Shared Libraries ANSI [{00E21198-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Static Libraries Unicode [{00E21199-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Shared Libraries Unicode [{00E2119A-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: ATL MFC Source Code [{00E2119C-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Tools [{00E2118E-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Visual C++ Error Lookup [{00E211A4-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:22:11] Setup.exe: Win32 Platform SDK Tools [{EC50DD48-3064-11D5-A54A-0090278A1BB8}]
+[07/07/23,05:22:11] VS70pgui: Failed to increment max steps for small progress. Logging as event not error ... noncritical.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:11] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:22:13] Setup.exe: GetGlobalCustomProperty({A4421CB8-2DFF-4FB4-B59E-5E79F9DC09A0})
+[07/07/23,05:22:13] Visual Studio .NET Professional - English: MsiInstallProduct initiated with command line:  SUITEINTEGRATIONKEY="490D3C64-A846-4bcf-A22E-448B5157FA53" VSEXTUI="1" SETUPWINDOW="131630" REINSTALLMODE="omus" INSTALLLEVEL="2" USERNAME="ivan" REBOOT="Suppress" PIDKEY="D64GGGXY6TV6FTRWCPBB2YDYB" ALLUSERS="1" ADDLOCAL="Visual_Studio.NET_Professional,Language_Tools_for_VS_7_Pro,VCpp_for_VS_7_Pro,VCpp_Runtime_Libraries,CRT2_Static_Libraries,CRT3_Shared_Libraries,CRT4_Source_Code,CRT1_Single_Threaded_Libraries,VCpp_Class_and_Template_Libraries,ATL_MFC_Static_Libraries_ANSI,ATL_MFC_Shared_Libraries_ANSI,ATL_MFC_Static_Libraries_Unicode,ATL_MFC_Shared_Libraries_Unicode,ATL_MFC_Source_Code,VCpp_Tools,Error_Lookup,Platform_SDK_Tools"  ARPINSTALLLOCATION="C:\Program Files\Microsoft Visual Studio .NET\" 
+[07/07/23,05:22:13] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:13] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:22:13] Setup.exe: GetGlobalCustomProperty({39E467CB-8962-4AD8-99F9-864AFF183FD4})
+[07/07/23,05:23:07] vs70uimgr: Entering DisplayMessage() method.
+[07/07/23,05:23:07] Setup.exe: IsRunningUnattended
+[07/07/23,05:23:07] vs70uimgr: Entering GetActiveHWND() method.
+[07/07/23,05:23:14] vs70uimgr: DisplayMessage: Please insert the disk: Visual Studio .NET Professional - English Disk 2
+[07/07/23,05:23:15] vs70uimgr: Entering DisplayMessage() method.
+[07/07/23,05:23:15] Setup.exe: IsRunningUnattended
+[07/07/23,05:23:15] vs70uimgr: Entering GetActiveHWND() method.
+[07/07/23,05:23:23] vs70uimgr: DisplayMessage: Please insert the disk: Visual Studio .NET Professional - English Disk 3
+[07/07/23,05:23:24] vs70uimgr: Entering DisplayMessage() method.
+[07/07/23,05:23:24] Setup.exe: IsRunningUnattended
+[07/07/23,05:23:24] vs70uimgr: Entering GetActiveHWND() method.
+[07/07/23,05:23:32] vs70uimgr: DisplayMessage: Please insert the disk: Visual Studio .NET Professional - English Disk 4
+[07/07/23,05:24:13] Visual Studio .NET Professional - English: MsiInstallProduct return code: 0.
+[07/07/23,05:24:13] Setup.exe: GetGlobalCustomProperty({710A502B-4669-405C-A985-BA21545509BA})
+[07/07/23,05:24:13] Setup.exe: GetGlobalCustomProperty({0969412C-7281-11D2-AF01-00C04F797FB8})
+[07/07/23,05:24:13] Setup.exe: GetGlobalCustomProperty({0DC70217-9545-11D2-ACD4-00C04F8EEBA1})
+[07/07/23,05:24:13] Setup.exe: AddGlobalCustomProperty
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] Setup.exe: ISetupManager::RunInstallFromList(IP_INSTALL) completed
+[07/07/23,05:24:13] Setup.exe: ISetupManager::RunSharedInstall starting
+[07/07/23,05:24:13] Setup.exe: ISetupManager::RunSharedInstall completed
+[07/07/23,05:24:13] Setup.exe: ISetupManager::RunInstallFromList(IP_POSTINSTALL) starting
+[07/07/23,05:24:13] VS70pgui: Failed to increment max steps for small progress. Logging as event not error ... noncritical.
+[07/07/23,05:24:13] Setup.exe: ValidateAndCorrectTheInstallOrder()
+[07/07/23,05:24:13] Setup.exe: Attempted Order
+[07/07/23,05:24:13] Setup.exe: Visual Studio .NET Professional - English [{D0610409-7D65-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:24:13] Setup.exe: Visual Studio .NET Professional [{B8813A92-F099-11D4-A547-0090278A1BB8}]
+[07/07/23,05:24:13] Setup.exe: Language Tools [{67926D82-6F2B-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:24:13] Setup.exe: Visual C++ .NET [{D825DF04-87AB-11D5-A54F-0090278A1BB8}]
+[07/07/23,05:24:13] Setup.exe: Visual C++ Run-Time Libraries [{00E2118C-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:24:13] Setup.exe: Visual C++ Static Multi-Threaded CRT Libraries [{00E21192-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:24:13] Setup.exe: Visual C++ Dynamic CRT Libraries [{00E21193-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:24:13] Setup.exe: Visual C++ CRT Source Code [{00E21194-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:24:13] Setup.exe: Visual C++ Static Single-Threaded CRT Libraries [{00E21195-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:24:13] Setup.exe: Visual C++ Class & Template Libraries [{00E2118D-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:24:13] Setup.exe: ATL MFC Static Libraries ANSI [{00E21197-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:24:13] Setup.exe: ATL MFC Shared Libraries ANSI [{00E21198-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:24:13] Setup.exe: ATL MFC Static Libraries Unicode [{00E21199-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:24:13] Setup.exe: ATL MFC Shared Libraries Unicode [{00E2119A-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:24:13] Setup.exe: ATL MFC Source Code [{00E2119C-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:24:13] Setup.exe: Visual C++ Tools [{00E2118E-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:24:13] Setup.exe: Visual C++ Error Lookup [{00E211A4-5361-11D3-A51F-00A0C9231BA1}]
+[07/07/23,05:24:13] Setup.exe: Win32 Platform SDK Tools [{EC50DD48-3064-11D5-A54A-0090278A1BB8}]
+[07/07/23,05:24:13] VS70pgui: Failed to increment max steps for small progress. Logging as event not error ... noncritical.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.
+[07/07/23,05:24:13] Setup.exe: ISetupManager::RunInstallFromList(IP_POSTINSTALL) completed
+[07/07/23,05:24:13] Setup.exe: ISetupManager::RunInstallLists() completing
+[07/07/23,05:24:13] vs70uimgr: Entering RunningComponent() method.

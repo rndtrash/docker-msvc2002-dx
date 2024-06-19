@@ -1,0 +1,10 @@
+[Version]
+Signature="$CHICAGO$"
+Provider="Visual Studio .NET Professional - English"
+
+[Scenario List]
+CltScen.dll
+
+[Scenario Factory Information]
+Null String
+

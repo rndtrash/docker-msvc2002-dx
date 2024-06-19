@@ -1,0 +1,349 @@
+<!- (c) 2001 Microsoft Corporation -->
+<HTML DIR="LTR">
+
+<HEAD>
+	<TITLE>AddWebSvc Wizard</TITLE>
+	<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<STYLE TYPE="text/css">@import url();</STYLE>
+	<SCRIPT>
+		var strURL = "../../../";
+		strURL += window.external.GetHostLocale();
+		strURL += "/NewStyles.css";
+		document.styleSheets(0).imports(0).href = strURL;
+	</SCRIPT>
+
+	<SYMBOL NAME="ITEM_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="HEADER_FILE" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="HEADER_FILE_VALID" TYPE="bool" VALUE="false"></SYMBOL>
+	<SYMBOL NAME="TODO_COMMENTS" TYPE=checkbox VALUE=true></SYMBOL>
+	<SYMBOL NAME="SAMPLE_CODE" TYPE=checkbox VALUE=true></SYMBOL>
+</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="OnKey();" ONKEYPRESS="OnPress();">
+<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL WIDTH="100%">
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV CLASS="SMALLA" ID="Layer0">
+		 <IMG CLASS="SMALLEST" SRC="..\..\Images\ATL_AddWebSvc.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+		</DIV>
+	   </TD>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">Welcome to the ATL Server Web Service Object Wizard</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">This wizard adds an object to your project that implements a Web service.</P>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+	 
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW ONE//-->
+	</TD>
+	</TR>
+	<TR VALIGN="TOP">
+	<TD HEIGHT="100%">
+	<!--OPEN OF ALL ENCOMPASSING TABLE ROW TWO//-->
+	
+	 <TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL>
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+	   
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+		  
+		  	<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL WIDTH="398"><COL WIDTH="12">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="3">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+			 <TR>
+  			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+			  <TD VALIGN="TOP">
+			  	<SPAN CLASS="itemTextTop">
+	  	 			 <LABEL FOR="ITEM_NAME" ID="ITEM_NAME_LABEL"><U>I</U>tem name:</LABEL>
+	  	 			 <BR>
+	  	 			 <INPUT CLASS="sideBtn" ID="ITEM_NAME" ACCESSKEY="I" TITLE="" VALUE="" TYPE="text" onPropertyChange="OnItemName();">
+				</SPAN>
+
+				<P CLASS="ElementSpacer2">&nbsp;</P>
+					 
+  				<SPAN CLASS="itemText" TITLE="Name of header file where class will be defined." ID="HEADER_FILE_TITLE">
+	  	 			<LABEL FOR="HEADER_FILE" ID="HEADER_FILE_LABEL">.h fil<U>e</U>:</LABEL>
+	  	 			<BR>
+	  	 			<INPUT CLASS="sideBtn" ID="HEADER_FILE" ACCESSKEY="E" TITLE="Name of header file where class will be defined." TYPE="text">
+				 </SPAN>
+
+				<P CLASS="ElementSpacer2">&nbsp;</P>
+				
+ 				<SPAN CLASS="itemText" ID="TODO_COMMENTS_TITLE" TITLE="Generate comments.">
+	  				 <INPUT CLASS="CheckBox" TYPE="checkbox" ID="TODO_COMMENTS" ACCESSKEY="T" TITLE="Generate comments.">
+	  	 			 <DIV CLASS="itemTextCheckboxA" ID="TODO_COMMENTS_DIV" TITLE="Generate comments.">
+		  			  <LABEL FOR="TODO_COMMENTS" ID="TODO_COMMENTS_LABEL">Generate <U>T</U>ODO comments</LABEL>
+	  	 			 </DIV>
+				</SPAN>
+	
+				<P CLASS="ElementSpacer">&nbsp;</P>
+					 
+				  <SPAN CLASS="itemText" ID="SAMPLE_CODE_TITLE" TITLE="Generate sample code.">
+	  				 <INPUT CLASS="CheckBox" TYPE="checkbox" ID="SAMPLE_CODE" ACCESSKEY="S" TITLE="Generate sample code.">
+	  	 			 <DIV CLASS="itemTextCheckboxA"  ID="SAMPLE_CODE_DIV" TITLE="Generate sample code.">
+		  			  <LABEL FOR="SAMPLE_CODE" ID="SAMPLE_CODE_LABEL" >Generate <U>s</U>ample code</LABEL>
+	  	 			 </DIV>
+				</SPAN>
+			  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="100%" COLSPAN="3">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+		 	</TABLE>
+			
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD HEIGHT="48">
+	   	  <!--OPEN OF BUTTON HTML//-->
+		  
+		  	<TABLE HEIGHT="48" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			  </TR>
+ 
+ 			  <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">Finish</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">Cancel</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.codewiz.class.atl.webserv.overview');">Help</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+			
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+	
+	   <!--CLOSE OF CONTENT AND BUTTON TABLE//-->
+	   </TD>
+	  </TR>
+	 </TABLE>
+	
+	<!--CLOSE OF ALL ENCOMPASSING TABLE ROW TWO//-->
+	</TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+function InitDocument(document)
+{
+	setDirection();
+	
+	try
+	{
+		if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+		{
+			var L_WizardDialogTitle_Text = "ATL Server Web Service Object Wizard";
+			window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+			window.external.SetDefaults(document);
+		}
+		window.external.Load(document);
+		window.external.AddSymbol("SAFE_PROJECT_NAME", CreateSafeName(window.external.FindSymbol("PROJECT_NAME")));
+	}
+	catch(e)
+	{
+		L_Err1_Text = "Error occurred in InitDocument: ";
+		window.external.ReportError(L_Err1_Text + e.description);
+	}
+}
+
+function OnFinish(document)
+{
+	if (!ValidateInput())
+		return;
+
+	OnWizFinish(document);
+}
+
+function OnItemName()
+{
+	var strItemName = ITEM_NAME.value;
+	var strLen = strItemName.length;
+	if (strLen)
+	{
+		HEADER_FILE.value = strItemName + ".h";
+	}
+	else
+	{
+		HEADER_FILE.value = "";
+	}
+}
+
+function ValidateInput()
+{
+	var oInvalid = null;
+
+	if (oInvalid == null)
+		if (!Validate(ITEM_NAME))
+			oInvalid = ITEM_NAME;
+
+	if (oInvalid == null)
+		if (!Validate(HEADER_FILE))
+			oInvalid = HEADER_FILE;
+
+	if (oInvalid != null)
+	{
+		if (gbShowError)
+			window.external.ReportError();
+		else
+			gbShowError = true;
+		oInvalid.focus();
+		return false;
+	}
+	return true;
+}
+
+var gbShowError = true;
+
+function Validate(obj)
+{
+	var bValid = true;
+	switch(obj.id)
+	{
+		case "BASE_ITEM_NAME":
+			if(""!=BASE_ITEM_NAME.value)
+				bValid = window.external.dte.VCLanguageManager.ValidateQualifiedName(obj.value);
+			break;
+		case "ITEM_NAME":
+			bValid = window.external.ParentObject.ValidateMember(obj.value, vsCMElementClass);
+			break;
+		case "HEADER_FILE":
+			if (!window.external.FindSymbol("HEADER_FILE_VALID"))
+			{
+				gbShowError = bValid = CanUseFileName(obj.value, true);
+				if (!bValid)
+					break;
+				window.external.AddSymbol("HEADER_FILE_VALID", true)
+			}
+			bValid = ValidateFileNameAndEnsureInProject(obj.value);
+			break;
+		default:
+			break;
+	}
+
+	if (typeof(bValid) == "undefined")
+		bValid = false;
+
+	return bValid;
+}
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	var strPath = "../../../";
+	strPath += window.external.GetHostLocale();
+	var strScriptPath = strPath + "/Script.js";
+	var strCommonPath = strPath + "/Common.js";
+	document.scripts("INCLUDE_SCRIPT").src = strScriptPath;
+	document.scripts("INCLUDE_COMMON").src = strCommonPath;
+</SCRIPT>

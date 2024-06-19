@@ -1,0 +1,16 @@
+[Version]
+Signature="$CHICAGO$"
+Provider="Visual Studio .NET Professional - English"
+
+[GUID to Friendly Name Mapping]
+F81E14E5-69E6-11d2-8586-00C04F797FB8,GFN_ Component Selection Page
+F81E14E8-69E6-11d2-8586-00C04F797FB8,GFN_ Summary Page
+
+[Complete Component List]
+GFN_ Visual Studio .NET Professional - English
+
+[Display Pages]
+GFN_ Component Selection Page
+<component pages>
+GFN_ Summary Page
+

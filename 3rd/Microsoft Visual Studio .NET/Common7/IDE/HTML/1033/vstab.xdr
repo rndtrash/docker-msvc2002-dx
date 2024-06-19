@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Schema name="VsTab-schema" xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+	<ElementType name="Tab" model="closed" content="eltOnly" order="seq">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Name" dt:type="string" required="no"/>
+		<AttributeType name="Filterable" dt:type="enumeration" dt:values="true false"/>
+		<AttributeType name="IsApplication" dt:type="enumeration" dt:values="true false"/>
+		<attribute type="ID"/>
+		<attribute type="Name"/>
+		<attribute type="Filterable"/>
+		<attribute type="IsApplication"/>
+		<AttributeType name="xmlns" dt:type="string"/>
+		<attribute type="xmlns"/>
+		<group minOccurs="1" maxOccurs="1" order="seq">
+			<element type="TabData" minOccurs="0" maxOccurs="1"/>
+			<element type="Application" minOccurs="1" maxOccurs="1"/>
+			<element type="Feeds" minOccurs="0" maxOccurs="1"/>
+			<element type="Config" minOccurs="0" maxOccurs="1"/>
+		</group>
+	</ElementType>
+	<ElementType name="TabData" model="closed" content="eltOnly" order="seq">
+		<description>A sequence of values</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<attribute type="ID"/>
+		<group minOccurs="1" maxOccurs="1" order="seq">
+			<element type="Value" minOccurs="0" maxOccurs="*"/>
+		</group>
+	</ElementType>
+	<ElementType name="Application" model="closed" content="eltOnly" order="seq">
+		<description>Description of the tab's view (visual surface)</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Title" dt:type="string" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="Title"/>
+		<group minOccurs="1" maxOccurs="1" order="seq">
+			<element type="Action" minOccurs="0" maxOccurs="*"/>
+			<group minOccurs="1" maxOccurs="1" order="one">
+				<element type="PaneSet" minOccurs="1" maxOccurs="1"/>
+				<element type="Pane" minOccurs="1" maxOccurs="1"/>
+			</group>
+			<element type="Data" minOccurs="0" maxOccurs="1"/>
+		</group>
+	</ElementType>
+	<ElementType name="Feeds" model="closed" content="eltOnly" order="seq">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<attribute type="ID"/>
+		<group minOccurs="0" maxOccurs="*" order="seq">
+			<element type="Feed" minOccurs="1" maxOccurs="1"/>
+		</group>
+	</ElementType>
+	<ElementType name="Config" model="closed" content="eltOnly" order="seq">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<attribute type="ID"/>
+		<group minOccurs="0" maxOccurs="*" order="one">
+			<element type="Select" minOccurs="1" maxOccurs="1"/>
+			<element type="Feed" minOccurs="1" maxOccurs="1"/>
+		</group>
+	</ElementType>
+	<ElementType name="Value" model="closed" content="textOnly" dt:type="string">
+		<description>name-value pairs with ExtraInfo attribute</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Name" dt:type="string" required="no"/>
+		<AttributeType name="ExtraInfo" dt:type="string" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="Name"/>
+		<attribute type="ExtraInfo"/>
+	</ElementType>
+	<ElementType name="Action" model="closed" content="eltOnly" order="seq">
+		<description>Actions that can be performed by AppHost apps</description>
+		<AttributeType name="ID" dt:type="id" required="yes"/>
+		<AttributeType name="Title" dt:type="string" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="Title"/>
+		<group minOccurs="0" maxOccurs="*" order="one">
+			<element type="InvokeMethod" minOccurs="1" maxOccurs="1"/>
+		</group>
+	</ElementType>
+	<ElementType name="PaneSet" model="closed" content="eltOnly" order="seq">
+		<description>A set of panes may be layed out as a tabset or a list (sequence)</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Title" dt:type="string" required="no"/>
+		<AttributeType name="Priority" dt:type="int" required="no"/>
+		<AttributeType name="Layout" dt:type="enumeration" dt:values="tabs list tree" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="Title"/>
+		<attribute type="Priority"/>
+		<attribute type="Layout"/>
+		<group minOccurs="1" maxOccurs="*" order="one">
+			<element type="PaneSet" minOccurs="1" maxOccurs="1"/>
+			<element type="Pane" minOccurs="1" maxOccurs="1"/>
+		</group>
+	</ElementType>
+	<ElementType name="Pane" model="closed" content="eltOnly" order="seq">
+		<description>Discreet visual region</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Title" dt:type="string" required="no"/>
+		<AttributeType name="Priority" dt:type="int" required="no"/>
+		<AttributeType name="OnClick" dt:type="idref" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="Title"/>
+		<attribute type="Priority"/>
+		<attribute type="OnClick"/>
+		<group minOccurs="0" maxOccurs="*" order="one">
+			<element type="Form" minOccurs="1" maxOccurs="1"/>
+			<element type="Button" minOccurs="1" maxOccurs="1"/>
+			<element type="ButtonField" minOccurs="1" maxOccurs="1"/>
+			<element type="SubmitButton" minOccurs="1" maxOccurs="1"/>
+			<element type="CheckBox" minOccurs="1" maxOccurs="1"/>
+			<element type="TextField" minOccurs="1" maxOccurs="1"/>
+			<element type="PasswordField" minOccurs="1" maxOccurs="1"/>
+			<element type="FileField" minOccurs="1" maxOccurs="1"/>
+			<element type="Image" minOccurs="1" maxOccurs="1"/>
+			<element type="RadioGroup" minOccurs="1" maxOccurs="1"/>
+			<element type="FieldSet" minOccurs="1" maxOccurs="1"/>
+			<element type="Label" minOccurs="1" maxOccurs="1"/>
+			<element type="TextSpan" minOccurs="1" maxOccurs="1"/>
+			<element type="Listbox" minOccurs="1" maxOccurs="1"/>
+			<element type="Break" minOccurs="1" maxOccurs="1"/>
+			<element type="HRule" minOccurs="1" maxOccurs="1"/>
+			<element type="Title" minOccurs="1" maxOccurs="1"/>
+			<element type="LItemEx" minOccurs="1" maxOccurs="1"/>
+			<element type="Hyperlink" minOccurs="1" maxOccurs="1"/>
+			<element type="ProjectMRUList" minOccurs="1" maxOccurs="1"/>
+			<element type="ShowSamples" minOccurs="1" maxOccurs="1"/>
+			<element type="SearchMSDN" minOccurs="1" maxOccurs="1"/>
+			<element type="SearchGotDotNet" minOccurs="1" maxOccurs="1"/>
+			<element type="Include" minOccurs="1" maxOccurs="*"/>
+			<group minOccurs="1" maxOccurs="*" order="one">
+				<element type="LinkGroupSet" minOccurs="1" maxOccurs="1"/>
+				<element type="LinkGroup" minOccurs="1" maxOccurs="1"/>
+			</group>
+		</group>
+	</ElementType>
+	<ElementType name="Data" model="closed" content="eltOnly" order="seq">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<attribute type="ID"/>
+		<group minOccurs="1" maxOccurs="1" order="seq">
+			<element type="Context" minOccurs="0" maxOccurs="*"/>
+		</group>
+	</ElementType>
+	<ElementType name="Feed" model="closed" content="eltOnly" order="seq">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Expires" dt:type="ui8" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="Expires"/>
+		<group minOccurs="1" maxOccurs="1" order="seq">
+			<element type="Source" minOccurs="1" maxOccurs="1"/>
+		</group>
+	</ElementType>
+	<ElementType name="Select" model="closed" content="eltOnly" order="seq">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Normative" dt:type="enumeration" dt:values="true false"/>
+		<attribute type="ID"/>
+		<attribute type="Normative"/>
+		<group minOccurs="1" maxOccurs="1" order="seq">
+			<element type="Option" minOccurs="1" maxOccurs="*"/>
+		</group>
+	</ElementType>
+	<ElementType name="InvokeMethod" model="closed" content="textOnly" order="seq">
+		<description>&lt;Method URL="http://www.foo.com/bar.asp" Name="dostuff"/&gt; will result in a call to "http://www.foo.com/bar.asp?method=dostuff"</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="URL" dt:type="uri" required="no"/>
+		<AttributeType name="Name" dt:type="nmtoken" required="no"/>
+		<AttributeType name="ToolID" dt:type="nmtoken" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="URL"/>
+		<attribute type="Name"/>
+		<attribute type="ToolID"/>
+	</ElementType>
+	<ElementType name="Form" model="closed" content="eltOnly" order="seq">
+		<description>A pane is a rectangle on the page that contains controls or text</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Title" dt:type="string" required="no"/>
+		<AttributeType name="Priority" dt:type="int" required="no"/>
+		<AttributeType name="Action" dt:type="uri" required="no"/>
+		<AttributeType name="Method" dt:type="enumeration" dt:values="get post" required="no"/>
+		<AttributeType name="EncType" dt:type="string" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="Title"/>
+		<attribute type="Priority"/>
+		<attribute type="Action"/>
+		<attribute type="Method"/>
+		<attribute type="EncType"/>
+		<group minOccurs="0" maxOccurs="*" order="one">
+			<element type="Form" minOccurs="1" maxOccurs="1"/>
+			<element type="Button" minOccurs="1" maxOccurs="1"/>
+			<element type="ButtonField" minOccurs="1" maxOccurs="1"/>
+			<element type="SubmitButton" minOccurs="1" maxOccurs="1"/>
+			<element type="CheckBox" minOccurs="1" maxOccurs="1"/>
+			<element type="TextField" minOccurs="1" maxOccurs="1"/>
+			<element type="PasswordField" minOccurs="1" maxOccurs="1"/>
+			<element type="FileField" minOccurs="1" maxOccurs="1"/>
+			<element type="Image" minOccurs="1" maxOccurs="1"/>
+			<element type="RadioGroup" minOccurs="1" maxOccurs="1"/>
+			<element type="FieldSet" minOccurs="1" maxOccurs="1"/>
+			<element type="Label" minOccurs="1" maxOccurs="1"/>
+			<element type="TextSpan" minOccurs="1" maxOccurs="1"/>
+			<element type="Listbox" minOccurs="1" maxOccurs="1"/>
+			<element type="Break" minOccurs="1" maxOccurs="1"/>
+			<element type="HRule" minOccurs="1" maxOccurs="1"/>
+			<element type="Title" minOccurs="1" maxOccurs="1"/>
+			<element type="LItemEx" minOccurs="1" maxOccurs="1"/>
+			<element type="Hyperlink" minOccurs="1" maxOccurs="1"/>
+			<element type="ProjectMRUList" minOccurs="1" maxOccurs="1"/>
+			<element type="ShowSamples" minOccurs="1" maxOccurs="1"/>
+			<element type="SearchMSDN" minOccurs="1" maxOccurs="1"/>
+			<element type="SearchGotDotNet" minOccurs="1" maxOccurs="1"/>
+			<element type="Include" minOccurs="1" maxOccurs="*"/>
+			<group minOccurs="1" maxOccurs="*" order="one">
+				<element type="LinkGroupSet" minOccurs="1" maxOccurs="1"/>
+				<element type="LinkGroup" minOccurs="1" maxOccurs="1"/>
+			</group>
+		</group>
+	</ElementType>
+	<ElementType name="Button" model="closed" content="empty">
+		<description>HTML Button element</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Text" dt:type="string" required="no"/>
+		<AttributeType name="OnClick" dt:type="idref" required="no"/>
+		<AttributeType name="AccessKey" dt:type="string" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="Text"/>
+		<attribute type="OnClick"/>
+		<attribute type="AccessKey"/>
+	</ElementType>
+	<ElementType name="ButtonField" model="closed" content="textOnly" dt:type="string">
+		<description>Form Input type button</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="OnClick" dt:type="idref" required="no"/>
+		<AttributeType name="AccessKey" dt:type="string" required="no"/>
+		<AttributeType name="Name" dt:type="nmtoken" required="no"/>
+		<AttributeType name="Value" dt:type="string" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="OnClick"/>
+		<attribute type="AccessKey"/>
+		<attribute type="Name"/>
+		<attribute type="Value"/>
+	</ElementType>
+	<ElementType name="SubmitButton" model="closed" content="textOnly" dt:type="string">
+		<description>Form Input type submit</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="AccessKey" dt:type="string" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="AccessKey"/>
+	</ElementType>
+	<ElementType name="CheckBox" model="closed" content="textOnly" dt:type="string">
+		<description>Input type checkbox</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Checked" dt:type="enumeration" dt:values="true false"/>
+		<AttributeType name="AccessKey" dt:type="string" required="no"/>
+		<AttributeType name="Name" dt:type="nmtoken" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="Checked"/>
+		<attribute type="AccessKey"/>
+		<attribute type="Name"/>
+	</ElementType>
+	<ElementType name="TextField" model="closed" content="textOnly" dt:type="string">
+		<description>Input type text</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="OnBlur" dt:type="idref" required="no"/>
+		<AttributeType name="Size" dt:type="int" required="no"/>
+		<AttributeType name="MaxLength" dt:type="int" required="no"/>
+		<AttributeType name="Name" dt:type="nmtoken" required="no"/>
+		<AttributeType name="Width" dt:type="string" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="OnBlur"/>
+		<attribute type="Size"/>
+		<attribute type="MaxLength"/>
+		<attribute type="Name"/>
+		<attribute type="Width"/>
+	</ElementType>
+	<ElementType name="PasswordField" model="closed" content="textOnly" dt:type="string">
+		<description>Input type password</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="OnBlur" dt:type="idref" required="no"/>
+		<AttributeType name="Size" dt:type="int" required="no"/>
+		<AttributeType name="MaxLength" dt:type="int" required="no"/>
+		<AttributeType name="Name" dt:type="nmtoken" required="no"/>
+		<AttributeType name="Width" dt:type="string" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="OnBlur"/>
+		<attribute type="Size"/>
+		<attribute type="MaxLength"/>
+		<attribute type="Name"/>
+		<attribute type="Width"/>
+	</ElementType>
+	<ElementType name="FileField" model="closed" content="textOnly" dt:type="string">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="OnBlur" dt:type="idref" required="no"/>
+		<AttributeType name="Size" dt:type="int" required="no"/>
+		<AttributeType name="MaxLength" dt:type="int" required="no"/>
+		<AttributeType name="Name" dt:type="nmtoken" required="no"/>
+		<AttributeType name="Width" dt:type="string" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="OnBlur"/>
+		<attribute type="Size"/>
+		<attribute type="MaxLength"/>
+		<attribute type="Name"/>
+		<attribute type="Width"/>
+	</ElementType>
+	<ElementType name="Image" model="closed" content="empty">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Source" dt:type="uri" required="no"/>
+		<AttributeType name="OnClick" dt:type="idref" required="no"/>
+		<AttributeType name="Width" dt:type="int" required="no"/>
+		<AttributeType name="Height" dt:type="int" required="no"/>
+		<AttributeType name="Align" dt:type="nmtoken" required="no"/>
+		<AttributeType name="AltText" dt:type="string" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="Source"/>
+		<attribute type="OnClick"/>
+		<attribute type="Width"/>
+		<attribute type="Height"/>
+		<attribute type="Align"/>
+		<attribute type="AltText"/>
+	</ElementType>
+	<ElementType name="RadioGroup" model="closed" content="eltOnly" order="seq">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="OnChange" dt:type="idref" required="no"/>
+		<AttributeType name="GroupName" dt:type="nmtoken" required="no"/>
+		<AttributeType name="Selected" dt:type="int" required="no"/>
+		<AttributeType name="BreaksBetween" dt:type="enumeration" dt:values="true false"/>
+		<AttributeType name="AccessKey" dt:type="string" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="OnChange"/>
+		<attribute type="GroupName"/>
+		<attribute type="Selected"/>
+		<attribute type="BreaksBetween"/>
+		<attribute type="AccessKey"/>
+		<group minOccurs="1" maxOccurs="*" order="seq">
+			<element type="RadioButton" minOccurs="1" maxOccurs="1"/>
+		</group>
+	</ElementType>
+	<ElementType name="FieldSet" model="closed" content="eltOnly" order="seq">
+		<description>The Title of the FieldSet is used as the "legend"</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Title" dt:type="string" required="no"/>
+		<AttributeType name="Priority" dt:type="int" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="Title"/>
+		<attribute type="Priority"/>
+		<group minOccurs="0" maxOccurs="*" order="one">
+			<element type="Form" minOccurs="1" maxOccurs="1"/>
+			<element type="Button" minOccurs="1" maxOccurs="1"/>
+			<element type="ButtonField" minOccurs="1" maxOccurs="1"/>
+			<element type="SubmitButton" minOccurs="1" maxOccurs="1"/>
+			<element type="CheckBox" minOccurs="1" maxOccurs="1"/>
+			<element type="TextField" minOccurs="1" maxOccurs="1"/>
+			<element type="PasswordField" minOccurs="1" maxOccurs="1"/>
+			<element type="FileField" minOccurs="1" maxOccurs="1"/>
+			<element type="Image" minOccurs="1" maxOccurs="1"/>
+			<element type="RadioGroup" minOccurs="1" maxOccurs="1"/>
+			<element type="FieldSet" minOccurs="1" maxOccurs="1"/>
+			<element type="Label" minOccurs="1" maxOccurs="1"/>
+			<element type="TextSpan" minOccurs="1" maxOccurs="1"/>
+			<element type="Listbox" minOccurs="1" maxOccurs="1"/>
+			<element type="Break" minOccurs="1" maxOccurs="1"/>
+			<element type="HRule" minOccurs="1" maxOccurs="1"/>
+			<element type="Title" minOccurs="1" maxOccurs="1"/>
+			<element type="LItemEx" minOccurs="1" maxOccurs="1"/>
+			<element type="Hyperlink" minOccurs="1" maxOccurs="1"/>
+			<element type="ProjectMRUList" minOccurs="1" maxOccurs="1"/>
+			<element type="ShowSamples" minOccurs="1" maxOccurs="1"/>
+			<element type="SearchMSDN" minOccurs="1" maxOccurs="1"/>
+			<element type="SearchGotDotNet" minOccurs="1" maxOccurs="1"/>
+			<element type="Include" minOccurs="1" maxOccurs="*"/>
+			<group minOccurs="1" maxOccurs="*" order="one">
+				<element type="LinkGroupSet" minOccurs="1" maxOccurs="1"/>
+				<element type="LinkGroup" minOccurs="1" maxOccurs="1"/>
+			</group>
+		</group>
+	</ElementType>
+	<ElementType name="Label" model="closed" content="textOnly" dt:type="string">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="AccessKey" dt:type="string" required="no"/>
+		<AttributeType name="For" dt:type="idref" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="AccessKey"/>
+		<attribute type="For"/>
+	</ElementType>
+	<ElementType name="TextSpan" model="closed" content="mixed" order="many">
+		<description>This is a restricted text span with limited formatting and containment</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="FontFamily" dt:type="string" required="no"/>
+		<AttributeType name="FontSize" dt:type="number" required="no"/>
+		<AttributeType name="Emphasis" dt:type="int" required="no"/>
+		<AttributeType name="SpanStyle" dt:type="enumeration" dt:values="span p h1 h2 h3 h4 h5 h6" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="FontFamily"/>
+		<attribute type="FontSize"/>
+		<attribute type="Emphasis"/>
+		<attribute type="SpanStyle"/>
+		<group minOccurs="0" maxOccurs="*" order="many">
+			<element type="TextSpan" minOccurs="1" maxOccurs="1"/>
+			<element type="Break" minOccurs="1" maxOccurs="1"/>
+			<element type="Image" minOccurs="1" maxOccurs="1"/>
+			<element type="Hyperlink" minOccurs="1" maxOccurs="1"/>
+		</group>
+	</ElementType>
+	<ElementType name="Listbox" model="closed" content="eltOnly" order="seq">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="OnSelectionChange" dt:type="idref" required="no"/>
+		<AttributeType name="VisibleRows" dt:type="int" required="no"/>
+		<AttributeType name="Multiselect" dt:type="enumeration" dt:values="true false"/>
+		<attribute type="ID"/>
+		<attribute type="OnSelectionChange"/>
+		<attribute type="VisibleRows"/>
+		<attribute type="Multiselect"/>
+		<group minOccurs="0" maxOccurs="*" order="seq">
+			<element type="ListBoxItem" minOccurs="1" maxOccurs="1"/>
+		</group>
+	</ElementType>
+	<ElementType name="Break" model="closed" content="empty">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<attribute type="ID"/>
+	</ElementType>
+	<ElementType name="HRule" model="closed" content="empty">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<attribute type="ID"/>
+	</ElementType>
+	<ElementType name="Title" model="closed" content="textOnly" dt:type="string">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<attribute type="ID"/>
+	</ElementType>
+	<ElementType name="LItemEx" model="closed" content="eltOnly" order="seq">
+		<group minOccurs="1" maxOccurs="1" order="seq">
+			<element type="LItem" minOccurs="1" maxOccurs="1"/>
+			<element type="Blurb" minOccurs="0" maxOccurs="1"/>
+		</group>
+	</ElementType>
+	<ElementType name="ProjectMRUList" model="closed" content="empty">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Title" dt:type="string" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="Title"/>
+	</ElementType>
+	<ElementType name="SearchMSDN" model="closed" content="textOnly">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="URL" dt:type="uri" required="no"/>
+		<AttributeType name="AdvancedURL" dt:type="uri" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="URL"/>
+		<attribute type="AdvancedURL"/>
+	</ElementType>
+	<ElementType name="LinkGroupSet" model="closed" content="eltOnly" order="seq">
+		<description> A LinkGroupSet is a collection of LinkGroup elements. This exists primarily for web tabs of the Start Page to specify a collection of linkGroups that define inner tabs or have a "list-style" view.				</description>
+		<AttributeType name="Title" dt:type="string" required="no"/>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Priority" dt:type="int" required="no"/>
+		<AttributeType name="Layout" dt:type="enumeration" dt:values="tabs list tree" required="no"/>
+		<attribute type="Title"/>
+		<attribute type="ID"/>
+		<attribute type="Priority"/>
+		<attribute type="Layout"/>
+		<group minOccurs="1" maxOccurs="1" order="one">
+			<element type="LinkGroup" minOccurs="0" maxOccurs="*"/>
+			<element type="LinkGroupSet" minOccurs="0" maxOccurs="*"/>
+		</group>
+	</ElementType>
+	<ElementType name="LinkGroup" model="closed" content="eltOnly" order="seq">
+		<description>Bag of links </description>
+		<AttributeType name="Title" dt:type="string" required="no"/>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Priority" dt:type="int" required="no"/>
+		<AttributeType name="Layout" dt:type="enumeration" dt:values="tabs list tree" required="no"/>
+		<attribute type="Title"/>
+		<attribute type="ID"/>
+		<attribute type="Priority"/>
+		<attribute type="Layout"/>
+		<group minOccurs="0" maxOccurs="*" order="one">
+			<element type="Blurb" minOccurs="1" maxOccurs="1"/>
+		</group>
+	</ElementType>
+	<ElementType name="Context" model="closed" content="eltOnly" order="seq">
+		<description> contextType contains the links and their associated context. Keywords is a list of Keywords associated with these links. Attributes is a list of attributes associated with these links. Links is the list of links that should be displayed.</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<attribute type="ID"/>
+		<group minOccurs="1" maxOccurs="1" order="seq">
+			<element type="Attributes" minOccurs="0" maxOccurs="*"/>
+			<element type="Links" minOccurs="1" maxOccurs="*"/>
+		</group>
+	</ElementType>
+	<ElementType name="Source" model="closed" content="eltOnly" order="seq">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="LCID" dt:type="int" required="no"/>
+		<AttributeType name="URL" dt:type="uri" required="no"/>
+		<AttributeType name="RootDir" dt:type="enumeration" dt:values="AppData" required="no"/>
+		<AttributeType name="Normative" dt:type="enumeration" dt:values="true false" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="LCID"/>
+		<attribute type="URL"/>
+		<attribute type="RootDir"/>
+		<attribute type="Normative"/>
+		<group minOccurs="1" maxOccurs="1" order="seq">
+			<element type="Arg" minOccurs="0" maxOccurs="*"/>
+		</group>
+	</ElementType>
+	<ElementType name="Option" model="closed" content="textOnly" dt:type="string">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Selected" dt:type="enumeration" dt:values="true false"/>
+		<AttributeType name="FeedID" dt:type="idref" required="no"/>
+		<AttributeType name="LCID" dt:type="int" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="Selected"/>
+		<attribute type="FeedID"/>
+		<attribute type="LCID"/>
+	</ElementType>
+	<ElementType name="RadioButton" model="closed" content="textOnly" dt:type="string">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="AccessKey" dt:type="string" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="AccessKey"/>
+	</ElementType>
+	<ElementType name="Hyperlink" model="closed" content="textOnly" dt:type="string">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="URL" dt:type="uri" required="yes"/>
+		<AttributeType name="OnClick" dt:type="idref" required="no"/>
+		<AttributeType name="Relative" dt:type="int" required="no"/>
+		<attribute type="Relative"/>
+		<attribute type="ID"/>
+		<attribute type="URL"/>
+		<attribute type="OnClick"/>
+	</ElementType>
+	<ElementType name="ListBoxItem" model="closed" content="textOnly" dt:type="string">
+		<description>Items in a listbox</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Data" dt:type="int" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="Data"/>
+	</ElementType>
+	<ElementType name="LItem" model="closed" content="textOnly" dt:type="string">
+		<description> lItemType represents a link, URL is the URL of the link. LinkGroup specifies which LinkGroup the link should be shown in. Image (optional) specifies a URL for an image to display next to the link.</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Priority" dt:type="int" required="no"/>
+		<AttributeType name="URL" dt:type="uri" required="no"/>
+		<AttributeType name="LinkGroup" dt:type="nmtoken" required="no"/>
+		<AttributeType name="Image" dt:type="uri" required="no"/>
+		<AttributeType name="ToolTip" dt:type="string" required="no"/>
+		<AttributeType name="Invokes" dt:type="idref" required="no"/>
+		<AttributeType name="Relative" dt:type="int" required="no"/>
+		<attribute type="Relative"/>
+		<attribute type="ID"/>
+		<attribute type="Priority"/>
+		<attribute type="URL"/>
+		<attribute type="LinkGroup"/>
+		<attribute type="Image"/>
+		<attribute type="ToolTip"/>
+		<attribute type="Invokes"/>
+	</ElementType>
+	<ElementType name="Blurb" model="closed" content="mixed" order="many">
+		<description>Blurb is a text block that can be associated with an LItem</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<attribute type="ID"/>
+	</ElementType>
+	<ElementType name="Attributes" model="closed" content="eltOnly" order="seq">
+		<description> attributesType contains a list of AItems</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<attribute type="ID"/>
+		<group minOccurs="1" maxOccurs="1" order="seq">
+			<element type="AItem" minOccurs="1" maxOccurs="*"/>
+		</group>
+	</ElementType>
+	<ElementType name="AItem" model="closed" content="empty">
+		<description> aItemType represents an attribute</description>
+		<AttributeType name="Name" dt:type="string" required="no"/>
+		<AttributeType name="Value" dt:type="string" required="no"/>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<attribute type="Name"/>
+		<attribute type="Value"/>
+		<attribute type="ID"/>
+	</ElementType>
+	<ElementType name="Arg" model="closed" content="textOnly" dt:type="string">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Name" dt:type="nmtoken" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="Name"/>
+	</ElementType>
+	<ElementType name="Links" model="closed" content="eltOnly" order="seq">
+		<description>a list of LItems</description>
+		<group minOccurs="1" maxOccurs="*" order="one">
+			<element type="LItem" minOccurs="1" maxOccurs="1"/>
+			<element type="LItemEx" minOccurs="1" maxOccurs="1"/>
+		</group>
+	</ElementType>
+	<ElementType name="ShowSamples" model="closed" content="eltOnly" order="seq">
+		<description>Samples search tool</description>
+		<group minOccurs="1" maxOccurs="1" order="seq">
+			<element type="SampleType" minOccurs="1" maxOccurs="*"/>
+		</group>
+	</ElementType>
+	<ElementType name="SampleType" model="closed" content="textOnly" dt:type="string">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<attribute type="ID"/>
+	</ElementType>
+	<ElementType name="Include" model="closed" content="eltOnly" order="seq">
+		<description>Include online content</description>
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="Title" dt:type="string" required="no"/>
+		<AttributeType name="URL" dt:type="uri" required="yes"/>
+		<attribute type="ID"/>
+		<attribute type="Title"/>
+		<attribute type="URL"/>
+		<group minOccurs="1" maxOccurs="1" order="seq">
+			<element type="Message" minOccurs="0" maxOccurs="1"/>
+			<element type="Arg" minOccurs="1" maxOccurs="*"/>
+		</group>
+	</ElementType>
+	<ElementType name="Message" model="closed" content="textOnly" dt:type="string">
+	</ElementType>
+
+<!-- GotDotNet -->
+
+	<ElementType name="resources" model="closed" content="eltOnly" order="seq">
+		<description>GotDotNet resources</description>
+		<AttributeType name="xmlns" dt:type="string"/>
+		<attribute type="xmlns"/>
+		<group minOccurs="1" maxOccurs="1" order="seq">
+			<element type="resource" minOccurs="1" maxOccurs="*"/>
+		</group>
+	</ElementType>
+	<ElementType name="resource" model="closed" content="eltOnly" order="seq">
+		<description>GotDotNet resource</description>
+		<group minOccurs="1" maxOccurs="1" order="seq">
+			<element type="title" minOccurs="1" maxOccurs="1"/>
+			<element type="url" minOccurs="1" maxOccurs="1"/>
+			<element type="description" minOccurs="1" maxOccurs="1"/>
+			<element type="date" minOccurs="1" maxOccurs="1"/>
+		</group>
+	</ElementType>
+	<ElementType name="title" model="closed" content="textOnly" dt:type="string">
+	</ElementType>
+	<ElementType name="url" model="closed" content="textOnly" dt:type="uri">
+	</ElementType>
+	<ElementType name="description" model="closed" content="textOnly" dt:type="string">
+	</ElementType>
+	<ElementType name="date" model="closed" content="textOnly" dt:type="string">
+	</ElementType>
+	<ElementType name="SearchGotDotNet" model="closed" content="eltOnly" order="seq">
+		<description>UDDI web services search tool</description>
+		<AttributeType name="URL" dt:type="uri" required="yes"/>
+		<AttributeType name="AdvancedSrch" dt:type="uri" required="yes"/>
+		<attribute type="URL"/>
+		<attribute type="AdvancedSrch"/>
+		<group minOccurs="1" maxOccurs="1" order="seq">
+			<element type="Classification" minOccurs="1" maxOccurs="*"/>
+		</group>
+	</ElementType>
+	<ElementType name="Classification" model="closed" content="textOnly" dt:type="string">
+		<AttributeType name="ID" dt:type="id" required="no"/>
+		<AttributeType name="GUID" dt:type="string" required="no"/>
+		<attribute type="ID"/>
+		<attribute type="GUID"/>
+	</ElementType>
+</Schema>

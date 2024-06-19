@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<VisualStudioStyleSheet 
+	ProjectType="Visual C++" 
+	Version="07.00" 
+	PlatformName="Win32" 
+	Name="Static Link To MFC">
+	<Tool 
+		Name="VCCLCompilerTool"/>
+	<Tool 
+		Name="VCLinkerTool" 
+		DelayLoadDLLs="OleAcc.dll"
+		AdditionalDependencies="DelayImp.lib"/>
+</VisualStudioStyleSheet>

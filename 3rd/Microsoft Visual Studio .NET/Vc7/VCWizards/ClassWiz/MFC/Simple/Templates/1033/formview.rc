@@ -1,0 +1,6 @@
+DIALOG  0, 0, 320, 200
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+	LTEXT	"TODO: Place form controls on this dialog.",IDC_STATIC,24,42,280,8
+END

@@ -1,0 +1,5 @@
+VSWIZARD 7.0
+Wizard=VsWizard.VsWizardEngine
+Param="WIZARD_NAME = Generic"
+Param="RELATIVE_PATH = VCWizards\ClassWiz"
+Param="PREPROCESS_FUNCTION = CanAddClass"

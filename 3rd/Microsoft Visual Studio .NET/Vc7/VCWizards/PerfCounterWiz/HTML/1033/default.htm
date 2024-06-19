@@ -1,0 +1,563 @@
+<!- (c) 2001 Microsoft Corporation -->
+<HTML DIR="LTR">
+
+<HEAD>
+	<TITLE>Add PerfMon Counter Wizard</TITLE>
+	<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<STYLE TYPE="text/css">@import url();</STYLE>
+	<SCRIPT>
+		var strURL = "../../../";
+		strURL += window.external.GetHostLocale();
+		strURL += "/NewStyles.css";
+		document.styleSheets(0).imports(0).href = strURL;
+	</SCRIPT>
+
+	<SYMBOL NAME="VARIABLE_TYPE" TYPE=text VALUE="ULONG"></SYMBOL>
+	<SYMBOL NAME="VARIABLE_NAME" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="COUNTER_TYPE" TYPE=select-one VALUE="PERF_COUNTER_COUNTER"></SYMBOL>
+	<SYMBOL NAME="MAX_COUNTER_SIZE" TYPE=num VALUE=64></SYMBOL>
+	<SYMBOL NAME="NAME_STRING" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="HELP_STRING" TYPE=text VALUE=""></SYMBOL>
+	<SYMBOL NAME="DETAIL_LEVEL" TYPE=select-one VALUE="PERF_DETAIL_NOVICE"></SYMBOL>
+	<SYMBOL NAME="DEFAULT_SCALE" TYPE=num VALUE=0></SYMBOL>
+	<SYMBOL NAME="DEFAULT_COUNTER" TYPE=checkbox VALUE=false></SYMBOL>
+</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="if (!bValidating) OnKey();" ONKEYPRESS="if (!bValidating) OnPress();">
+
+<TABLE CLASS="ONE" HEIGHT="100%" WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL WIDTH="100%">
+
+  <!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79" WIDTH="100%" COLSPAN="2">
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV CLASS="SMALLA" ID="Layer0">
+		 <IMG CLASS="SMALLEST" SRC="../../Images/PerfCounter.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+		</DIV>
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">Welcome to the Add Perfmon Counter Wizard</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">This wizard generates a perfmon counter to add to your perfmon class.</P>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+	</TD>
+  </TR>
+  <!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+
+  <!--OPEN OF CONTENT AND BUTTON TABLES//-->
+  <TR VALIGN="TOP">
+	   <TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+	   
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+		  
+		  	<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL WIDTH="284"><COL WIDTH="12"><COL WIDTH="285"><COL WIDTH="12">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="5">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			 <TR VALIGN="TOP">
+ 				 <TD VALIGN="TOP" WIDTH="12">
+  					&nbsp;
+  				 </TD>
+				 <TD VALIGN="TOP" COLSPAN="3">
+				  <TABLE CLASS="FixedSize" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+				  <COL WIDTH="103"><COL WIDTH="12"><COL WIDTH="195"><COL WIDTH="12"><COL WIDTH="258">
+				   <TR VALIGN="TOP">
+				    <TD VALIGN="TOP">
+ 					 <SPAN CLASS="itemTextTop" TITLE="The type of the member variable." ID="AUT_ID" >
+	  	 				 <LABEL FOR="VARIABLE_TYPE" ID="VARIABLE_TYPE_LABEL">Variable <U>t</U>ype:</LABEL>
+	  	 				 <BR>
+	  	 				 <SELECT CLASS="sideBtn" ID="VARIABLE_TYPE" SIZE="1" ACCESSKEY="T" TITLE="The type of the member variable." VALUE="ULONG" onChange="OnTypeChange();" STYLE="WIDTH:102;">
+						  <OPTION VALUE="ULONG" ID="ULONG_OPTION" SELECTED>ULONG</OPTION>
+						  <OPTION VALUE="ULONGLONG" ID="ULONGLONG_OPTION">ULONGLONG</OPTION>
+						 </SELECT>
+					 </SPAN>
+				 	</TD>
+   		  		  	<TD VALIGN="TOP" WIDTH="12">
+  						&nbsp;
+  		  		  	</TD>
+				  	<TD VALIGN="TOP">
+ 					 <SPAN CLASS="itemTextTop" TITLE="The name of the member variable" ID="AUT_ID1" >
+	  	 				 <LABEL FOR="VARIABLE_NAME" ID="VARIABLE_NAME_LABEL">Variable <U>n</U>ame:</LABEL>
+	  	 				 <BR>
+	  	 				 <INPUT CLASS="sideBtn" ID="VARIABLE_NAME" TYPE="TEXT" ACCESSKEY="N" TITLE="The name of the member variable">
+					 </SPAN>
+  		  		  	</TD>
+   		  		  	<TD VALIGN="TOP" WIDTH="12">
+  						&nbsp;
+  		  		  	</TD>
+  				  	<TD VALIGN="TOP">
+ 					 <SPAN CLASS="itemTextTop" TITLE="The type of counter to be added. This determines how the data in the counter is interpretted by perfmon clients when being displayed to the user." ID="AUT_ID2" >
+	  	 				 <LABEL FOR="COUNTER_TYPE" ID="COUNTER_TYPE_LABEL">C<U>o</U>unter type:</LABEL>
+	  	 				 <BR>
+	  	 				 <SELECT CLASS="sideBtn" ID="COUNTER_TYPE" SIZE="1" ACCESSKEY="O" TITLE="The type of counter to be added. This determines how the data in the counter is interpretted by perfmon clients when being displayed to the user." VALUE="PERF_COUNTER_COUNTER" STYLE="WIDTH:257;">
+						 </SELECT>
+						 <!-- COUNTER_TYPE_HIDDEN stores the options that will be copied to COUNTER_TYPE based on the current selection of VARIABLE_TYPE -->
+	  	 				 <SELECT CLASS="sideBtn" ID="COUNTER_TYPE_HIDDEN" SIZE="1" ACCESSKEY="O" TITLE="" VALUE="PERF_COUNTER_COUNTER" STYLE="WIDTH:0PX; HEIGHT:0PX; MARGIN-BOTTOM:-2PX;" DISABLED>
+						   	<-- ULONG types -->
+							<OPTION VALUE="PERF_AVERAGE_BASE" ID="PERF_AVERAGE_BASE_OPTION" VARTYPE="ULONG" SELECTME="false">Average Base</OPTION>
+							<OPTION VALUE="PERF_AVERAGE_TIMER" ID="PERF_AVERAGE_TIMER_OPTION" VARTYPE="ULONG" SELECTME="false">Average Timer</OPTION>
+							<OPTION VALUE="PERF_COUNTER_DELTA" ID="PERF_COUNTER_DELTA_OPTION" VARTYPE="ULONG" SELECTME="false">Delta</OPTION>
+							<OPTION VALUE="PERF_COUNTER_QUEUELEN_TYPE" ID="PERF_COUNTER_QUEUELEN_TYPE_OPTION" VARTYPE="ULONG" SELECTME="false">Queue Length</OPTION>
+						   	<OPTION VALUE="PERF_COUNTER_COUNTER" ID="PERF_COUNTER_COUNTER_OPTION" VARTYPE="ULONG" SELECTME="false">Rate Counter</OPTION>
+							<OPTION VALUE="PERF_COUNTER_RAWCOUNT" ID="PERF_COUNTER_RAWCOUNT_OPTION" VARTYPE="ULONG" SELECTME="true">Raw Counter</OPTION>
+							<OPTION VALUE="PERF_COUNTER_RAWCOUNT_HEX" ID="PERF_COUNTER_RAWCOUNT_HEX_OPTION" VARTYPE="ULONG" SELECTME="false">Raw Counter (Hex)</OPTION>
+							<OPTION VALUE="PERF_RAW_FRACTION" ID="PERF_RAW_FRACTION_OPTION" VARTYPE="ULONG" SELECTME="false">Raw Fraction</OPTION>
+							<OPTION VALUE="PERF_RAW_BASE" ID="PERF_RAW_BASE_OPTION" VARTYPE="ULONG" SELECTME="false">Raw Fraction Base</OPTION>
+							<OPTION VALUE="PERF_SAMPLE_BASE" ID="PERF_SAMPLE_BASE_OPTION" VARTYPE="ULONG" SELECTME="false">Sample Base</OPTION>
+							<OPTION VALUE="PERF_SAMPLE_COUNTER" ID="PERF_SAMPLE_COUNTER_OPTION" VARTYPE="ULONG" SELECTME="false">Sample Counter</OPTION>
+							<OPTION VALUE="PERF_SAMPLE_FRACTION" ID="PERF_SAMPLE_FRACTION_OPTION" VARTYPE="ULONG" SELECTME="false">Sample Percentage</OPTION>
+							<-- ULONGLONG types -->
+							<OPTION VALUE="PERF_ELAPSED_TIME" ID="PERF_ELAPSED_TIME_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Elapsed Time</OPTION>
+							<OPTION VALUE="PERF_AVERAGE_BULK" ID="PERF_AVERAGE_BULK_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Large Average</OPTION>
+							<OPTION VALUE="PERF_COUNTER_LARGE_DELTA" ID="PERF_COUNTER_LARGE_DELTA_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Large Delta</OPTION>
+							<OPTION VALUE="PERF_COUNTER_LARGE_QUEUELEN_TYPE" ID="PERF_COUNTER_LARGE_QUEUELEN_TYPE_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Large Queue Length</OPTION>
+							<OPTION VALUE="PERF_COUNTER_100NS_QUEUELEN_TYPE" ID="PERF_COUNTER_100NS_QUEUELEN_TYPE_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Large Queue Length (100 Ns)</OPTION>
+							<OPTION VALUE="PERF_COUNTER_OBJ_TIME_QUEUELEN_TYPE" ID="PERF_COUNTER_OBJ_TIME_QUEUELEN_TYPE_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Large Queue Length (Object Time)</OPTION>
+							<OPTION VALUE="PERF_COUNTER_BULK_COUNT" ID="PERF_COUNTER_BULK_COUNT_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Large Rate</OPTION>
+							<OPTION VALUE="PERF_COUNTER_LARGE_RAWCOUNT" ID="PERF_COUNTER_LARGE_RAWCOUNT_OPTION" VARTYPE="ULONGLONG" SELECTME="true">Large Raw Counter</OPTION>
+							<OPTION VALUE="PERF_COUNTER_LARGE_RAWCOUNT_HEX" ID="PERF_COUNTER_LARGE_RAWCOUNT_HEX_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Large Raw Counter (Hex)</OPTION>
+							<OPTION VALUE="PERF_LARGE_RAW_FRACTION" ID="PERF_LARGE_RAW_FRACTION_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Large Raw Fraction</OPTION>
+							<OPTION VALUE="PERF_LARGE_RAW_BASE" ID="PERF_LARGE_RAW_BASE_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Large Raw Fraction Base</OPTION>
+							<OPTION VALUE="PERF_COUNTER_MULTI_TIMER" ID="PERF_COUNTER_MULTI_TIMER_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Multi-Item Timer</OPTION>
+							<OPTION VALUE="PERF_COUNTER_MULTI_TIMER_INV" ID="PERF_COUNTER_MULTI_TIMER_INV_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Multi-Item Timer Inverse</OPTION>
+							<OPTION VALUE="PERF_100NSEC_MULTI_TIMER" ID="PERF_100NSEC_MULTI_TIMER_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Multi-Item Timer (100 Ns)</OPTION>
+							<OPTION VALUE="PERF_100NSEC_MULTI_TIMER_INV" ID="PERF_100NSEC_MULTI_TIMER_INV_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Multi-Item Timer Inverse (100 Ns)</OPTION>
+							<OPTION VALUE="PERF_COUNTER_MULTI_BASE" ID="PERF_COUNTER_MULTI_BASE_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Multi-Item Timer Base</OPTION>
+							<OPTION VALUE="PERF_PRECISION_SYSTEM_TIMER" ID="PERF_PRECISION_SYSTEM_TIMER_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Precision Timer</OPTION>
+							<OPTION VALUE="PERF_PRECISION_100NS_TIMER" ID="PERF_PRECISION_100NS_TIMER_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Precision Timer (100 Ns)</OPTION>
+							<OPTION VALUE="PERF_PRECISION_OBJECT_TIMER" ID="PERF_PRECISION_OBJECT_TIMER_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Precision Timer (Object Time)</OPTION>
+							<OPTION VALUE="PERF_PRECISION_TIMESTAMP" ID="PERF_PRECISION_TIMESTAMP_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Precision Timer Timestamp</OPTION>
+							<OPTION VALUE="PERF_COUNTER_TIMER" ID="PERF_COUNTER_TIMER_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Timer</OPTION>
+							<OPTION VALUE="PERF_COUNTER_TIMER_INV" ID="PERF_COUNTER_TIMER_INV_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Timer Inverse</OPTION>
+							<OPTION VALUE="PERF_100NSEC_TIMER" ID="PERF_100NSEC_TIMER_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Timer (100 Ns)</OPTION>
+							<OPTION VALUE="PERF_100NSEC_TIMER_INV" ID="PERF_100NSEC_TIMER_INV_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Timer Inverse (100 Ns)</OPTION>
+							<OPTION VALUE="PERF_OBJ_TIME_TIMER" ID="PERF_OBJ_TIME_TIMER_OPTION" VARTYPE="ULONGLONG" SELECTME="false">Timer (Object Time)</OPTION>
+							<-- TEXT types -->
+							<OPTION VALUE="PERF_COUNTER_TEXT" ID="PERF_COUNTER_TEXT_OPTION" VARTYPE="WCHAR" SELECTME="true">Counter Text</OPTION>
+						 </SELECT>
+					 </SPAN>
+					</TD>
+				   </TR>
+			  	  </TABLE>
+  		  		 </TD>
+  		  		 <TD VALIGN="TOP" WIDTH="12">
+  					&nbsp;
+  		  		 </TD>
+ 		  	 </TR>
+
+ 			 <TR VALIGN="TOP">
+ 				 <TD VALIGN="TOP" WIDTH="12">
+  					&nbsp;
+  				 </TD>
+				 <TD VALIGN="TOP" COLSPAN="3">
+				  <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+				  <COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="186">
+				   <TR VALIGN="TOP">
+				    <TD VALIGN="TOP">
+ 					 <SPAN CLASS="itemText" TITLE="The name of the counter as presented to the user in the Counter List in perfmon" ID="AUT_ID3" >
+	  	 				 <LABEL FOR="NAME_STRING" ID="NAME_STRING_LABEL">N<U>a</U>me string:</LABEL>
+	  	 				 <BR>
+	  	 				 <INPUT CLASS="sideBtn" ID="NAME_STRING" TYPE="TEXT" ACCESSKEY="A" TITLE="The name of the counter as presented to the user in the Counter List in perfmon">
+					 </SPAN>
+				 	</TD>
+   		  		  	<TD VALIGN="TOP" WIDTH="12">
+  						&nbsp;
+  		  		  	</TD>
+				  	<TD VALIGN="TOP">
+  						&nbsp;
+  		  		  	</TD>
+   		  		  	<TD VALIGN="TOP" WIDTH="12">
+  						&nbsp;
+  		  		  	</TD>
+  				  	<TD VALIGN="TOP">
+  						&nbsp;
+					</TD>
+				   </TR>
+			  	  </TABLE>
+  		  		 </TD>
+  		  		 <TD VALIGN="TOP" WIDTH="12">
+  					&nbsp;
+  		  		 </TD>
+ 		  	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="5">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			 <TR VALIGN="TOP">
+ 				 <TD VALIGN="TOP" WIDTH="12">
+  					&nbsp;
+  				 </TD>
+				 <TD VALIGN="TOP" COLSPAN="3">
+				  <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+				  <COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="185"><COL WIDTH="12"><COL WIDTH="186">
+				   <TR VALIGN="TOP">
+				    <TD VALIGN="TOP">
+ 					 <SPAN CLASS="itemText" TITLE="The explanation text displayed to the user when they request an explanation of the counter from perfmon" ID="AUT_ID4" >
+	  	 				 <LABEL FOR="HELP_STRING" ID="HELP_STRING_LABEL">Hel<U>p</U> string:</LABEL>
+	  	 				 <BR>
+	  	 				 <INPUT CLASS="sideBtn" ID="HELP_STRING" TYPE="TEXT" ACCESSKEY="P" TITLE="The explanation text displayed to the user when they request an explanation of the counter from perfmon">
+					 </SPAN>
+				 	</TD>
+   		  		  	<TD VALIGN="TOP" WIDTH="12">
+  						&nbsp;
+  		  		  	</TD>
+				  	<TD VALIGN="TOP">
+  						&nbsp;
+  		  		  	</TD>
+   		  		  	<TD VALIGN="TOP" WIDTH="12">
+  						&nbsp;
+  		  		  	</TD>
+  				  	<TD VALIGN="TOP">
+  						&nbsp;
+					</TD>
+				   </TR>
+			  	  </TABLE>
+  		  		 </TD>
+  		  		 <TD VALIGN="TOP" WIDTH="12">
+  					&nbsp;
+  		  		 </TD>
+ 		  	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="5">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+
+ 			 <TR VALIGN="TOP">
+ 				 <TD VALIGN="TOP" WIDTH="12">
+  					&nbsp;
+  				 </TD>
+				 <TD VALIGN="TOP" COLSPAN="3">
+				  <TABLE CLASS="FixedSize" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+				  <COL WIDTH="194"><COL WIDTH="12"><COL WIDTH="194"><COL WIDTH="12"><COL WIDTH="168">
+				   <TR VALIGN="TOP">
+				    <TD VALIGN="TOP">
+ 					 <SPAN CLASS="itemText" TITLE="A hint to the perfmon client indication the complexity of the counter for different levels of user" ID="AUT_ID5" >
+	  	 				 <LABEL FOR="DETAIL_LEVEL" ID="DETAIL_LEVEL_LABEL"><U>D</U>etail level:</LABEL>
+	  	 				 <BR>
+	  	 				 <SELECT CLASS="sideBtn" ID="DETAIL_LEVEL" SIZE="1" ACCESSKEY="D" TITLE="A hint to the perfmon client indication the complexity of the counter for different levels of user" VALUE="PERF_DETAIL_NOVICE">
+						 	<OPTION VALUE="PERF_DETAIL_NOVICE" ID="PERF_DETAIL_NOVICE_OPTION" SELECTED>novice</OPTION>
+							<OPTION VALUE="PERF_DETAIL_ADVANCED" ID="PERF_DETAIL_ADVANCED_OPTION">advanced</OPTION>
+							<OPTION VALUE="PERF_DETAIL_EXPERT" ID="PERF_DETAIL_EXPERT_OPTION">expert</OPTION>
+							<OPTION VALUE="PERF_DETAIL_WIZARD" ID="PERF_DETAIL_WIZARD_OPTION">wizard</OPTION>
+						 </SELECT>
+					 </SPAN>
+				 	</TD>
+   		  		  	<TD VALIGN="TOP" WIDTH="12">
+  						&nbsp;
+  		  		  	</TD>
+				  	<TD VALIGN="TOP">
+ 					 <SPAN CLASS="itemText" TITLE="This is the power of 10 to multiply the data by before displaying it" ID="AUT_ID6" >
+	  	 				 <LABEL FOR="DEFAULT_SCALE" ID="DEFAULT_SCALE_LABEL">Default <U>s</U>cale:</LABEL>
+	  	 				 <BR>
+	  	 				 <INPUT CLASS="sideBtn" ID="DEFAULT_SCALE" TYPE="TEXT" ACCESSKEY="S" TITLE="This is the power of 10 to multiply the data by before displaying it">
+					 </SPAN>
+  		  		  	</TD>
+   		  		  	<TD VALIGN="TOP" WIDTH="12">
+  						&nbsp;
+  		  		  	</TD>
+  				  	<TD VALIGN="MIDDLE">
+  					 <SPAN CLASS="itemText" TITLE="If checked, this counter will be selected by default when a user selects the object in perfmon" ID="AUT_ID7" >
+	  				  <INPUT TYPE="checkbox" CLASS="CheckBox" ID="DEFAULT_COUNTER" ACCESSKEY="E" TITLE="If checked, this counter will be selected by default when a user selects the object in perfmon">
+	  	 			   <DIV CLASS="itemTextCheckboxA" STYLE="WIDTH:167PX;">
+		  			    <LABEL FOR="DEFAULT_COUNTER" ID="DEFAULT_COUNTER_LABEL">D<U>e</U>fault counter</LABEL>
+	  	 			   </DIV>
+					 </SPAN>
+					</TD>
+				   </TR>
+			  	  </TABLE>
+  		  		 </TD>
+  		  		 <TD VALIGN="TOP" WIDTH="12">
+  					&nbsp;
+  		  		 </TD>
+ 		  	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="100%" COLSPAN="5">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+		 	</TABLE>
+			
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD HEIGHT="48">
+	   	  <!--OPEN OF BUTTON HTML//-->
+		  
+		  	<TABLE HEIGHT="48" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			  </TR>
+ 
+ 			  <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">Finish</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">Cancel</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.codewiz.class.atl.perfcounter.overview');">Help</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+			
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+	
+  	<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+ 	</TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var strParameters = "";
+
+function InitDocument(document)
+{
+	setDirection();
+	
+	if (window.external.FindSymbol("DOCUMENT_FIRST_LOAD"))
+	{
+		var L_WizardDialogTitle_Text = "Add PerfMon Counter Wizard";
+		window.external.AddSymbol("WIZARD_DIALOG_TITLE", L_WizardDialogTitle_Text);
+		window.external.SetDefaults(document);
+	}
+
+	window.external.Load(document);
+
+	OnTypeChange();
+}
+
+function Next(document, linkto)
+{
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	bValidating = true;
+	if (!ValidateInput())
+	{
+		bValidating = false;
+		return;
+	}
+	bValidating = false;
+
+	OnWizFinish(document);
+}
+
+function ValidateInput()
+{
+	var oInvalid = null;
+
+	if (!Validate(VARIABLE_NAME))
+		oInvalid = VARIABLE_NAME;
+
+	if (!Validate(NAME_STRING))
+		oInvalid = NAME_STRING;
+
+	if (!Validate(HELP_STRING))
+		oInvalid = HELP_STRING;
+
+	if (!Validate(DEFAULT_SCALE))
+		oInvalid = DEFAULT_SCALE;
+
+	if (oInvalid != null)
+	{
+		window.external.ReportError();
+		oInvalid.focus();
+		return false;
+	}
+	return true;
+}
+
+function Validate(obj)
+{
+	var bValid = true;
+	switch(obj.id)
+	{
+		case "VARIABLE_NAME":
+		{
+			bValid = window.external.ParentObject.ValidateMember(VARIABLE_NAME.value, vsCMElementVariable);
+			break;
+		}
+		case "NAME_STRING":
+		case "HELP_STRING":
+			if (obj.value.length = 0)
+			{
+				var L_InvalidValue_Text = "Invalid value";
+				oErrObj = new Error(L_InvalidValue_Text);
+				SetErrorInfo(oErrObj);
+				bValid = false;
+			}
+			break;
+		case "DEFAULT_SCALE":
+		{
+			var re = /^[-+]?\d+$/g;
+			bValid = re.test(DEFAULT_SCALE.value);
+			if (!bValid)
+			{
+				var L_DefaultScaleValidation_Text = "Please enter an integer for the Default Scale";
+				oErrObj = new Error(L_DefaultScaleValidation_Text);
+				SetErrorInfo(oErrObj);
+			}
+			break;
+		}
+		default:
+			break;
+	}
+
+	if (typeof(bValid) == "undefined")
+		bValid = false;
+
+	return bValid;
+}
+
+function OnTypeChange()
+{
+	var oVarType = document.all.tags("SELECT").item("VARIABLE_TYPE");
+	var oCounterType = document.all.tags("SELECT").item("COUNTER_TYPE");
+	var oOptions = document.all.tags("SELECT").item("COUNTER_TYPE_HIDDEN");
+	
+	while (oCounterType.options.length > 0)
+	{
+		oCounterType.options.remove(0);
+	}
+
+	var nSelect = -1;
+
+	for (var i=0; i<oOptions.options.length; i++)
+	{
+		var bEnable = false;
+
+		if (oOptions.options[i].VARTYPE == oVarType.value)
+			bEnable = true;
+
+		if (bEnable)
+		{
+			if (oOptions.options[i].SELECTME == "true")
+				nSelect = oCounterType.options.length;
+
+			var oOption = document.createElement("OPTION");
+			oOption.value = oOptions.options[i].value;
+			oOption.text = oOptions.options[i].text;
+			oCounterType.options.add(oOption);
+		}
+	}
+	
+	if (nSelect != -1)
+		oCounterType.options[nSelect].selected = true;
+}
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	var strPath = "../../../";
+	strPath += window.external.GetHostLocale();
+	var strScriptPath = strPath + "/Script.js";
+	var strCommonPath = strPath + "/Common.js";
+	document.scripts("INCLUDE_SCRIPT").src = strScriptPath;
+	document.scripts("INCLUDE_COMMON").src = strCommonPath;
+</SCRIPT>

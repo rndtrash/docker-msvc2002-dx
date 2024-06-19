@@ -1,0 +1,11 @@
+	[
+		uuid([!output CLSID_REGISTRY_FORMAT]),
+[!if TRANSACTION_SUPPORT]
+		[!output TRANSACTION_TYPE],
+[!endif]
+		helpstring("[!output TYPE_NAME]")
+	]
+	coclass [!output COCLASS]
+	{
+		[default] interface [!output INTERFACE_NAME];
+	};

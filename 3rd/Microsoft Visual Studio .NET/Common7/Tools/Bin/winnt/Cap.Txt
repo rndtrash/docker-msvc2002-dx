@@ -1,0 +1,19 @@
+The Call Attributed Profiler (CAP)
+
+
+The Call Attributed profiler allows you to profile function calls within an
+application. It consists of the following set of files:
+            
+    cap.dll
+    cap.ini
+    cap.lib
+    capdump.exe
+    capsetup.exe
+    capstats.exe
+
+CAP cannot profile an application when a function throws an exception.  To understand why this is true, some background about how CAP operates would help. Each time a function is entered, CAP replaces the return address on the stack with the address of its post processing routine. The actual return address is saved in a frame on a parallel stack that CAP maintains. When the function exits, it jumps to the post processing routine, which updates the call statistics, removes the frame from its stack, and jumps to the real return address.  However, when an exception occurs, one or more functions never do a return and thus CAP still has frames for the functions on its stack.  This is why CAP and exceptions do not mix.
+
+For more information, see the Win32 SDK documentation. Query on "Call
+Attributed Profiler" or go to Programming and Tools Guides, open Tools Guide,
+open Performance Tuning Win32-based Applications, and go to Call Attributed
+Profiler.

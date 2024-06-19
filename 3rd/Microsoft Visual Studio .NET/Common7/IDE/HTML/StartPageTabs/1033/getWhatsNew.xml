@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<TabDefinition>
+	<Tab ID="vs_get_whats_new" Name="What's New" Filterable="true">
+		<TabData>
+			<Value Name="VisualStudioF1Keyword">vs.homepage.get.informed</Value>
+		</TabData>
+		<Application Title="What's New" ID="vs_get_whats_new_app">
+			<Action ID="CheckForUpdates" Title="Check for updates">
+				<InvokeMethod ToolID="vs_Help_CheckForUpdates" Name="VsCheckForUpdates" />
+			</Action>
+			<Pane ID="Links" Title="Product Information">
+				<LinkGroup ID="WhatuSay" Title="Product Information" Priority="200" />
+				<LinkGroup ID="VSUpdate" Title="Product Updates" Priority="200" />
+			</Pane>
+			<Data>
+				<Context>
+					<Links>
+						<LItemEx>
+							<LItem ID="li1" LinkGroup="WhatuSay" Priority="600" URL="ms-help://ms.msdnvs/vsintro7/HTML/vxoriWhatsNewInVisualStudio.htm">What's New in Visual Studio .NET</LItem>
+						</LItemEx>
+						<LItemEx>
+							<LItem ID="li2" LinkGroup="WhatuSay" Priority="600" URL="ms-help://ms.msdnvs/vsintro7/HTML/vxoriVisualStudioToolsStartPage.htm">What's New in Visual Studio Tools</LItem>
+						</LItemEx>
+					</Links>
+				</Context>
+				<Context>
+					<Attributes>
+						<AItem Name="DocSet" Value="Visual Basic" />
+					</Attributes>
+					<Links>
+						<LItemEx>
+							<LItem ID="li3" LinkGroup="WhatuSay" Priority="600" URL="ms-help://MS.VSCC/MS.MSDNVS/vbcon/html/vboriwhatsnewvb70.htm">What's New in Visual Basic</LItem>
+						</LItemEx>
+					</Links>
+				</Context>
+				<Context>
+					<Attributes>
+						<AItem Name="DocSet" Value="Visual C++" />
+					</Attributes>
+					<Links>
+						<LItemEx>
+							<LItem ID="li4" LinkGroup="WhatuSay" Priority="600" URL="ms-help://ms.msdnvs/vcedit/HTML/vcrefWhatsNewForVisualCVersion70.htm">What's New in Visual C++</LItem>
+						</LItemEx>
+					</Links>
+				</Context>
+				<Context>
+					<Attributes>
+						<AItem Name="DocSet" Value="C#" />
+					</Attributes>
+					<Links>
+						<LItemEx>
+							<LItem ID="li5" LinkGroup="WhatuSay" Priority="600" URL="ms-help://MS.VSCC/MS.MSDNVS/vbcon/html/vboriwhatsnewvb70.htm">What's New in Visual C#</LItem>
+						</LItemEx>
+					</Links>
+				</Context>
+				<Context>
+					<Links>
+						<LItemEx>
+							<LItem ID="vssp" LinkGroup="VSUpdate" Priority="600" Image="images/update.bmp" Invokes="CheckForUpdates">Check availability of Visual Studio .NET service packs</LItem>
+						</LItemEx>
+						<LItemEx>
+							<LItem ID="li6" LinkGroup="WhatuSay" Priority="600" URL="ms-help://ms.msdnvs/vsintro7/HTML/vxconCreatingAutomationObjects.htm">Automation object model</LItem>
+						</LItemEx>
+						<LItemEx>
+							<LItem ID="li7" LinkGroup="WhatuSay" Priority="600" URL="ms-help://MS.VSCC/MS.MSDNVS/vssdkstrt/html/vsoriVisualStudioNETSDK.htm">Visual Studio .NET SDKs</LItem>
+						</LItemEx>
+						<LItemEx>
+							<LItem ID="li8" LinkGroup="WhatuSay" Priority="600" URL="http://beta.visualstudio.net/netsdk_readme.asp">.NET SDK Online Readme</LItem>
+						</LItemEx>
+						<LItemEx>
+							<LItem ID="li9" LinkGroup="WhatuSay" Priority="600" URL="ms-help://ms.msdnvs/vsintro7/HTML/vxtbsLocatingReadmeFiles.htm">Locating Readme Files</LItem>
+						</LItemEx>
+					</Links>
+				</Context>
+			</Data>
+		</Application>
+		<Feeds>
+			<Feed Expires="81827931">
+				<Source LCID="1033" URL="http://msdn.microsoft.com/vsdata/vsdata.asp">
+					<Arg Name="tab">vs_get_whats_new</Arg>
+				</Source>
+			</Feed>
+		</Feeds>
+	</Tab>
+</TabDefinition>

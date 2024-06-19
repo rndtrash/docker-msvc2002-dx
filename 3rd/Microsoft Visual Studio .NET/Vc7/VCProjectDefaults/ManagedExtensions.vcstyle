@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<VisualStudioStyleSheet 
+	ProjectType="Visual C++" 
+	Version="07.00" 
+	PlatformName="Win32" 
+	Name="Managed C++ Extensions">
+	<Tool 
+		Name="VCCLCompilerTool" 
+		CompileAsManaged="2"/>
+	<Tool
+		Name="VCLinkerTool"
+		IgnoreImportLibrary="TRUE"/>
+	<Tool
+		Name="VCWebServiceProxyGeneratorTool"
+		GeneratedProxyLanguage="1"/>
+</VisualStudioStyleSheet>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<VisualStudioStyleSheet 
+	ProjectType="Visual C++" 
+	Version="07.00" 
+	PlatformName="Win32" 
+	Name="ATL With CRT">
+	<Tool 
+		Name="VCCLCompilerTool" 
+		Optimization="2"
+		ExceptionHandling="TRUE"/>
+</VisualStudioStyleSheet>

@@ -1,0 +1,660 @@
+<!- (c) 2001 Microsoft Corporation -->
+<HTML DIR="LTR">
+
+<HEAD>
+	<TITLE>ISAPI Extension Wizard</TITLE>
+	<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<STYLE TYPE="text/css">@import url();</STYLE>
+	<SCRIPT>
+		var strURL = "../../../";
+		strURL += window.external.GetHostLocale();
+		strURL += "/NewStyles.css";
+		document.styleSheets(0).imports(0).href = strURL;
+	</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="if (!bValidating) OnKey();" ONKEYPRESS="if (!bValidating) OnPress()">
+
+<TABLE CLASS="ONE" HEIGHT="100%" WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL WIDTH="178"><COL>
+
+  <!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79" WIDTH="100%" COLSPAN="2">
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV CLASS="SMALLA" ID="Layer0">
+		 <IMG CLASS="SMALLEST" SRC="../../Images/ISAPI_1.gif" WIDTH="63" HEIGHT="63" ALT="" BORDER="0">
+		</DIV>
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">Notifications</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">Specify priority, connection, and events for filter notifications.</P>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+	</TD>
+  </TR>
+  <!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+
+  <!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+  <TR VALIGN="TOP">
+	<TD CLASS="Three" VALIGN="TOP" HEIGHT="100%" WIDTH="178">
+	 <TABLE CLASS="fixedSize" HEIGHT="100%" WIDTH="178" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+  	  <TR VALIGN="TOP">
+	   <TD CLASS="threeCustom" VALIGN="TOP" STYLE="BACKGROUND-IMAGE: URL(../../Images/ISAPI_Background.gif);">
+	   <!--OPEN OF NAVIGATION TABLE//-->
+
+	    <TABLE CLASS="THREE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="12"><COL WIDTH="166"><COL WIDTH="1">
+		 <TR>
+	   	  <TD VALIGN="TOP" COLSPAN="3" HEIGHT="12">
+	  		&nbsp;
+		  </TD>
+		 </TR>
+		 <TR>
+	   	  <TD VALIGN="TOP" HEIGHT="100%" WIDTH="12">
+	  		&nbsp;
+		  </TD>
+	   	  <TD VALIGN="TOP" HEIGHT="100%" WIDTH="165">
+	   	  <!--OPEN OF NAVIGATIONAL LINKS//-->
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="166" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="162">
+				<SPAN CLASS="ACTIVELINK" ID="Default" TITLE="Examine an overview of selections." onClick="Next(document, 'default.htm');" TABINDEX="1">Overview</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="166" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="162">
+				<SPAN CLASS="ACTIVELINK" ID="AppSettings" TITLE="Specify object types to include in the project and the associated class information." onClick="Next(document, 'AppSettings.htm');" TABINDEX="2">Object Settings</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+
+		  	<DIV CLASS="LINKSELECTED">
+	 	   	 <SPAN CLASS="VERTLINE1">
+			  <IMG SRC="../../Images/spacer.gif" WIDTH="1" HEIGHT="1" ALT="" BORDER="0">
+			 </SPAN>
+			 <SPAN CLASS="HORILINE1">
+			  <TABLE WIDTH="167" HEIGHT="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			   <TR VALIGN="TOP">
+			    <TD CLASS="DOTTEDLINE" HEIGHT="1">
+				</TD>
+			   </TR>
+			   <TR VALIGN="TOP">
+			    <TD HEIGHT="100%">
+				 <IMG SRC="../../Images/spacer.gif" WIDTH="1" HEIGHT="28" ALT="" BORDER="0">
+			    </TD>
+			   </TR>
+			   <TR VALIGN="TOP">
+			    <TD CLASS="DOTTEDLINE" HEIGHT="1">
+			    </TD>
+			   </TR>
+			  </TABLE>
+			 </SPAN>
+			 <TABLE WIDTH="160" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXTSELECTEDINDENT">
+			  <TR VALIGN="MIDDLE">
+			   <TD WIDTH="156">
+				<SPAN ID="Notifications" TITLE="Specify priority, connection, and events for filter notifications.">Notifications</SPAN>
+			   </TD>
+			   <TD WIDTH="4">
+				<IMG SRC="../../Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+			
+	   	  <!--CLOSE OF NAVIGATIONAL LINKS//-->
+		  </TD>
+		  <TD WIDTH="1">
+		   <DIV CLASS="VERTLINE">
+			 <IMG SRC="../../Images/spacer.gif" WIDTH="1" HEIGHT="1" ALT="" BORDER="0">
+		   </DIV>
+		  </TD>
+		 </TR>
+		 </TABLE>
+		</TD>
+	   </TR>
+	   </TABLE>
+			
+	   <!--CLOSE OF NAVIGATION TABLE//-->
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+	   
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+		  
+		  	<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL WIDTH="188"><COL WIDTH="12"><COL WIDTH="188"><COL WIDTH="22">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="5">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR>
+ 			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" WIDTH="188">
+ 				<SPAN CLASS="itemTextTop" ID="SELECTOPTION_SPAN" TITLE="Select one option. Default is LOW.">Notification priority for the filter:
+					 <P CLASS="Spacer">&nbsp;</P>
+	
+	  				 <INPUT TYPE="radio" CLASS="Radio" NAME="priority" ID="PRIORITY_HIGH" ACCESSKEY="I" TITLE="Select high priority to cause your filter to be called first. This can significantly slow server performance." TABINDEX="3">
+	  	 			 <DIV CLASS="itemTextRadioB" ID="PRIORITY_HIGH_DIV" TITLE="Select high priority to cause your filter to be called first. This can significantly slow server performance.">
+		  			  <LABEL FOR="PRIORITY_HIGH" ID="PRIORITY_HIGH_LABEL">H<U>i</U>gh</LABEL>
+	  	 			 </DIV>
+	  
+	  				 <BR>
+	  
+	  			 	 <INPUT TYPE="radio" CLASS="Radio" NAME="priority" ID="PRIORITY_MEDIUM" ACCESSKEY="M" TITLE="Select medium priority to cause your filter to be called after all high-priority filters and before low-priority filters." TABINDEX="4">
+	  	 			 <DIV CLASS="itemTextRadioB" ID="PRIORITY_MEDIUM_DIV" TITLE="Select medium priority to cause your filter to be called after all high-priority filters and before low-priority filters.">
+		  			  <LABEL FOR="PRIORITY_MEDIUM" ID="PRIORITY_MEDIUM_LABEL"><U>M</U>edium</LABEL>
+	  	 			 </DIV>
+	  
+	  				 <BR>
+	  
+	  			 	 <INPUT TYPE="radio" CLASS="Radio" NAME="priority" ID="PRIORITY_LOW" ACCESSKEY="L" TITLE="Select low priority to cause your filter to be called after all high- and medium-priority filters. Low priority is recommended because it has the least impact on server performance." TABINDEX="5">
+	  	 			 <DIV CLASS="itemTextRadioB" ID="PRIORITY_LOW_DIV" TITLE="Select low priority to cause your filter to be called after all high- and medium-priority filters. Low priority is recommended because it has the least impact on server performance.">
+		  			  <LABEL FOR="PRIORITY_LOW" ID="PRIORITY_LOW_LABEL"><U>L</U>ow</LABEL>
+	  	 			 </DIV>
+				</SPAN>
+			  </TD>
+ 			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" WIDTH="188">
+			  <SPAN CLASS="itemTextTop" ID="SELECT_MULTIPLE_SPAN" TITLE="Select multiple notification types.">Notifications for the filter to process:
+	  				 <P CLASS="Spacer">&nbsp;</P>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="NOTIFY_READ_RAW_DATA" ACCESSKEY="R" TITLE="Notifies the filter after raw data is sent from the client to the server, but before the server processes it." onClick="SetFilterFlags();" TABINDEX="6">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="NOTIFY_READ_RAW_DATA_DIV" TITLE="Notifies the filter after raw data is sent from the client to the server, but before the server processes it.">
+		  			  <LABEL FOR="NOTIFY_READ_RAW_DATA" ID="NOTIFY_READ_RAW_DATA_LABEL">Incoming <U>r</U>aw data and headers</LABEL>
+	  	 			 </DIV>
+	  
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="NOTIFY_SEND_RAW_DATA" ACCESSKEY="O" onClick="SetFilterFlags();" TITLE="Notifies the filter before raw data is sent from the server to the client." TABINDEX="7">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="NOTIFY_SEND_RAW_DATA_DIV" TITLE="Notifies the filter before raw data is sent from the server to the client.">
+		  			  <LABEL FOR="NOTIFY_SEND_RAW_DATA" ID="NOTIFY_SEND_RAW_DATA_LABEL"><U>O</U>utgoing raw data and headers</LABEL>
+	  	 			 </DIV>
+	  
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="NOTIFY_AUTHENTICATION" ACCESSKEY="N" onClick="SetFilterFlags();" TITLE="Notifies the filter when the server authenticates the client." TABINDEX="8">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="NOTIFY_AUTHENTICATION_DIV" TITLE="Notifies the filter when the server authenticates the client.">
+		  			  <LABEL FOR="NOTIFY_AUTHENTICATION" ID="NOTIFY_AUTHENTICATION_LABEL">Clie<U>n</U>t authentication requests</LABEL>
+	  	 			 </DIV>
+				</SPAN>
+			  </TD>
+			 </TR>
+			  
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="17" COLSPAN="5">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			  
+ 			 <TR>
+ 			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" COLSPAN="3">
+  				<SPAN CLASS="itemText" ID="SELECT_OPTIONS_SPAN" TITLE="Select one or both options. Default is both.">Filter connection types:
+  			  </TD>
+ 			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			  
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="4" COLSPAN="5">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR>
+ 			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" WIDTH="188">
+				<SPAN CLASS="itemText">
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="SECURED_PORT_SESSIONS" ACCESSKEY="S" onClick="OnSecuredPort();" TITLE="Receive notifications from secured port sessions.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="SECURED_PORT_SESSIONS_DIV" TITLE="Receive notifications from secured port sessions.">
+		  			  <LABEL FOR="SECURED_PORT_SESSIONS" ID="SECURED_PORT_SESSIONS_LABEL"><U>S</U>ecured port sessions</LABEL>
+	  	 			 </DIV>
+					 
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="NON_SECURED_PORT_SESSIONS" ACCESSKEY="T" onClick="OnNonSecuredPort();" TITLE="Receive notifications from nonsecured port sessions.">
+	  	 			 <DIV CLASS="itemTextCheckboxB"  ID="NON_SECURED_PORT_SESSIONS_DIV" TITLE="Receive notifications from nonsecured port sessions.">
+		  			  <LABEL FOR="NON_SECURED_PORT_SESSIONS" ID="NON_SECURED_PORT_SESSIONS_LABEL">Nonsecured por<U>t</U> sessions</LABEL>
+	  	 			 </DIV>
+					 
+					 <BR>
+					 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="NOTIFY_AUTH_COMPLETE" ACCESSKEY="A" onClick="SetFilterFlags();" TITLE="Notifies the filter when the server has completed authentication.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="NOTIFY_AUTH_COMPLETE_DIV" TITLE="Notifies the filter when the server has completed authentication.">
+		  			  <LABEL FOR="NOTIFY_AUTH_COMPLETE" ID="NOTIFY_AUTH_COMPLETE_LABEL">Completion of <U>a</U>uthentication</LABEL>
+	  	 			 </DIV>
+					 
+	  				 <BR>
+					 
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="NOTIFY_END_OF_REQUEST" ACCESSKEY="Q" onClick="SetFilterFlags();" TITLE="Notifies the filter when the server has finished processing a request.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="NOTIFY_END_OF_REQUEST_DIV" TITLE="Notifies the filter when the server has finished processing a request.">
+		  			  <LABEL FOR="NOTIFY_END_OF_REQUEST" ID="NOTIFY_END_OF_REQUEST_LABEL">Finished processing re<U>q</U>uest</LABEL>
+	  	 			 </DIV>
+	  
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="NOTIFY_SEND_RESPONSE" ACCESSKEY="B" onClick="SetFilterFlags();" TITLE="Notifies the filter when the server is about to send HTTP response headers to the client.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="NOTIFY_SEND_RESPONSE_DIV" TITLE="Notifies the filter when the server is about to send HTTP response headers to the client.">
+		  			  <LABEL FOR="NOTIFY_SEND_RESPONSE" ID="NOTIFY_SEND_RESPONSE_LABEL"><U>B</U>efore response headers are sent</LABEL>
+	  	 			 </DIV>
+				</SPAN>
+			  </TD>
+ 			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" WIDTH="188">
+			  	<SPAN CLASS="itemText">
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="NOTIFY_URL_MAP" ACCESSKEY="U" onClick="SetFilterFlags();" TITLE="Notifies the filter when a server is mapping a logical URL to a physical path.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="NOTIFY_URL_MAP_DIV" TITLE="Notifies the filter when a server is mapping a logical URL to a physical path.">
+		  			  <LABEL FOR="NOTIFY_URL_MAP" ID="NOTIFY_URL_MAP_LABEL"><U>U</U>RL mapping requests</LABEL>
+	  	 			 </DIV>
+	  
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="NOTIFY_LOG" ACCESSKEY="V" onClick="SetFilterFlags();" TITLE="Notifies the filter when information is written to a server log file.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="NOTIFY_LOG_DIV" TITLE="Notifies the filter when information is written to a server log file.">
+		  			  <LABEL FOR="NOTIFY_LOG" ID="NOTIFY_LOG_LABEL">Ser<U>v</U>er log writes</LABEL>
+	  	 			 </DIV>
+					 
+					 <BR>
+					 
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="NOTIFY_END_OF_NET_SESSION" ACCESSKEY="E" onClick="SetFilterFlags();" TITLE="Notifies the filter that the session is ending.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="NOTIFY_END_OF_NET_SESSION_DIV" TITLE="Notifies the filter that the session is ending.">
+		  			  <LABEL FOR="NOTIFY_END_OF_NET_SESSION" ID="NOTIFY_END_OF_NET_SESSION_LABEL"><U>E</U>nd of connection</LABEL>
+	  	 			 </DIV>
+	  
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="NOTIFY_ACCESS_DENIED" ACCESSKEY="D" onClick="SetFilterFlags();" TITLE="Notifies the filter when access is denied.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="NOTIFY_ACCESS_DENIED_DIV" TITLE="Notifies the filter when access is denied.">
+		  			  <LABEL FOR="NOTIFY_ACCESS_DENIED" ID="NOTIFY_ACCESS_DENIED_LABEL">Access <U>d</U>enied</LABEL>
+					 </DIV>
+	  
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="NOTIFY_PREPROC_HEADERS" ACCESSKEY="P" onClick="SetFilterFlags();" TITLE="Notifies the filter that the server has preprocessed the client headers.">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="NOTIFY_PREPROC_HEADERS_DIV" TITLE="Notifies the filter that the server has preprocessed the client headers.">
+		  			  <LABEL FOR="NOTIFY_PREPROC_HEADERS" ID="NOTIFY_PREPROC_HEADERS_LABEL"><U>P</U>ost-preprocessing of the request headers</LABEL>
+	  	 			 </DIV>
+				</SPAN>
+			  </TD>
+			 </TR>
+			  
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="100%" COLSPAN="5">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+		 	</TABLE>
+			
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD HEIGHT="48">
+	   	  <!--OPEN OF BUTTON HTML//-->
+		  
+		  	<TABLE HEIGHT="48" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			  </TR>
+ 
+ 			  <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">Finish</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">Cancel</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.appwiz.isapi.ext.notifications');">Help</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+			
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+	
+  	<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+ 	</TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var tab_array = new Array();
+tab_array[0] = Default;
+tab_array[1] = AppSettings;
+tab_array[2] = Notifications;
+
+function InitDocument(document)
+{
+	setDirection();
+	InitTabs();
+	window.external.Load(document);
+	PRIORITY_HIGH.focus();
+}
+
+function InitTabs()
+{
+	MouseOut(Notifications);
+}
+
+function OnSecuredPort()
+{
+	if (NON_SECURED_PORT_SESSIONS.checked == false &&
+		SECURED_PORT_SESSIONS.checked == false)
+		NON_SECURED_PORT_SESSIONS.checked = true;
+	SetFilterFlags();
+}
+
+function OnNonSecuredPort()
+{
+	if (NON_SECURED_PORT_SESSIONS.checked == false &&
+		SECURED_PORT_SESSIONS.checked == false)
+		SECURED_PORT_SESSIONS.checked = true;
+	SetFilterFlags();
+}
+
+function SetFilterFlags()
+{
+	var bFirstFlag = true;
+	var strFlags = "";
+	if (SECURED_PORT_SESSIONS.checked)
+	{
+		if (!bFirstFlag)
+			strFlags = strFlags + " | SF_NOTIFY_SECURE_PORT";
+		else
+		{
+			strFlags = strFlags + "SF_NOTIFY_SECURE_PORT";
+			bFirstFlag = false;
+		}
+	}
+	if (NON_SECURED_PORT_SESSIONS.checked)
+	{
+		if (!bFirstFlag)
+			strFlags = strFlags + " | SF_NOTIFY_NONSECURE_PORT";
+		else
+		{
+			strFlags = strFlags + "SF_NOTIFY_NONSECURE_PORT";
+			bFirstFlag = false;
+		}
+	}
+	if (NOTIFY_PREPROC_HEADERS.checked)
+	{
+		if (!bFirstFlag)
+			strFlags = strFlags + " | SF_NOTIFY_PREPROC_HEADERS";
+		else
+		{
+			strFlags = strFlags + "SF_NOTIFY_PREPROC_HEADERS";
+			bFirstFlag = false;
+		}
+	}
+	if (NOTIFY_AUTHENTICATION.checked)
+	{
+		if (!bFirstFlag)
+			strFlags = strFlags + " | SF_NOTIFY_AUTHENTICATION";
+		else
+		{
+			strFlags = strFlags + "SF_NOTIFY_AUTHENTICATION";
+			bFirstFlag = false;
+		}
+	}
+	if (NOTIFY_AUTH_COMPLETE.checked)
+	{
+		if (!bFirstFlag)
+			strFlags = strFlags + " | SF_NOTIFY_AUTH_COMPLETE";
+		else
+		{
+			strFlags = strFlags + "SF_NOTIFY_AUTH_COMPLETE";
+			bFirstFlag = false;
+		}
+	}
+	if (NOTIFY_URL_MAP.checked)
+	{
+		if (!bFirstFlag)
+			strFlags = strFlags + " | SF_NOTIFY_URL_MAP";
+		else
+		{
+			strFlags = strFlags + "SF_NOTIFY_URL_MAP";
+			bFirstFlag = false;
+		}
+	}
+	if (NOTIFY_SEND_RAW_DATA.checked)
+	{
+		if (!bFirstFlag)
+			strFlags = strFlags + " | SF_NOTIFY_SEND_RAW_DATA";
+		else
+		{
+			strFlags = strFlags + "SF_NOTIFY_SEND_RAW_DATA";
+			bFirstFlag = false;
+		}
+	}
+	if (NOTIFY_READ_RAW_DATA.checked)
+	{
+		if (!bFirstFlag)
+			strFlags = strFlags + " | SF_NOTIFY_READ_RAW_DATA";
+		else
+		{
+			strFlags = strFlags + "SF_NOTIFY_READ_RAW_DATA";
+			bFirstFlag = false;
+		}
+	}
+	if (NOTIFY_LOG.checked)
+	{
+		if (!bFirstFlag)
+			strFlags = strFlags + " | SF_NOTIFY_LOG";
+		else
+		{
+			strFlags = strFlags + "SF_NOTIFY_LOG";
+			bFirstFlag = false;
+		}
+	}
+	if (NOTIFY_END_OF_NET_SESSION.checked)
+	{
+		if (!bFirstFlag)
+			strFlags = strFlags + " | SF_NOTIFY_END_OF_NET_SESSION";
+		else
+		{
+			strFlags = strFlags + "SF_NOTIFY_END_OF_NET_SESSION";
+			bFirstFlag = false;
+		}
+	}
+	if (NOTIFY_ACCESS_DENIED.checked)
+	{
+		if (!bFirstFlag)
+			strFlags = strFlags + " | SF_NOTIFY_ACCESS_DENIED";
+		else
+		{
+			strFlags = strFlags + "SF_NOTIFY_ACCESS_DENIED";
+			bFirstFlag = false;
+		}
+	}
+	if (NOTIFY_END_OF_REQUEST.checked)
+	{
+		if (!bFirstFlag)
+			strFlags = strFlags + " | SF_NOTIFY_END_OF_REQUEST";
+		else
+		{
+			strFlags = strFlags + "SF_NOTIFY_END_OF_REQUEST";
+			bFirstFlag = false;
+		}
+	}
+	if (NOTIFY_SEND_RESPONSE.checked)
+	{
+		if (!bFirstFlag)
+			strFlags = strFlags + " | SF_NOTIFY_SEND_RESPONSE";
+		else
+		{
+			strFlags = strFlags + "SF_NOTIFY_SEND_RESPONSE";
+			bFirstFlag = false;
+		}
+	}
+	window.external.AddSymbol("FILTER_FLAGS", strFlags);
+}
+
+function Next(document, linkto)
+{
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	bValidating = true;
+	if (!ValidateInput())
+	{
+		bValidating = false;
+		Next(document, 'AppSettings.htm');
+		return;
+	}
+
+	OnWizFinish(document);
+}
+
+function ValidateInput()
+{
+	var bValid = true;
+	var strClass = window.external.FindSymbol("EXTENSION_CLASS");
+
+	bValid = window.external.dte.VCLanguageManager.ValidateIdentifier(strClass) && 
+		!window.external.dte.VCLanguageManager.IsReservedName(strClass);
+
+	if (bValid)
+	{
+		strClass = window.external.FindSymbol("FILTER_CLASS");
+		bValid = window.external.dte.VCLanguageManager.ValidateIdentifier(strClass) && 
+			!window.external.dte.VCLanguageManager.IsReservedName(strClass);
+	}
+
+	if (!bValid)
+	{
+		window.external.ReportError();
+		return false;
+	}
+	return true;
+}
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	var strPath = "../../../";
+	strPath += window.external.GetHostLocale();
+	var strScriptPath = strPath + "/Script.js";
+	var strCommonPath = strPath + "/Common.js";
+	document.scripts("INCLUDE_SCRIPT").src = strScriptPath;
+	document.scripts("INCLUDE_COMMON").src = strCommonPath;
+</SCRIPT>

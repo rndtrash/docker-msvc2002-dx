@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabDefinition>
+	<Tab ID="vs_online_community" Name="Online Community" Filterable="true">
+		<TabData>
+			<Value Name="VisualStudioF1Keyword">vs.homepage.online.community</Value>
+		</TabData>
+		<Application Title="Online Community" ID="vs_online_community_app">
+			<Pane ID="CommPane" Title="Online Community">
+				<LinkGroupSet ID="CommList" Layout="list" Priority="500">
+					<LinkGroup ID="VSComm" Title="Online Community" Priority="900" />
+				</LinkGroupSet>
+			</Pane>
+			<Data>
+				<Context>
+					<Links>
+						<LItemEx>
+							<LItem LinkGroup="VSComm"/>
+							<Blurb>This feature requires that you have connected to the internet previously or are currently online</Blurb>
+						</LItemEx>
+					</Links>
+				</Context>
+			</Data>
+		</Application>
+		<Feeds>
+			<Feed Expires="6681827931">
+				<Source ID="CommSrc" LCID="1033" URL="http://msdn.microsoft.com/vsdata/vsdata.asp">
+					<Arg Name="tab">vs_community</Arg>
+				</Source>
+			</Feed>
+		</Feeds>
+	</Tab>
+
+	<Tab ID="vs_msdn_headlines" Name="Headlines" Filterable="true">
+		<TabData>
+			<Value Name="VisualStudioF1Keyword">vs.homepage.headlines</Value>
+		</TabData>
+		<Application Title="Headlines" ID="vs_msdn_headlines_app">
+			<Pane ID="HeadPane" Title="Headlines">
+				<LinkGroupSet ID="HdlsList" Layout="list" Priority="500">
+					<LinkGroup ID="MSDNHdls" Title="Headlines" Priority="900" />
+				</LinkGroupSet>
+			</Pane>
+			<Data>
+				<Context>
+					<Links>
+						<LItemEx>
+							<LItem LinkGroup="MSDNHdls"/>
+							<Blurb>This feature requires that you have connected to the internet previously or are currently online</Blurb>
+						</LItemEx>
+					</Links>
+				</Context>
+			</Data>
+		</Application>
+		<Feeds>
+			<Feed Expires="6681827931">
+				<Source ID="HdlSrc" LCID="1033" URL="http://msdn.microsoft.com/vsdata/vsdata.asp">
+					<Arg Name="tab">vs_msdn_headlines</Arg>
+				</Source>
+			</Feed>
+		</Feeds>
+	</Tab>
+	
+	<Tab ID="vs_search_online" Name="Search Online" Filterable="false">
+		<TabData>
+			<Value Name="VisualStudioF1Keyword">vs.homepage.search.online</Value>
+		</TabData>
+		<Application Title="Search" ID="vs_search_online_app">
+			<Pane ID="SearchPane" Title="Search">
+				<SearchMSDN>
+				</SearchMSDN>
+			</Pane>
+		</Application>
+		<Feeds>
+			<Feed>
+				<Source LCID="1033" URL="http://msdn.microsoft.com/vsdata/vsdata.asp">
+					<Arg Name="so">RECCNT</Arg>
+					<Arg Name="boolean">ANY</Arg>
+					<Arg Name="i">02</Arg>
+					<Arg Name="i">07</Arg>
+					<Arg Name="i">08</Arg>
+					<Arg Name="i">09</Arg>
+					<Arg Name="p">1</Arg>
+					<Arg Name="nq">new</Arg>
+				</Source>
+			</Feed>
+		</Feeds>
+	</Tab>
+	
+	<Tab ID="vs_msdn_downloads" Name="Downloads" Filterable="true">
+		<TabData>
+			<Value Name="VisualStudioF1Keyword">vs.homepage.downloads</Value>
+		</TabData>
+		<Application Title="Downloads" ID="vs_msdn_downloads_app">
+			<Pane ID="DnldsPane" Title="Downloads">
+				<LinkGroupSet ID="DnldsList" Layout="list" Priority="500">
+					<LinkGroup ID="MSDNDnlds" Title="Downloads" Priority="900" />
+				</LinkGroupSet>
+			</Pane>
+			<Data>
+				<Context>
+					<Links>
+						<LItemEx>
+							<LItem LinkGroup="MSDNDnlds"/>
+							<Blurb>This feature requires that you have connected to the internet previously or are currently online</Blurb>
+						</LItemEx>
+					</Links>
+				</Context>
+			</Data>
+		</Application>
+		<Feeds>
+			<Feed Expires="86681827931">
+				<Source ID="DnlDefaultSrc" LCID="1033" URL="http://msdn.microsoft.com/vsdata/vsdata.asp">
+					<Arg Name="tab">vs_msdn_downloads</Arg>
+				</Source>
+			</Feed>
+		</Feeds>
+	</Tab>
+  
+	<Tab ID="vs_xml_webservices" Name="XML Web Services" Filterable="false">
+		<TabData>
+			<Value Name="VisualStudioF1Keyword">vs.homepage.xmlwebservices</Value>
+		</TabData>
+		<Application Title="Downloads" ID="vs_xml_webservices_app">
+			<Pane ID="XMLWSPane" Title="XML Web Services">
+				<LinkGroupSet ID="XMLWSList" Layout="list" Priority="500">
+					<LinkGroup ID="XMLWS" Title="XML Web Services" Priority="900" />
+				</LinkGroupSet>
+			</Pane>
+			<Data>
+				<Context>
+					<Links>
+						<LItemEx>
+							<LItem LinkGroup="XMLWS"/>
+							<Blurb>This feature requires that you have connected to the internet previously or are currently online</Blurb>
+						</LItemEx>
+					</Links>
+				</Context>
+			</Data>
+		</Application>
+		<Feeds>
+			<Feed Expires="86681827931">
+				<Source ID="XMLWSDefaultSrc" LCID="1033" URL="http://msdn.microsoft.com/vsdata/vsdata.asp">
+					<Arg Name="tab">vs_xml_web_services</Arg>
+				</Source>
+			</Feed>
+		</Feeds>
+	</Tab>
+
+	<Tab ID="vs_web_hosting" Name="Web Hosting" Filterable="false">
+		<TabData>
+			<Value Name="VisualStudioF1Keyword">vs.homepage.web.hosting</Value>
+		</TabData>
+		<Application Title="Downloads" ID="vs_web_hosting_app">
+			<Pane ID="WebHostingPane" Title="Web Hosting">
+				<LinkGroupSet ID="WHList" Layout="list" Priority="500">
+					<LinkGroup ID="WH" Title="Web Hosting" Priority="900" />
+				</LinkGroupSet>
+			</Pane>
+			<Data>
+				<Context>
+					<Links>
+						<LItemEx>
+							<LItem LinkGroup="WH"/>
+							<Blurb>This feature requires that you have connected to the internet previously or are currently online</Blurb>
+						</LItemEx>
+					</Links>
+				</Context>
+			</Data>
+		</Application>
+		<Feeds>
+			<Feed Expires="86681827931">
+				<Source ID="DefaultWebHostSrc" LCID="1033" URL="http://msdn.microsoft.com/vsdata/vsdata.asp">
+					<Arg Name="tab">vs_web_hosting</Arg>
+				</Source>
+			</Feed>
+		</Feeds>
+	</Tab>
+</TabDefinition>

@@ -1,0 +1,772 @@
+<!- (c) 2001 Microsoft Corporation -->
+<HTML DIR="LTR">
+
+<HEAD>
+	<TITLE>ATL Server Project Wizard</TITLE>
+	<META NAME="vs_targetSchema" CONTENT="http://schemas.microsoft.com/intellisense/ie5">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+	<STYLE TYPE="text/css">@import url();</STYLE>
+	<SCRIPT>
+		var strURL = "../../../";
+		strURL += window.external.GetHostLocale();
+		strURL += "/NewStyles.css";
+		document.styleSheets(0).imports(0).href = strURL;
+	</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="BUTTONFACE" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" ONLOAD="InitDocument(document);" ONKEYDOWN="if (!bValidating) OnKey();" ONKEYPRESS="if (!bValidating) OnPress();">
+
+<TABLE CLASS="ONE" HEIGHT="100%" WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<COL WIDTH="178"><COL>
+
+  <!--OPEN OF INTRODUCTORY INFORMATION TABLE//-->
+  <TR VALIGN="TOP">
+	<TD HEIGHT="79" WIDTH="100%" COLSPAN="2">
+	 <TABLE CLASS="TWO" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	 <COL WIDTH="12"><COL><COL WIDTH="12">
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+  
+	   <TD CLASS="IMAGE" VALIGN="BOTTOM" WIDTH="110" ROWSPAN="2">
+		<DIV CLASS="SMALLA" ID="Layer1">
+		 <IMG CLASS="SMALL" SRC="../../Images/AtlsWiz1.gif" WIDTH="98" HEIGHT="70" ALT="" BORDER="0" TABINDEX="-1">
+		</DIV>
+	   </TD>
+
+	   <TD VALIGN="TOP" HEIGHT="12" WIDTH="6" ROWSPAN="2">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65">
+		<H4 CLASS="HEAD" ID="HEAD">Application Options</H4>
+		<P CLASS="SUBHEAD" ID="SUBHEAD">Choose the options to be supported by the Web application DLL.</P>
+	   </TD>
+	  
+	   <TD VALIGN="TOP" HEIGHT="65" WIDTH="12">
+	  	&nbsp;
+	   </TD>
+	  </TR>
+	 
+	  <TR>
+	   <TD VALIGN="TOP" CLASS="RULE" COLSPAN="5" HEIGHT="2">
+		<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+	  	 <TR VALIGN="TOP">
+	  	  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+	  	  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+	  	 </TR>
+		</TABLE>
+	   </TD>
+	  </TR>
+	 </TABLE>
+	</TD>
+  </TR>
+  <!--CLOSE OF INTRODUCTORY INFORMATION TABLE//-->
+
+  <!--OPEN OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+  <TR VALIGN="TOP">
+	<TD CLASS="Three" VALIGN="TOP" HEIGHT="100%" WIDTH="178">
+	 <TABLE CLASS="fixedSize" HEIGHT="100%" WIDTH="178" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+  	  <TR VALIGN="TOP">
+	   <TD CLASS="threeCustom" VALIGN="TOP" STYLE="BACKGROUND-IMAGE: URL(../../Images/ATL_Server_Background.gif);">
+	   	<!--OPEN OF NAVIGATION TABLE//-->
+
+	    <TABLE CLASS="THREE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="12"><COL WIDTH="166"><COL WIDTH="1">
+		 <TR>
+	   	  <TD VALIGN="TOP" COLSPAN="3" HEIGHT="12">
+	  		&nbsp;
+		  </TD>
+		 </TR>
+		 <TR>
+	   	  <TD VALIGN="TOP" HEIGHT="100%" WIDTH="12">
+	  		&nbsp;
+		  </TD>
+	   	  <TD VALIGN="TOP" HEIGHT="100%" WIDTH="165">
+	   	  <!--OPEN OF NAVIGATIONAL LINKS//-->
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="166" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="162">
+				<SPAN CLASS="ACTIVELINK" ID="Default" TITLE="Examine an overview of selections" onClick="Next(document, 'Default.htm');" TABINDEX="1">Overview</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="166" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="162">
+				<SPAN CLASS="ACTIVELINK" ID="AppSettings" TITLE="Choose the project types to be generated along with their names and locations" onClick="Next(document, 'AppSettings.htm');" TABINDEX="2">Project Settings</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="166" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXTINDENT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="162">
+				<SPAN CLASS="ACTIVELINK" ID="ServerOptions" TITLE="Choose the options to be supported by the ISAPI extension DLL" onClick="onClick(this);" TABINDEX="3">Server Options</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+
+		  	<DIV CLASS="LINKSELECTED">
+	 	   	 <SPAN CLASS="VERTLINE1">
+			  <IMG SRC="../../Images/spacer.gif" WIDTH="1" HEIGHT="1" ALT="" BORDER="0">
+			 </SPAN>
+			 <SPAN CLASS="HORILINE1">
+			  <TABLE WIDTH="167" HEIGHT="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			   <TR VALIGN="TOP">
+			    <TD CLASS="DOTTEDLINE" HEIGHT="1">
+				</TD>
+			   </TR>
+			   <TR VALIGN="TOP">
+			    <TD HEIGHT="100%">
+				 <IMG SRC="../../Images/spacer.gif" WIDTH="1" HEIGHT="28" ALT="" BORDER="0">
+			    </TD>
+			   </TR>
+			   <TR VALIGN="TOP">
+			    <TD CLASS="DOTTEDLINE" HEIGHT="1">
+			    </TD>
+			   </TR>
+			  </TABLE>
+			 </SPAN>
+			 <TABLE WIDTH="160" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXTSELECTEDINDENT">
+			  <TR VALIGN="MIDDLE">
+			   <TD WIDTH="156">
+				<SPAN ID="AppOptions" TITLE="Choose the options to be supported by the Web application DLL">Application Options</SPAN>
+			   </TD>
+			   <TD WIDTH="4">
+				<IMG SRC="../../Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+	  		
+			<DIV CLASS="LINK">
+			 <TABLE WIDTH="166" HEIGHT="28" BORDER="0" CELLPADDING="0" CELLSPACING="0" CLASS="LINKTEXT">
+			  <TR VALIGN="MIDDLE">
+	  		   <TD WIDTH="162">
+				<SPAN CLASS="ACTIVELINK" ID="DevOptions" TITLE="Choose the options that configure the generated projects to the way that you work best" onClick="Next(document, 'DevOptions.htm');" TABINDEX="4">Developer Support Options</SPAN>
+			   </TD>
+	  		   <TD WIDTH="4">
+			  	<IMG SRC="../../Images/spacer.gif" HEIGHT="1" WIDTH="4">
+			   </TD>
+			  </TR>
+			 </TABLE>
+			</DIV>
+			
+	   	  <!--CLOSE OF NAVIGATIONAL LINKS//-->
+		  </TD>
+		  <TD WIDTH="1">
+		   <DIV CLASS="VERTLINE">
+			 <IMG SRC="../../Images/spacer.gif" WIDTH="1" HEIGHT="1" ALT="" BORDER="0">
+		   </DIV>
+		  </TD>
+		 </TR>
+		 </TABLE>
+		</TD>
+	   </TR>
+	   </TABLE>
+			
+	   <!--CLOSE OF NAVIGATION TABLE//-->
+	   </TD>
+  
+	   <TD VALIGN="TOP" HEIGHT="100%">
+	   <!--OPEN OF CONTENT AND BUTTON TABLE//-->
+	   
+	   	<TABLE CLASS="ONE" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		<COL WIDTH="100%">
+		 <TR VALIGN="TOP">
+		  <TD HEIGHT="100%">
+	   	  <!--OPEN OF CONTENT//-->
+		  
+		  	<TABLE CLASS="CONTENT" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL WIDTH="193"><COL WIDTH="12"><COL WIDTH="193"><COL WIDTH="12">
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="5">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+ 			 <TR>
+ 			 <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+ 				<SPAN CLASS="itemTextTop" TITLE="Specifies whether the web application DLL supports additional services." ID="options_title">Application options:
+	  				 <P CLASS="Spacer">&nbsp;</P>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="VALIDATION" ACCESSKEY="v" TITLE="Specifies whether to insert the method necessary for validation of query parameters and form variables." onPropertychange="OnValidation();">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="validation_title" TITLE="Specifies whether to insert the method necessary for validation of query parameters and form variables.">
+		  			  <LABEL FOR="VALIDATION" ID="VALIDATION_LABEL"><U>V</U>alidation support</LABEL>
+	  	 			 </DIV>
+	  
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="STENCIL" ACCESSKEY="s" TITLE="Specifies whether to insert a replacement method that demonstrates how to use the tag_name attribute or REPLACEMENT_METHOD_ENTRY macro." onPropertychange="OnStencil();">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="stencil_title" TITLE="Specifies whether to insert a replacement method that demonstrates how to use the tag_name attribute or REPLACEMENT_METHOD_ENTRY macro.">
+		  			  <LABEL FOR="STENCIL" ID="STENCIL_LABEL"><U>S</U>tencil processing support</LABEL>
+	  	 			 </DIV>
+	  
+	  				 <BR>
+	  
+	  				 <INPUT TYPE="checkbox" CLASS="CheckBoxA" ID="SOAP" ACCESSKEY="w" TITLE="Specifies whether to generate code for a Web Service. If this box is not selected, a standard request handler is generated instead." onPropertychange="OnSoap();">
+	  	 			 <DIV CLASS="itemTextCheckboxB" ID="ITEMTEXTCHECKBOX_TITLE" TITLE="Specifies whether to generate code for a Web Service. If this box is not selected, a standard request handler is generated instead.">
+		  			  <LABEL FOR="SOAP" ID="SOAP_LABEL">Create as <U>W</U>eb Service</LABEL>
+	  	 			 </DIV>
+				</SPAN>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+  			  <TD VALIGN="TOP">
+  				&nbsp;
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="19" COLSPAN="5">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			 
+			 <DIV ID="srf_options">
+ 			 <TR>
+ 			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" COLSPAN="3">
+			    <SPAN CLASS="itemTextTop" ID="SRF_OPTIONS_SPAN" TITLE="Specifies whether to add tags to the generated server response file.">Options for initial server response file (.srf):</SPAN>
+				<P CLASS="ElementSpacer14">&nbsp;</P>
+			  </TD>
+ 			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+			 </TR>
+			 
+ 			 <TR>
+ 			  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP">
+				<SPAN CLASS="itemText">
+	  				 <INPUT CLASS="CheckBoxA" TYPE="checkbox" ID="USELOCALE" ACCESSKEY="l" TITLE="Specifies the corresponding locale tag be added to the generated server response file." onPropertychange="OnUseLocale();">
+	  	 			 <DIV CLASS="itemTextCheckboxB" TITLE="Specifies the corresponding locale tag be added to the generated server response file." ID="uselocale_title">
+		  			  <LABEL FOR="USELOCALE" ID="USELOCALE_LABEL">Use <U>l</U>ocale</LABEL>
+	  	 			 </DIV>
+				</SPAN>
+	
+				<P CLASS="ElementSpacer2">&nbsp;</P>
+				
+				<SPAN ID="id_locale" CLASS="itemText" TITLE="Localization Option - select a locale from the list below.">
+	  	 			 <LABEL CLASS="INDENT2" FOR="LOCALE" ID="LOCALE_LABEL">L<U>o</U>cale:</LABEL>
+	  	 			 <BR>
+					<SELECT CLASS="sideBtn2AShort" SIZE="1" ID="LOCALE" ACCESSKEY="O">
+						<OPTION VALUE="af" ID="AF_OPTION" LCID="1078">Afrikaans</OPTION>
+						<OPTION VALUE="sq" ID="SQ_OPTION" LCID="1052">Albanian</OPTION>
+						<OPTION VALUE="ar" ID="AR_OPTION" LCID="1">Arabic</OPTION>
+						<OPTION VALUE="ar-dz" ID="AR_DZ_OPTION" LCID="5121">Arabic (Algeria)</OPTION>
+						<OPTION VALUE="ar-bh" ID="AR_BH_OPTION" LCID="15361">Arabic (Bahrain)</OPTION>
+						<OPTION VALUE="ar-eg" ID="AR_EG_OPTION" LCID="3073">Arabic (Egypt)</OPTION>
+						<OPTION VALUE="ar-iq" ID="AR_IQ_OPTION" LCID="2049">Arabic (Iraq)</OPTION>
+						<OPTION VALUE="ar-jo" ID="AR_JO_OPTION" LCID="11265">Arabic (Jordan)</OPTION>
+						<OPTION VALUE="ar-kw" ID="AR_KW_OPTION" LCID="13313">Arabic (Kuwait)</OPTION>
+						<OPTION VALUE="ar-lb" ID="AR_LB_OPTION" LCID="12289">Arabic (Lebanon)</OPTION>
+						<OPTION VALUE="ar-ly" ID="AR_LY_OPTION" LCID="4097">Arabic (Libya)</OPTION>
+						<OPTION VALUE="ar-ma" ID="AR_MA_OPTION" LCID="6145">Arabic (Morocco)</OPTION>
+						<OPTION VALUE="ar-tn" ID="AR_TN_OPTION" LCID="7169">Arabic (Tunisia)</OPTION>
+						<OPTION VALUE="ar-om" ID="AR_OM_OPTION" LCID="8193">Arabic (Oman)</OPTION>
+						<OPTION VALUE="ar-qa" ID="AR_QA_OPTION" LCID="16385">Arabic (Qatar)</OPTION>
+						<OPTION VALUE="ar-sa" ID="AR_SA_OPTION" LCID="1025">Arabic (Saudi Arabia)</OPTION>
+						<OPTION VALUE="ar-sy" ID="AR_SY_OPTION" LCID="10241">Arabic (Syria)</OPTION>
+						<OPTION VALUE="ar-ae" ID="AR_AE_OPTION" LCID="14337">Arabic (U.A.E.)</OPTION>
+						<OPTION VALUE="ar-ye" ID="AR_YE_OPTION" LCID="9217">Arabic (Yemen)</OPTION>
+						<OPTION VALUE="hy" ID="HY_OPTION" LCID="1067">Armenian</OPTION>
+						<OPTION VALUE="as" ID="AS_OPTION" LCID="1101">Assamese</OPTION>
+						<OPTION VALUE="az" ID="AZ_OPTION" LCID="2092">Azeri (Cyrillic)</OPTION>
+						<OPTION VALUE="az" ID="AZ_OPTION" LCID="1068">Azeri (Latin)</OPTION>
+						<OPTION VALUE="eu" ID="EU_OPTION" LCID="1069">Basque</OPTION>
+						<OPTION VALUE="be" ID="BE_OPTION" LCID="1059">Belarusian</OPTION>
+						<OPTION VALUE="bn" ID="BN_OPTION" LCID="1093">Bengali</OPTION>
+						<OPTION VALUE="bg" ID="BG_OPTION" LCID="1026">Bulgarian</OPTION>
+						<OPTION VALUE="ca" ID="CA_OPTION" LCID="1027">Catalan</OPTION>
+						<OPTION VALUE="zh" ID="ZH_OPTION" LCID="4">Chinese</OPTION>
+						<OPTION VALUE="zh-hk" ID="ZH_HK_OPTION" LCID="3076">Chinese (Hong Kong SAR)</OPTION>
+						<OPTION VALUE="zh" ID="ZH_OPTION" LCID="5124">Chinese (Macau SAR)</OPTION>
+						<OPTION VALUE="zh-cn" ID="ZH_CN_OPTION" LCID="2052">Chinese (PRC)</OPTION>
+						<OPTION VALUE="zh-sg" ID="ZH_SG_OPTION" LCID="4100">Chinese (Singapore)</OPTION>
+						<OPTION VALUE="zh-tw" ID="ZH_TW_OPTION" LCID="1028">Chinese (Taiwan)</OPTION>
+						<OPTION VALUE="hr" ID="HR_OPTION" LCID="1050">Croatian</OPTION>
+						<OPTION VALUE="cs" ID="CS_OPTION" LCID="1029">Czech</OPTION>
+						<OPTION VALUE="da" ID="DA_OPTION" LCID="1030">Danish</OPTION>
+						<OPTION VALUE="nl-be" ID="NL_BE_OPTION" LCID="2067">Dutch (Belgium)</OPTION>
+						<OPTION VALUE="nl" ID="NL_OPTION" LCID="1043">Dutch (Netherlands)</OPTION>
+						<OPTION VALUE="en" ID="EN_OPTION" LCID="9">English</OPTION>
+						<OPTION VALUE="en-au" ID="EN_AU_OPTION" LCID="3081">English (Australia)</OPTION>
+						<OPTION VALUE="en-bz" ID="EN_BZ_OPTION" LCID="10249">English (Belize)</OPTION>
+						<OPTION VALUE="en-ca" ID="EN_CA_OPTION" LCID="4105">English (Canada)</OPTION>
+						<OPTION VALUE="en" ID="EN_OPTION" LCID="9225">English (Caribbean)</OPTION>
+						<OPTION VALUE="en-ie" ID="EN_IE_OPTION" LCID="6153">English (Ireland)</OPTION>
+						<OPTION VALUE="en-jm" ID="EN_JM_OPTION" LCID="8201">English (Jamaica)</OPTION>
+						<OPTION VALUE="en-nz" ID="EN_NZ_OPTION" LCID="5129">English (New Zealand)</OPTION>
+						<OPTION VALUE="en-ph" ID="EN_PH_OPTION" LCID="13321">English (Philippines)</OPTION>
+						<OPTION VALUE="en-za" ID="EN_ZA_OPTION" LCID="7177">English (South Africa)</OPTION>
+						<OPTION VALUE="en-gb" ID="EN_GB_OPTION" LCID="2057">English (United Kingdom)</OPTION>
+						<OPTION VALUE="en-us" ID="EN_US_OPTION" LCID="1033">English (United States)</OPTION>
+						<OPTION VALUE="en-tt" ID="EN_TT_OPTION" LCID="11273">English (Trinidad)</OPTION>
+						<OPTION VALUE="en-zw" ID="EN_ZW_OPTION" LCID="12297">English (Zimbabwe)</OPTION>
+						<OPTION VALUE="et" ID="ET_OPTION" LCID="1061">Estonian</OPTION>
+						<OPTION VALUE="fo" ID="FO_OPTION" LCID="1080">Faeroese</OPTION>
+						<OPTION VALUE="fa" ID="FA_OPTION" LCID="1065">Farsi</OPTION>
+						<OPTION VALUE="fi" ID="FI_OPTION" LCID="1035">Finnish</OPTION>
+						<OPTION VALUE="fr-be" ID="FR_BE_OPTION" LCID="2060">French (Belgium)</OPTION>
+						<OPTION VALUE="fr-ca" ID="FR_CA_OPTION" LCID="3084">French (Canada)</OPTION>
+						<OPTION VALUE="fr" ID="FR_OPTION" LCID="1036">French (France)</OPTION>
+						<OPTION VALUE="fr-lu" ID="FR_LU_OPTION" LCID="5132">French (Luxembourg)</OPTION>
+						<OPTION VALUE="fr-mc" ID="FR_MC_OPTION" LCID="6156">French (Monaco)</OPTION>
+						<OPTION VALUE="fr-ch" ID="FR_CH_OPTION" LCID="4108">French (Switzerland)</OPTION>
+						<OPTION VALUE="gd" ID="GD_OPTION" LCID="1084">Gaelic</OPTION>
+						<OPTION VALUE="ka" ID="KA_OPTION" LCID="1079">Georgian</OPTION>
+						<OPTION VALUE="de-at" ID="DE_AT_OPTION" LCID="3079">German (Austria)</OPTION>
+						<OPTION VALUE="de-li" ID="DE_LI_OPTION" LCID="5127">German (Liechtenstein)</OPTION>
+						<OPTION VALUE="de-lu" ID="DE_LU_OPTION" LCID="4103">German (Luxembourg)</OPTION>
+						<OPTION VALUE="de" ID="DE_OPTION" LCID="1031">German (Germany)</OPTION>
+						<OPTION VALUE="de-ch" ID="DE_CH_OPTION" LCID="2055">German (Switzerland)</OPTION>
+						<OPTION VALUE="el" ID="EL_OPTION" LCID="1032">Greek</OPTION>
+						<OPTION VALUE="gu" ID="GU_OPTION" LCID="1095">Gujarati</OPTION>
+						<OPTION VALUE="he" ID="HE_OPTION" LCID="1037">Hebrew</OPTION>
+						<OPTION VALUE="hi" ID="HI_OPTION" LCID="1081">Hindi</OPTION>
+						<OPTION VALUE="hu" ID="HU_OPTION" LCID="1038">Hungarian</OPTION>
+						<OPTION VALUE="is" ID="IS_OPTION" LCID="1039">Icelandic</OPTION>
+						<OPTION VALUE="id" ID="ID_OPTION" LCID="1057">Indonesian</OPTION>
+						<OPTION VALUE="it" ID="IT_OPTION" LCID="1040">Italian (Italy)</OPTION>
+						<OPTION VALUE="it-ch" ID="IT_CH_OPTION" LCID="2064">Italian (Switzerland)</OPTION>
+						<OPTION VALUE="ja" ID="JA_OPTION" LCID="1041">Japanese</OPTION>
+						<OPTION VALUE="kn" ID="KN_OPTION" LCID="1099">Kannada</OPTION>
+						<OPTION VALUE="kk" ID="KK_OPTION" LCID="1087">Kazakh</OPTION>
+						<OPTION VALUE="x-kok" ID="X_KOK_OPTION" LCID="1111">Konkani</OPTION>
+						<OPTION VALUE="ko" ID="KO_OPTION" LCID="1042">Korean</OPTION>
+						<OPTION VALUE="lv" ID="LV_OPTION" LCID="1062">Latvian</OPTION>
+						<OPTION VALUE="lt" ID="LT_OPTION" LCID="1063">Lithuanian</OPTION>
+						<OPTION VALUE="mk" ID="MK_OPTION" LCID="1071">Macedonian (FYROM)</OPTION>
+						<OPTION VALUE="ms" ID="MS_OPTION" LCID="2110">Malay (Brunei Darussalam)</OPTION>
+						<OPTION VALUE="ms" ID="MS_OPTION" LCID="1086">Malay (Malaysia)</OPTION>
+						<OPTION VALUE="ml" ID="ML_OPTION" LCID="1100">Malayalam</OPTION>
+						<OPTION VALUE="mt" ID="MT_OPTION" LCID="1082">Maltese</OPTION>
+						<OPTION VALUE="mr" ID="MR_OPTION" LCID="1102">Marathi</OPTION>
+						<OPTION VALUE="ne" ID="NE_OPTION" LCID="2145">Nepali (India)</OPTION>
+						<OPTION VALUE="no" ID="NO_OPTION" LCID="1044">Norwegian (Bokmal)</OPTION>
+						<OPTION VALUE="no" ID="NO_OPTION" LCID="2068">Norwegian (Nynorsk)</OPTION>
+						<OPTION VALUE="or" ID="OR_OPTION" LCID="1096">Oriya</OPTION>
+						<OPTION VALUE="pl" ID="PL_OPTION" LCID="1045">Polish</OPTION>
+						<OPTION VALUE="pt-br" ID="PT_BR_OPTION" LCID="1046">Portuguese (Brazil)</OPTION>
+						<OPTION VALUE="pt" ID="PT_OPTION" LCID="2070">Portuguese (Portugal)</OPTION>
+						<OPTION VALUE="pa" ID="PA_OPTION" LCID="1094">Punjabi</OPTION>
+						<OPTION VALUE="rm" ID="RM_OPTION" LCID="1047">Rhaeto-Romanic</OPTION>
+						<OPTION VALUE="ro" ID="RO_OPTION" LCID="1048">Romanian</OPTION>
+						<OPTION VALUE="ro-mo" ID="RO_MO_OPTION" LCID="2072">Romanian (Moldova)</OPTION>
+						<OPTION VALUE="ru" ID="RU_OPTION" LCID="1049">Russian</OPTION>
+						<OPTION VALUE="ru-mo" ID="RU_MO_OPTION" LCID="2073">Russian (Moldova)</OPTION>
+						<OPTION VALUE="sa" ID="SA_OPTION" LCID="1103">Sanskrit</OPTION>
+						<OPTION VALUE="sr" ID="SR_OPTION" LCID="3098">Serbian (Cyrillic)</OPTION>
+						<OPTION VALUE="sr" ID="SR_OPTION" LCID="2074">Serbian (Latin)</OPTION>
+						<OPTION VALUE="sk" ID="SK_OPTION" LCID="1051">Slovak</OPTION>
+						<OPTION VALUE="sl" ID="SL_OPTION" LCID="1060">Slovenian</OPTION>
+						<OPTION VALUE="sb" ID="SB_OPTION" LCID="1070">Sorbian</OPTION>
+						<OPTION VALUE="es-ar" ID="ES_AR_OPTION" LCID="11274">Spanish (Argentina)</OPTION>
+						<OPTION VALUE="es-bo" ID="ES_BO_OPTION" LCID="16394">Spanish (Bolivia)</OPTION>
+						<OPTION VALUE="es-cl" ID="ES_CL_OPTION" LCID="13322">Spanish (Chile)</OPTION>
+						<OPTION VALUE="es-co" ID="ES_CO_OPTION" LCID="9226">Spanish (Colombia)</OPTION>
+						<OPTION VALUE="es-cr" ID="ES_CR_OPTION" LCID="5130">Spanish (Costa Rica)</OPTION>
+						<OPTION VALUE="es-do" ID="ES_DO_OPTION" LCID="7178">Spanish (Dominican Republic)</OPTION>
+						<OPTION VALUE="es-ec" ID="ES_EC_OPTION" LCID="12298">Spanish (Ecuador)</OPTION>
+						<OPTION VALUE="es-sv" ID="ES_SV_OPTION" LCID="17418">Spanish (El Salvador)</OPTION>
+						<OPTION VALUE="es-gt" ID="ES_GT_OPTION" LCID="4106">Spanish (Guatemala)</OPTION>
+						<OPTION VALUE="es-hn" ID="ES_HN_OPTION" LCID="18442">Spanish (Honduras)</OPTION>
+						<OPTION VALUE="es" ID="ES_OPTION" LCID="3082">Spanish (International Sort)</OPTION>
+						<OPTION VALUE="es-mx" ID="ES_MX_OPTION" LCID="2058">Spanish (Mexico)</OPTION>
+						<OPTION VALUE="es-ni" ID="ES_NI_OPTION" LCID="19466">Spanish (Nicaragua)</OPTION>
+						<OPTION VALUE="es-pa" ID="ES_PA_OPTION" LCID="6154">Spanish (Panama)</OPTION>
+						<OPTION VALUE="es-py" ID="ES_PY_OPTION" LCID="15370">Spanish (Paraguay)</OPTION>
+						<OPTION VALUE="es-pe" ID="ES_PE_OPTION" LCID="10250">Spanish (Peru)</OPTION>
+						<OPTION VALUE="es-pr" ID="ES_PR_OPTION" LCID="20490">Spanish (Puerto Rico)</OPTION>
+						<OPTION VALUE="es" ID="ES_OPTION" LCID="1034">Spanish (Traditional Sort)</OPTION>
+						<OPTION VALUE="es-uy" ID="ES_UY_OPTION" LCID="14346">Spanish (Uruguay)</OPTION>
+						<OPTION VALUE="es-ve" ID="ES_VE_OPTION" LCID="8202">Spanish (Venezuela)</OPTION>
+						<OPTION VALUE="sx" ID="SX_OPTION" LCID="1072">Sutu</OPTION>
+						<OPTION VALUE="sw" ID="SW_OPTION" LCID="1089">Swahili</OPTION>
+						<OPTION VALUE="sv" ID="SV_OPTION" LCID="1053">Swedish</OPTION>
+						<OPTION VALUE="sv-fi" ID="SV_FI_OPTION" LCID="2077">Swedish (Finland)</OPTION>
+						<OPTION VALUE="ta" ID="TA_OPTION" LCID="1097">Tamil</OPTION>
+						<OPTION VALUE="tt" ID="TT_OPTION" LCID="1092">Tatar</OPTION>
+						<OPTION VALUE="te" ID="TE_OPTION" LCID="1098">Telugu</OPTION>
+						<OPTION VALUE="th" ID="TH_OPTION" LCID="1054">Thai</OPTION>
+						<OPTION VALUE="ts" ID="TS_OPTION" LCID="1073">Tsonga</OPTION>
+						<OPTION VALUE="tn" ID="TN_OPTION" LCID="1074">Tswana</OPTION>
+						<OPTION VALUE="tr" ID="TR_OPTION" LCID="1055">Turkish</OPTION>
+						<OPTION VALUE="uk" ID="UK_OPTION" LCID="1058">Ukrainian</OPTION>
+						<OPTION VALUE="ur" ID="UR_OPTION" LCID="1056">Urdu</OPTION>
+						<OPTION VALUE="uz" ID="UZ_OPTION" LCID="2115">Uzbek (Cyrillic)</OPTION>
+						<OPTION VALUE="uz" ID="UZ_OPTION" LCID="1091">Uzbek (Latin)</OPTION>
+						<OPTION VALUE="vi" ID="VI_OPTION" LCID="1066">Vietnamese</OPTION>
+						<OPTION VALUE="xh" ID="XH_OPTION" LCID="1076">Xhosa</OPTION>
+						<OPTION VALUE="yi" ID="YI_OPTION" LCID="1085">Yiddish</OPTION>
+						<OPTION VALUE="zu" ID="ZU_OPTION" LCID="1077">Zulu</OPTION>
+					</SELECT>
+				</SPAN>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+  			  <TD VALIGN="TOP">
+				<SPAN CLASS="itemText">
+	  				 <INPUT CLASS="CheckBoxA" TYPE="checkbox" ID="USECODEPAGE" ACCESSKEY="g" TITLE="Specifies the corresponding codepage tag be added to the generated server response file." onPropertychange="OnUseCodePage();">
+	  	 			 <DIV CLASS="itemTextCheckboxB" TITLE="Specifies the corresponding codepage tag be added to the generated server response file." ID="usecodepage_title">
+		  			  <LABEL FOR="USECODEPAGE" ID="USECODEPAGE_LABEL">Use codepa<u>g</u>e</LABEL>
+	  	 			 </DIV>
+				</SPAN>
+	
+				<P CLASS="ElementSpacer2">&nbsp;</P>
+				
+				<SPAN ID="id_codepage" CLASS="itemText" TITLE="Localization Option - select a locale from the list below.">
+	  	 			 <LABEL CLASS="INDENT2" FOR="CODEPAGE" ID="CODEPAGE_LABEL">Cod<U>e</U>page:</LABEL>
+	  	 			 <BR>
+	  	 			 <SELECT CLASS="sideBtn2AShort" SIZE="1" ID="CODEPAGE" ACCESSKEY="e" VALUE="utf-8">
+						<OPTION VALUE="utf-8" ID="UTF_OPTION" SELECTED>Unicode (UTF-8)</OPTION>
+						<OPTION VALUE="ASMO-708" ID="ASMO_OPTION">Arabic (ASMO 708)</OPTION>
+						<OPTION VALUE="DOS-720" ID="DOS720_OPTION">Arabic (DOS)</OPTION>
+						<OPTION VALUE="iso-8859-6" ID="ISO6_OPTION">Arabic (ISO)</OPTION>
+						<OPTION VALUE="windows-1256" ID="W1256_OPTION">Arabic (Windows)</OPTION>
+						<OPTION VALUE="windows-1257" ID="W1257_OPTION">Baltic (Windows)</OPTION>
+						<OPTION VALUE="ibm852" ID="IBM_OPTION">Central European (DOS)</OPTION>
+						<OPTION VALUE="iso-8859-2" ID="ISO2_OPTION">Central European (ISO)</OPTION>
+						<OPTION VALUE="windows-1250" ID="W1250_OPTION">Central European (Windows)</OPTION>
+						<OPTION VALUE="gb2312" ID="GB_OPTION">Chinese Simplified (GB2312)</OPTION>
+						<OPTION VALUE="hz-gb-2312" ID="HZ_GB_OPTION">Chinese Simplified (HZ)</OPTION>
+						<OPTION VALUE="big5" ID="BIG_OPTION">Chinese Traditional (Big5)</OPTION>
+						<OPTION VALUE="cp866" ID="CP866_OPTION">Cyrillic (DOS)</OPTION>
+						<OPTION VALUE="iso-8859-5" ID="ISO5_OPTION">Cyrillic (ISO)</OPTION>
+						<OPTION VALUE="koi8-r" ID="KOR_OPTION">Cyrillic (KOI8-R)</OPTION>
+						<OPTION VALUE="koi8-ru" ID="KORU_OPTION">Cyrillic (KOI8-U)</OPTION>
+						<OPTION VALUE="windows-1251" ID="W1251_OPTION">Cyrillic (Windows)</OPTION>
+						<OPTION VALUE="iso-8859-7" ID="ISO7_OPTION">Greek (ISO)</OPTION>
+						<OPTION VALUE="windows-1253" ID="W1253_OPTION">Greek (Windows)</OPTION>
+						<OPTION VALUE="DOS-862" ID="DOS862_OPTION">Hebrew (DOS)</OPTION>
+						<OPTION VALUE="iso-8859-8-i" ID="ISO8I_OPTION">Hebrew (ISO-Logical)</OPTION>
+						<OPTION VALUE="iso-8859-8" ID="ISO8_OPTION">Hebrew (ISO-Visual)</OPTION>
+						<OPTION VALUE="windows-1255" ID="W1255_OPTION">Hebrew (Windows)</OPTION>
+						<OPTION VALUE="euc-jp" ID="EUC_OPTION">Japanese (EUC)</OPTION>
+						<OPTION VALUE="shift_jis" ID="SHIFT_OPTION">Japanese (Shift-JIS)</OPTION>
+						<OPTION VALUE="ks_c_5601-1987" ID="KS_C_OPTION">Korean</OPTION>
+						<OPTION VALUE="windows-874" ID="W874_OPTION">Thai (Windows)</OPTION>
+						<OPTION VALUE="iso-8859-9" ID="ISO9_OPTION">Turkish (Windows)</OPTION>
+						<OPTION VALUE="windows-1258" ID="W1258_OPTION">Vietnamese (Windows)</OPTION>
+						<OPTION VALUE="iso-8859-1" ID="ISO1_OPTION">Western European</OPTION>
+					 </SELECT>
+				</SPAN>
+  		  	  </TD>
+  		  	  <TD VALIGN="TOP" WIDTH="12">
+  				&nbsp;
+  		  	  </TD>
+ 		  	 </TR>
+			 </DIV>
+			 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="100%" COLSPAN="5">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+		 	</TABLE>
+			
+	   	  <!--CLOSE OF CONTENT//-->
+		  </TD>
+		 </TR>
+		 <TR VALIGN="BOTTOM">
+		  <TD HEIGHT="48">
+	   	  <!--OPEN OF BUTTON HTML//-->
+		  
+		  	<TABLE HEIGHT="48" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+			<COL WIDTH="12"><COL><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="4"><COL WIDTH="75"><COL WIDTH="12">
+			 <TR>
+  			  <TD VALIGN="TOP" CLASS="RULE" COLSPAN="8" HEIGHT="2">
+				<TABLE BORDER="0" WIDTH="100%" HEIGHT="1" CELLPADDING="0" CELLSPACING="0">
+  	 			 <TR VALIGN="TOP">
+  	  			  <TD HEIGHT="1" WIDTH="100%" BGCOLOR="BUTTONSHADOW"></TD>
+  	  			  <TD HEIGHT="1" WIDTH="1" BGCOLOR="WINDOW"></TD>
+  	 			 </TR>
+				</TABLE>
+  			  </TD>
+ 			  </TR>
+ 
+ 			  <TR>
+  			  <TD VALIGN="TOP" HEIGHT="11" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			<TR>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="TOP" HEIGHT="23">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="FinishBtn" onClick="OnFinish(document);">Finish</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="CancelBtn" onClick="window.external.Finish(document, 'cancel');">Cancel</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="4">
+  				&nbsp;
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="75">
+  				<BUTTON CLASS="BUTTONS" ID="HelpBtn" onClick="window.external.OnHelp('vc.appwiz.atl.server.appopts');">Help</BUTTON>
+  			  </TD>
+  			  <TD VALIGN="MIDDLE" HEIGHT="23" WIDTH="12">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+ 
+ 			 <TR>
+  			  <TD VALIGN="TOP" HEIGHT="12" COLSPAN="8">
+  				&nbsp;
+  			  </TD>
+ 			 </TR>
+			</TABLE>
+			
+	   	  <!--CLOSE OF BUTTON HTML//-->
+		  </TD>
+		 </TR>
+		</TABLE>
+	
+  	<!--CLOSE OF NAVIGATION, CONTENT, AND BUTTON TABLES//-->
+ 	</TD>
+  </TR>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+var tab_array = new Array();
+tab_array[0] = Default;
+tab_array[1] = AppSettings;
+tab_array[2] = ServerOptions;
+tab_array[3] = AppOptions;
+tab_array[4] = DevOptions;
+
+function InitDocument(document)
+{
+	setDirection();
+	InitTabs();
+	window.external.Load(document);
+	InitControls();
+
+	var strHostLocale = window.external.GetHostLocale();
+	for (i = 0; i < LOCALE.children.length; i++)
+	{
+		var opt = LOCALE.children[i];
+		if (opt.LCID == strHostLocale)
+			opt.selected = true;
+	}
+
+	if (!VALIDATION.disabled)
+		VALIDATION.focus();
+	else if (!STENCIL.disabled)
+		STENCIL.focus();
+	else
+		SOAP.focus();
+}
+
+function InitControls()
+{
+	OnSoap();
+	OnStencil();
+	OnUseLocale();
+	OnUseCodePage();
+}
+
+function InitTabs()
+{
+	MouseOut(ServerOptions);
+	MouseOut(AppOptions);
+}
+
+function Next(document, linkto)
+{
+	window.external.Next(document, linkto);
+}
+
+function OnFinish(document)
+{
+	OnWizFinish(document);
+}
+
+function onClick(obj)
+{
+	if (obj.id == "ServerOptions")
+	{
+		if (window.external.FindSymbol("GENERATE_ISAPI") || 
+			window.external.FindSymbol("COMBINE_PROJECTS")) 
+		{ 
+			Next(document, "ServerOptions.htm"); 
+		}
+	}
+	else if (obj.id == "AppOptions")
+	{
+		if (window.external.FindSymbol("GENERATE_APP") ||
+			window.external.FindSymbol("COMBINE_PROJECTS")) 
+		{
+			Next(document, "AppOptions.htm");
+		}
+	}
+}
+
+function OnValidation()
+{
+	if (!SOAP.checked)
+		window.external.AddSymbol("VALIDATION", VALIDATION.checked);
+}
+
+function OnStencil()
+{
+	if (!SOAP.checked)
+	{
+		window.external.AddSymbol("STENCIL", STENCIL.checked);
+		if (!STENCIL.checked && window.external.FindSymbol("_STENCIL_CHECKED")==false)
+		{
+			window.external.AddSymbol("_STENCIL_CHECKED", true);
+			window.external.AddSymbol("_USELOCALE", USELOCALE.checked);
+			USELOCALE.checked = false;
+			USELOCALE.disabled = true;
+			window.external.AddSymbol("_USECODEPAGE", USECODEPAGE.checked);
+			USECODEPAGE.checked = false;
+			USECODEPAGE.disabled = true;
+		}
+		else
+		{
+			if (window.external.FindSymbol("_STENCIL_CHECKED"))
+			{
+				USELOCALE.checked = window.external.FindSymbol("_USELOCALE");
+				USELOCALE.disabled = false;
+				USECODEPAGE.checked = window.external.FindSymbol("_USECODEPAGE");
+				USECODEPAGE.disabled = false;
+				window.external.AddSymbol("_STENCIL_CHECKED", false);
+			}
+		}
+	}
+	usecodepage_title.disabled = USECODEPAGE.disabled;
+	uselocale_title.disabled = USELOCALE.disabled;
+}
+
+function OnSoap()
+{
+	window.external.AddSymbol("SOAP", SOAP.checked);
+	if (SOAP.checked && window.external.FindSymbol("_SOAP_CHECKED")==false)
+	{
+		window.external.AddSymbol("_SOAP_CHECKED", true);
+		window.external.AddSymbol("_STENCIL", STENCIL.checked);
+		STENCIL.checked = false;
+		STENCIL.disabled = true;
+		window.external.AddSymbol("_VALIDATION", VALIDATION.checked);
+		VALIDATION.checked = false;
+		VALIDATION.disabled = true;
+		window.external.AddSymbol("_USELOCALE", USELOCALE.checked);
+		USELOCALE.checked = false;
+		USELOCALE.disabled = true;
+		window.external.AddSymbol("_USECODEPAGE", USECODEPAGE.checked);
+		USECODEPAGE.checked = false;
+		USECODEPAGE.disabled = true;
+		window.external.AddSymbol("_ATTRIBUTED", window.external.FindSymbol("ATTRIBUTED"));
+		window.external.AddSymbol("ATTRIBUTED", true);
+		window.external.AddSymbol("APP_CLASS", window.external.FindSymbol("SAFE_PROJECT_NAME") + "Service");
+	}
+	else
+	{
+		if (window.external.FindSymbol("_SOAP_CHECKED"))
+		{
+			STENCIL.checked = window.external.FindSymbol("_STENCIL");
+			STENCIL.disabled = false;
+			VALIDATION.checked = window.external.FindSymbol("_VALIDATION");
+			VALIDATION.disabled = false;
+			USELOCALE.checked = window.external.FindSymbol("_USELOCALE");
+			USELOCALE.disabled = false;
+			USECODEPAGE.checked = window.external.FindSymbol("_USECODEPAGE");
+			USECODEPAGE.disabled = false;
+			window.external.AddSymbol("ATTRIBUTED", window.external.FindSymbol("_ATTRIBUTED"));
+			window.external.AddSymbol("_SOAP_CHECKED", false);
+		}
+		window.external.AddSymbol("APP_CLASS", "C" + window.external.FindSymbol("SAFE_PROJECT_NAME") + "Handler");
+	}
+	usecodepage_title.disabled = USECODEPAGE.disabled;
+	uselocale_title.disabled = USELOCALE.disabled;
+	validation_title.disabled = VALIDATION.disabled;
+	stencil_title.disabled = STENCIL.disabled;
+	srf_options.disabled = STENCIL.disabled;
+}
+
+function OnUseLocale()
+{
+	if (!SOAP.checked)
+		window.external.AddSymbol("USELOCALE", USELOCALE.checked);
+	LOCALE.disabled = !USELOCALE.checked;
+	id_locale.disabled = LOCALE.disabled;
+}
+
+function OnUseCodePage()
+{
+	if (!SOAP.checked)
+		window.external.AddSymbol("USECODEPAGE", USECODEPAGE.checked);
+	CODEPAGE.disabled = !USECODEPAGE.checked;
+	id_codepage.disabled = CODEPAGE.disabled;
+}
+
+</SCRIPT>
+<SCRIPT ID="INCLUDE_SCRIPT" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT ID="INCLUDE_COMMON" LANGUAGE="JSCRIPT"></SCRIPT>
+<SCRIPT>
+	var strPath = "../../../";
+	strPath += window.external.GetHostLocale();
+	var strScriptPath = strPath + "/Script.js";
+	var strCommonPath = strPath + "/Common.js";
+	document.scripts("INCLUDE_SCRIPT").src = strScriptPath;
+	document.scripts("INCLUDE_COMMON").src = strCommonPath;
+</SCRIPT>

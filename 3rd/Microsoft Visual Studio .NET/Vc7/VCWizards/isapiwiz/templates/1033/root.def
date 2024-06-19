@@ -1,0 +1,14 @@
+; [!output PROJECT_NAME].def : declares the module parameters for the DLL.
+
+LIBRARY	     "[!output PROJECT_NAME]"
+
+EXPORTS
+[!if GENERATE_FILTER]
+	HttpFilterProc
+	GetFilterVersion
+[!endif]
+[!if GENERATE_EXTENSION]
+	HttpExtensionProc
+	GetExtensionVersion
+	TerminateExtension
+[!endif]

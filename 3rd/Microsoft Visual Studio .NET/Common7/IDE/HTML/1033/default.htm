@@ -1,0 +1,62 @@
+<HTML>
+	<HEAD>
+		<TITLE>Start Page</TITLE>
+		<meta name="vs_targetSchema" content="Internet Explorer 5.0">
+		<LINK href="vsHome.css" type="text/css" rel="StyleSheet">
+			<SCRIPT language="JavaScript" src="vsHome.js"></SCRIPT>
+	</HEAD>
+	<BODY>
+		<!-- These spans are used as style bags in vshome.js since we can't assign classes (flashing problem) -->
+		<span ID="SpanClsTabItem" class="clsTabItem" style="display:none"></span><span ID="SpanClsTabItemOver" class="clsTabItemOver" style="display:none">
+		</span><span ID="SpanClsTabItemSelected" class="clsTabItemSelected" style="display:none">
+		</span>
+		<table height="100%" cellSpacing="0" cellPadding="0" width="100%" border="0">
+			<tr vAlign="top" align="left">
+				<td colSpan="5" height="56" align="right" nowrap>
+					<IMG style="LEFT: 0px; POSITION: absolute; TOP: 0px" src="vs:/start1.gif"> <span ID="VsUpdateSpan" style="display: none; left: 156px; position: absolute; top: 30px">
+						<a class="homepageinactive" href="javascript://null" onclick="fnInvokeVsUpdate()"><img src="vs:/images/update.gif" align="left" border="0" />An 
+							update for Visual Studio .NET is available. Click here to download.</a></span>
+					<TABLE id="checkStateFrame" style="height:30; left: 0px; position: relative; top: 0px" class="clsChxBoxen" border="0" height="100%">
+						<TR>
+							<TD vAlign="center">
+								<IMG onkeypress="if(event.keyCode==13)fnChkToggle(this);" id="chkWebLinks" onclick="fnChkToggle(this);" tabIndex="1" src="vs:/images/openAsNewNo.gif" align="right" border="0">&nbsp;&nbsp;
+							</TD>
+							<TD vAlign="center">
+								<IMG onkeypress="if(event.keyCode==13)fnChkToggle(this);" id="chkStart" onclick="fnChkToggle(this);" tabIndex="2" src="vs:/images/showHPYes.gif" align="right">
+							</TD>
+						</TR>
+					</TABLE>
+				</td>
+			</tr>
+			<tr align="left">
+				<td class="clsLogo" vAlign="top" align="left" height="30" id="tdSubLogo" background="vs:/start2_bar.GIF">
+					<img src="vs:/images/tabwidth.gif" border="0" />
+				</td>
+				<td id="tdTabFill" noWrap background="vs:/images/dropshadow.GIF" class="clsTabToolbar" colSpan="1">
+					<span id="selHelpFilterList" style="DISPLAY: none"><span class="clsTabToolbarItem" id="chipSelectTitle">
+							Filter: </span>
+						<select id="inptChipSelect" onchange="fnSetHelpFilter(this.options(this.selectedIndex).value);" name="inptChipSelect" class="">
+						</select>
+					</span>
+					<div class="clsSubPgTlBarHidden" id="spnSubPageToolbar">
+					</div>
+				</td>
+			</tr>
+			<tr height="100%" width="100%">
+				<td class="clsLeftNav" vAlign="top" width="151" rowSpan="1">
+					<TABLE id="tblTabEnum" class="clsTabList" height="100%" cellSpacing="0" cellPadding="5" width="100%">
+						<tbody>
+							<!-- filled in by fnEnumMenu -->
+						</tbody>
+					</TABLE>
+				</td>
+				<TD id="tdContentCell" vAlign="top" colSpan="3" class="clsTabContent">
+					<script>fnEnumMenu();</script>
+					&nbsp;
+				</TD>
+			</tr>
+		</table>
+		<div class="clsPopupDisplay" id="divPopupDisplay">
+		</div>
+	</BODY>
+</HTML>

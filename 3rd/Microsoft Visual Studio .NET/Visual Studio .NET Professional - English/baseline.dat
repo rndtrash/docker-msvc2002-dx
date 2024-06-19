@@ -1,0 +1,304 @@
+[Version]
+Signature = "$Windows NT$"
+Provider=Visual Studio .NET Windows Component Update - English
+Version=700.100.01
+NullString=Null String
+Lang=1033
+
+;this section exists for Cartman use
+[Display Pages]
+GFN_DPID Component Selection Page
+GFN_DPID Data Directory Page
+GFN_DPID Service Account Page
+<component pages>
+GFN_DPID Summary Page
+
+;the [Complete Component List] is required by cartman
+[Complete Component List]
+GFN_MID WinNT4 SP6
+GFN_MID Win2k SP2
+GFN_MID Front Page Server
+GFN_MID Windows Installer 2.0 NT
+GFN_MID WMI
+GFN_MID Front Page Client
+GFN_MID Setup Files
+GFN_MID Internet Explorer 6.0
+GFN_MID MDAC 2.7
+GFN_MID Jet4
+GFN_MID Framework SDK
+
+[gencomp01]
+moduleid=ED398C78-DD25-4407-B4C3-C43A75E6CE93
+GFN=GFN_MID WinNT4 SP6
+ComponentName=Windows NT 4.0 Service Pack 6a
+VersionCheck=ServicePackCheck
+SPLevel=6a
+IgnoreLaterVersions=0
+ReturnType=Nt4Sp6ReturnCheck
+CommandLine=-q -z -n
+EstInstallTime=151
+CleanCost=60000000
+version guid=1DA37B28-7374-4fa2-B092-B2A652C00F18
+version string=1.0
+Executable=sp6i386.exe
+Reboot=1
+RebootLaterOk=0
+LangSensitive=mandatory
+EncryptionOpt=1
+InstallOnWinNT4=1
+InstallOnWin2k=0
+InstallOnWhistler=0
+InstallOnFutureNT=0
+
+[gencomp02]
+moduleid=C32EA67E-6E85-4ba6-8F07-F476B01F6A46
+GFN=GFN_MID Win2k SP2
+ComponentName=Windows 2000 Service Pack 2
+VersionCheck=ServicePackCheck
+SPLevel=2
+IgnoreLaterVersions=0
+ReturnType=Win2kSp1ReturnCheck
+CommandLine=-q -z -n
+EstInstallTime=657
+CleanCost=100000000
+version guid=3C8FD413-EE18-41ff-8486-FBA7F48570FC
+version string=2.0
+Executable=W2KSP2.exe
+Reboot=1
+RebootLaterOk=0
+LangSensitive=mandatory
+EncryptionOpt=0
+InstallOnWinNT4=0
+InstallOnWin2k=1
+InstallOnWhistler=0
+InstallOnFutureNT=0
+
+[gencomp07]
+moduleid=343049A3-FDC8-4c0b-8810-204BD0A77C53
+GFN=GFN_MID Front Page Server
+ComponentName=Microsoft FrontPage 2000 Server Extensions Service Release 1.2
+VersionCheck=MsiVersionCheck
+UpgradeCode={77470B30-4927-11D2-B5FE-006097C998E7}
+MajorVersion=9
+MinorVersion=0
+IgnoreLaterVersions=0
+ReturnType=DoNotCheckReturn
+CommandLine=/c:fpseq.inf
+EstInstallTime=44
+CleanCost=10000000
+version guid=BE5843EC-20DF-4a5f-9AAE-18C579420894
+version string=4.0
+Executable=fpse2k.exe
+Reboot=30
+RebootLaterOk=0
+LangSensitive=optional
+EncryptionOpt=0
+InstallOnWinNT4=1
+InstallOnWin2k=0
+InstallOnWhistler=0
+InstallOnFutureNT=0
+
+[gencomp08]
+moduleid=F0BB11CB-414A-4538-8ED9-23A52121934C
+GFN=GFN_MID Windows Installer 2.0 NT
+ComponentName=Microsoft Windows Installer 2.0 [NT]
+VersionCheck=FileVersionCheck
+DetectFile=[winsys]msi.dll
+DetectFileVersion=2.0.2600.0
+IgnoreLaterVersions=0
+ReturnType=Win32ReturnCheck
+CommandLine=/c:"msiinst /delayrebootq"
+EstInstallTime=21
+CleanCost=11000000
+version guid=0E31E327-6837-49bb-90C7-AEFC94EC5F7C
+version string=1.5
+Executable=InstMsiW.exe
+Reboot=0
+RebootLaterOk=1
+LangSensitive=neutral
+EncryptionOpt=0
+InstallOnWinNT4=1
+InstallOnWin2k=1
+InstallOnWhistler=0
+InstallOnFutureNT=0
+
+[gencomp09]
+moduleid=BD8158D9-4F30-44f0-8CD2-71043CBCD7EF
+GFN=GFN_MID WMI
+ComponentName=Microsoft Windows Management Instrumentation
+VersionCheck=FileRegVerCheck
+DetectKey=HKLM,SOFTWARE\Microsoft\WBEM
+DetectKeyVal=Build
+DetectKeyValData=1085.0005
+IgnoreLaterVersions=0
+ReturnType=WinMgmtReturnCheck
+CommandLine=/s
+EstInstallTime=77
+CleanCost=18000000
+version guid=F093FAF7-E2B6-42ea-A146-D0FB22010C64
+version string=1.5
+Executable=wmicore.exe
+Reboot=1
+RebootLaterOk=0
+LangSensitive=neutral
+EncryptionOpt=0
+InstallOnWinNT4=1
+InstallOnWin2k=0
+InstallOnWhistler=0
+InstallOnFutureNT=0
+
+[gencomp10]
+moduleid=700729A2-6191-4247-A609-AFA455D23217
+GFN=GFN_MID Front Page Client
+ComponentName=Microsoft FrontPage 2000 Web Extensions Client
+VersionCheck=MsiVersionCheck
+UpgradeCode={0712D42B-19A7-4d8a-899C-B9CDACDE39D3}
+MajorVersion=7
+MinorVersion=0
+IgnoreLaterVersions=0
+ReturnType=Win32ReturnCheck
+CommandLine="[apppath]weccom.msi" REBOOT=ReallySuppress
+EstInstallTime=6
+CleanCost=3000000
+version guid=15AAE4B8-45E4-4e99-ADA1-B46664FDF0DD
+version string=4.0
+Executable=RunMSI.exe
+Reboot=0
+RebootLaterOk=0
+LangSensitive=neutral
+EncryptionOpt=0
+InstallOnWinNT4=1
+InstallOnWin2k=1
+InstallOnWhistler=1
+InstallOnFutureNT=1
+
+[gencomp11]
+moduleid=D81A7DE0-C77E-419b-B83D-D53AB984CC1A
+GFN=GFN_MID Setup Files
+ComponentName=Setup Runtime Files
+VersionCheck=MsiVersionCheck
+UpgradeCode={5A9BDE19-71A2-11D5-A54F-0090278A1BB8}
+MajorVersion=7
+MinorVersion=0
+IgnoreLaterVersions=0
+ReturnType=Win32ReturnCheck
+CommandLine="[apppath]bootstrap.msi" REBOOT=ReallySuppress
+EstInstallTime=11
+CleanCost=5236151
+version guid=B37E2887-E4ED-4317-B628-B5364905803D
+version string=1.0
+Executable=RunMSI.exe
+Reboot=0
+RebootLaterOk=1
+LangSensitive=neutral
+EncryptionOpt=0
+InstallOnWinNT4=1
+InstallOnWin2k=1
+InstallOnWhistler=1
+InstallOnFutureNT=1
+
+[gencomp13]
+moduleid=42B8BF38-A91C-48b6-8FD3-1BFCC50AD74C
+GFN=GFN_MID Internet Explorer 6.0
+ComponentName=Microsoft Internet Explorer 6
+VersionCheck=FileRegVerCheck
+DetectKey=HKLM,SOFTWARE\Microsoft\Internet Explorer
+DetectKeyVal=Version
+DetectKeyValData=6.0.2600.0
+IgnoreLaterVersions=0
+ReturnType=IeReturnCheck
+CommandLine=/c:"ie6wzd.exe /Q:A /R:N /S:""#e"""
+EstInstallTime=225
+CleanCost=125000000
+version guid=4E041A7D-5234-471b-90D5-75E994D46197
+version string=6.0
+Executable=ie6setup.exe
+Reboot=1
+RebootLaterOk=0
+LangSensitive=optional
+EncryptionOpt=0
+InstallOnWinNT4=1
+InstallOnWin2k=1
+InstallOnWhistler=0
+InstallOnFutureNT=0
+
+[gencomp16]
+moduleid=4B4AE149-9BDF-4ffa-A03D-514A5AED8282
+GFN=GFN_MID MDAC 2.7
+ComponentName=Microsoft Data Access Components 2.7
+VersionCheck=MDAC
+DetectKey=HKLM,SOFTWARE\Microsoft\DataAccess
+DetectKeyVal=FullInstallVer
+DetectKeyValData=2.70.7713.4
+DetectKeyValDataMin=2.5.1.1
+IgnoreLaterVersions=0
+ReturnType=MdacReturnCheck
+CommandLine=/q:a /c:"dasetup.exe /Q /N"
+EstInstallTime=99
+CleanCost=21000000
+version guid=16ABFF82-354B-49d9-BA04-18FB96EEE94C
+version string=2.7
+Executable=mdac_typ.exe
+Reboot=0
+RebootLaterOk=0
+LangSensitive=neutral
+EncryptionOpt=0
+InstallOnWinNT4=1
+InstallOnWin2k=1
+InstallOnWhistler=0
+InstallOnFutureNT=0
+
+[gencomp17]
+moduleid=79740E3F-F9A2-400d-9DDE-F729A27265E5
+GFN=GFN_MID Jet4
+ComponentName=Microsoft Jet 4.0 Service Pack 3
+VersionCheck=FileVersionCheck
+DetectFile=[winsys]msjet40.dll
+DetectFileVersion=4.0.2927.4
+IgnoreLaterVersions=0
+ReturnType=Win32ReturnCheck
+CommandLine=/R:N /Q:A
+EstInstallTime=9
+CleanCost=15886882
+version guid=5149FDE6-0D60-4a92-8680-9B600EA793D2
+version string=4.0
+Executable=jetsetup.exe
+Reboot=0
+RebootLaterOk=0
+LangSensitive=neutral
+EncryptionOpt=0
+InstallOnWinNT4=1
+InstallOnWin2k=0
+InstallOnWhistler=0
+InstallOnFutureNT=0
+
+[gencomp18]
+moduleid=FCFA9C48-78D2-4d33-96FD-0CF059B8D810
+GFN=GFN_MID Framework SDK
+ComponentName=Microsoft .NET Framework
+VersionCheck=RegDwordCheck
+DetectKey=HKLM,SOFTWARE\Microsoft\NET Framework Setup\Full\v1.0.3705\1033\Microsoft .NET Framework Full v1.0.3705 (1033)
+DetectKeyVal=Install
+DetectKeyValData=1
+IgnoreLaterVersions=1
+ReturnType=NetRtReturnCheck
+CommandLine=/q:a /c:"install /q /l"
+EstInstallTime=300
+CleanCost=130000000
+version guid=1957749D-20B9-4a98-9EAA-DD35FD80F804
+version string=2.0
+Executable=dotnetfx.exe
+Reboot=0
+RebootLaterOk=0
+LangSensitive=neutral
+EncryptionOpt=0
+InstallOnWinNT4=1
+InstallOnWin2k=1
+InstallOnWhistler=1
+InstallOnFutureNT=1
+
+
+[VS Custom]
+DepCheckLogon=VSWCU
+OldMDAC=VSWCU
+

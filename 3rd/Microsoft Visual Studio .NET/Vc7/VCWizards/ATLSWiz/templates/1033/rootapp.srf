@@ -1,0 +1,24 @@
+<html>
+{{// use MSDN's "ATL Server Response File Reference" to learn about SRF files.}}
+{{handler [!output SAFE_PROJECT_NAME].dll/Default}}
+<head>
+[!if USELOCALE]
+[!if TODO]
+{{// Specify the locale to use in processing the page.}}
+[!endif]
+{{locale [!output LOCALE]}}
+[!endif]
+[!if USECODEPAGE]
+[!if TODO]
+{{// Specify the codepage to use in processing the page.}}
+[!endif]
+{{codepage [!output CODEPAGE]}}
+<meta http-equiv="Content-Type" content="text/html; charset=[!output CODEPAGE]">
+[!endif]
+</head>
+<body>
+[!if STENCIL]
+This is a test: {{Hello}}<br>
+[!endif]
+</body>
+</html>

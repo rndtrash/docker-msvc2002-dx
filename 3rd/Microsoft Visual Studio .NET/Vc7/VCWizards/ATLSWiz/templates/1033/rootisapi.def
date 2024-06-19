@@ -1,0 +1,16 @@
+; [!output PROJECT_NAME].def : declares the module parameters for the DLL.
+
+[!if COMBINE_PROJECTS]
+LIBRARY	     "[!output SAFE_PROJECT_NAME]"
+[!else]
+LIBRARY	     "[!output PROJECT_NAME]"
+[!endif]
+
+EXPORTS
+	HttpExtensionProc
+	GetExtensionVersion
+	TerminateExtension
+[!if !ATTRIBUTED && PERFMON]
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+[!endif]

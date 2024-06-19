@@ -1,0 +1,49 @@
+"DeployProject"
+{
+	ProjectType = "8:{5443560c-dbb4-11d2-8724-00a0c9a8b90c}"
+    DeploymentTemplate = "8:{54565988-dbfb-11d2-898d-0000f8064ebb}"
+	InitialEditor = "8:FileSystemEditor"
+
+	"Configurations"
+	{
+		"Debug"
+		{
+			DisplayName = "8:Debug"
+			IsDebugOnly = "11:TRUE"
+			IsReleaseOnly = "11:FALSE"
+			PackageFilesAs = "3:2"
+			ShouldBuild = "11:FALSE"
+		}
+		"Release"
+		{
+			DisplayName = "8:Release"
+			IsDebugOnly = "11:FALSE"
+			IsReleaseOnly = "11:TRUE"
+			PackageFilesAs = "3:2"
+			ShouldBuild = "11:FALSE"
+		}
+	}
+	"Deployable"
+	{
+                "LaunchCondition"
+                {
+                    "{B26CFB94-18E3-45BF-8D42-933BDAF5E76C}:_DF1CA2119CD64D4B94CE993CF1624ACE"
+                    {
+                    "Name" = "8:IIS Condition"
+                    "Condition" = "8:IISVERSION >= \"#4\""
+                    "Message" = "8:[VSDIISMSG]"
+                    }
+                }
+                "Locator"
+                {
+                    "{328616F4-3D88-44AA-B041-F8100F0FDCF1}:_04904C1EB41D4AEB868E336FBFF3FDF9"
+                    {
+                    "Name" = "8:Search for IIS"
+                    "Root" = "2:1"
+                    "RegKey" = "8:SYSTEM\\CurrentControlSet\\Services\\W3SVC\\Parameters"
+                    "Value" = "8:MajorVersion"
+                    "Property" = "8:IISVERSION"
+                    }
+                }
+	}
+}

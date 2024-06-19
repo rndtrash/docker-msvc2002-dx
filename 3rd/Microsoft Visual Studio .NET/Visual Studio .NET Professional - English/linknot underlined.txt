@@ -1,0 +1,5 @@
+<STYLE>
+	A {text-decoration:none; font-weight:normal; cursor:hand}
+	
+	A:hover {text-decoration:underline;font-weight:bold}
+</style>

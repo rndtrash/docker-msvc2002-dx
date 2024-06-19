@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<discovery xmlns="http://schemas.xmlsoap.org/disco/">
+[!if GENERATE_DEPLOYMENT]
+	<contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://[!output REMOTE_MACHINE]/[!output ISAPI_VROOT]/[!output SAFE_PROJECT_NAME].dll?Handler=Gen[!output SAFE_PROJECT_NAME]WSDL" docRef="http://[!output REMOTE_MACHINE]/[!output ISAPI_VROOT]/[!output PROJECT_NAME].htm"/>
+[!else]
+	<contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://[!output REMOTE_MACHINE]/[!output PROJECT_NAME]/[!output SAFE_PROJECT_NAME].dll?Handler=Gen[!output SAFE_PROJECT_NAME]WSDL" docRef="http://[!output REMOTE_MACHINE]/[!output PROJECT_NAME]/[!output PROJECT_NAME].htm"/>
+[!endif]	
+</discovery>
